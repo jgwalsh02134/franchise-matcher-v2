@@ -399,7 +399,17 @@ async function doSearch(name) {
 }
 
 /* ---------- Status rendering ---------- */
+let elapsedTimer = null;
+
+function stopElapsedTimer() {
+  if (elapsedTimer) {
+    clearInterval(elapsedTimer);
+    elapsedTimer = null;
+  }
+}
+
 function showStatus(kind, name, detail) {
+  stopElapsedTimer();
   const el = document.getElementById('status');
   el.className = 'status';
   el.classList.remove('hidden');
@@ -408,7 +418,17 @@ function showStatus(kind, name, detail) {
     el.innerHTML = `<div class="spinner"></div>
       <h3>Searching OpenStreetMap for "${esc(name)}"</h3>
       <p>Querying every US location. This typically takes 10 to 40 seconds.</p>
+      <p class="elapsed" id="search-elapsed">0:00 elapsed</p>
       <p class="sub">If the primary endpoint is busy, a fallback is tried automatically.</p>`;
+    const startedAt = Date.now();
+    elapsedTimer = setInterval(() => {
+      const target = document.getElementById('search-elapsed');
+      if (!target) { stopElapsedTimer(); return; }
+      const secs = Math.floor((Date.now() - startedAt) / 1000);
+      const m = Math.floor(secs / 60);
+      const s = String(secs % 60).padStart(2, '0');
+      target.textContent = `${m}:${s} elapsed`;
+    }, 1000);
   } else if (kind === 'error') {
     el.classList.add('error');
     el.innerHTML = `<h3>Search could not complete</h3>
@@ -421,6 +441,7 @@ function showStatus(kind, name, detail) {
 }
 
 function hideStatus() {
+  stopElapsedTimer();
   document.getElementById('status').classList.add('hidden');
 }
 function hide(id) { document.getElementById(id).classList.add('hidden'); }

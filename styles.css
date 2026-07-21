@@ -206,6 +206,13 @@ a:hover { text-decoration: underline; }
 .status h3 { font-size: 17px; margin-bottom: 6px; }
 .status p { font-size: 14px; color: var(--slate); max-width: 520px; margin: 0 auto; }
 .status .sub { font-size: 12px; margin-top: 8px; }
+.status .elapsed {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--indigo);
+  font-variant-numeric: tabular-nums;
+}
 .hidden { display: none !important; }
 
 /* ---------- KPI row ---------- */

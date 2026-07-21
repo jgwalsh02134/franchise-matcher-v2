@@ -60,3 +60,23 @@ python3 -m http.server 8742
 - Type: Hanken Grotesk only. Indigo #4A6CF7 (≤25%), Deep Navy #0B1437 headlines,
   Soft Lavender #F2F4FF, flat color, no gradients.
 - Contact: adsell.ai · info@adsell.ai · (838) 240-4104.
+
+## Deploying to Railway
+
+1. In Railway, create a new project and connect this GitHub repo
+   (`jgwalsh02134/franchise-matcher-v2`).
+2. In the service's **Variables** tab, set `GOOGLE_PLACES_API_KEY` to your
+   Google Places API (New) key. The key stays server-side — the browser only
+   ever calls `/api/places`.
+3. Railway detects the Node app and runs `npm start` (no build step).
+
+Local development:
+
+```bash
+npm install
+GOOGLE_PLACES_API_KEY=xxx npm start
+# open http://localhost:3000
+```
+
+The app also works without the key — `/api/places` reports
+`available:false` and the frontend degrades to OSM-only mode.

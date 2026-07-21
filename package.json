@@ -1,0 +1,15 @@
+{
+  "name": "franchise-matcher-v2",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AdSell.ai Franchise Footprint Matcher — static site served by Express with a Google Places proxy",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

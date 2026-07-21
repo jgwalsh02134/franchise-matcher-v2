@@ -394,6 +394,7 @@ async function doSearch(name) {
 
   currentResult = { name, locs, markets, flight, usedPlaces: placesOk };
   renderResults(currentResult);
+  dmReset(name); // new search: prefill company, collapse panel, clear results
   setBtn(false);
 }
 
@@ -621,6 +622,155 @@ function renderStateTable(r) {
     </tr>`).join('');
 }
 
+/* ---------- Decision-makers (Apollo) ---------- */
+const DM_TITLES = [
+  'Chief Marketing Officer',
+  'VP Marketing',
+  'Director of Marketing',
+  'Director of Franchise Development',
+  'Chief Development Officer',
+];
+
+function dmReset(name) {
+  document.getElementById('dm-company').value = name || '';
+  document.getElementById('dm-domain').value = '';
+  document.getElementById('dm-body').classList.add('hidden');
+  document.getElementById('dm-expander').textContent = '+';
+  document.getElementById('dm-status').classList.add('hidden');
+  document.getElementById('dm-results').classList.add('hidden');
+  document.getElementById('dm-tbody').innerHTML = '';
+  document.querySelectorAll('#dm-titles .chip').forEach((c) => c.classList.add('active'));
+}
+
+function dmStatus(msg) {
+  const el = document.getElementById('dm-status');
+  if (!msg) { el.classList.add('hidden'); return; }
+  el.textContent = msg;
+  el.classList.remove('hidden');
+}
+
+async function dmSearch() {
+  const btn = document.getElementById('dm-search');
+  if (btn.disabled) return;
+  const company = document.getElementById('dm-company').value.trim();
+  const domain = document.getElementById('dm-domain').value.trim();
+  const titles = [...document.querySelectorAll('#dm-titles .chip.active')]
+    .map((c) => c.getAttribute('data-title'));
+  if (!company && !domain) {
+    dmStatus('Enter a company name or domain.');
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Searching\u2026';
+  dmStatus(null);
+  document.getElementById('dm-results').classList.add('hidden');
+
+  let data;
+  try {
+    const resp = await fetch('/api/apollo/people-search', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ company, domain, titles: titles.length ? titles : undefined }),
+    });
+    if (resp.status === 401) {
+      dmStatus('Sign in required \u2014 open the Publications page to authenticate, then retry.');
+      return;
+    }
+    data = await resp.json();
+  } catch (e) {
+    dmStatus('Contact search failed \u2014 network error. Try again.');
+    return;
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Search contacts';
+  }
+
+  if (!data || data.available === false) {
+    if (data && data.error === 'rate_limited') {
+      dmStatus('Apollo rate limit hit \u2014 wait a minute and retry.');
+    } else if (data && data.error) {
+      dmStatus('Contact search failed \u2014 try again in a moment.');
+    } else {
+      dmStatus('Apollo key not configured \u2014 add APOLLO_API_KEY in Railway.');
+    }
+    return;
+  }
+  if (!data.people || !data.people.length) {
+    dmStatus('No matching contacts found \u2014 try removing title filters or adding the company domain.');
+    return;
+  }
+  dmRenderPeople(data.people);
+}
+
+const LINKEDIN_SVG = '<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>';
+
+function dmRenderPeople(people) {
+  const tbody = document.getElementById('dm-tbody');
+  tbody.innerHTML = people.map((p) => {
+    const loc = [p.city, p.state].filter(Boolean).join(', ') || '\u2014';
+    const li = p.linkedin_url
+      ? `<a class="dm-li" href="${esc(p.linkedin_url)}" target="_blank" rel="noopener" title="LinkedIn profile">${LINKEDIN_SVG}</a>`
+      : '\u2014';
+    const revealable = p.email_status === 'verified' || p.email_status === 'likely';
+    const email = revealable
+      ? `<button class="btn btn-ghost dm-reveal" data-id="${esc(p.id)}">Reveal (1 credit)</button>`
+      : `<span class="dm-muted">${esc(p.email_status || 'unavailable')}</span>`;
+    return `<tr>
+      <td class="market-label">${esc(p.name || '')}</td>
+      <td>${esc(p.title || '')}</td>
+      <td>${esc(loc)}</td>
+      <td>${li}</td>
+      <td class="dm-email">${email}</td>
+    </tr>`;
+  }).join('');
+  document.getElementById('dm-results').classList.remove('hidden');
+
+  tbody.querySelectorAll('.dm-reveal').forEach((b) => {
+    b.addEventListener('click', () => dmReveal(b));
+  });
+}
+
+async function dmReveal(btn) {
+  if (btn.disabled) return;
+  if (!window.confirm('Reveal this email? This uses 1 Apollo credit.')) return;
+  btn.disabled = true;
+  btn.textContent = 'Revealing\u2026';
+  const cell = btn.closest('td');
+  try {
+    const resp = await fetch('/api/apollo/enrich', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: btn.getAttribute('data-id') }),
+    });
+    const data = await resp.json();
+    if (resp.ok && data && data.available && data.email) {
+      cell.innerHTML = `<a href="mailto:${esc(data.email)}">${esc(data.email)}</a>`;
+    } else {
+      cell.innerHTML = '<span class="dm-muted">reveal failed</span>';
+    }
+  } catch (e) {
+    cell.innerHTML = '<span class="dm-muted">reveal failed</span>';
+  }
+}
+
+function dmInit() {
+  const chips = document.getElementById('dm-titles');
+  chips.innerHTML = DM_TITLES.map((t) =>
+    `<button type="button" class="chip active" data-title="${esc(t)}">${esc(t)}</button>`
+  ).join('');
+  chips.querySelectorAll('.chip').forEach((c) => {
+    c.addEventListener('click', () => c.classList.toggle('active'));
+  });
+
+  document.getElementById('dm-toggle').addEventListener('click', () => {
+    const body = document.getElementById('dm-body');
+    const hidden = body.classList.toggle('hidden');
+    document.getElementById('dm-expander').textContent = hidden ? '+' : '\u2013';
+  });
+  document.getElementById('dm-search').addEventListener('click', dmSearch);
+}
+
 /* ---------- Copy button ---------- */
 function copyFlight() {
   const str = document.getElementById('copy-string').textContent;
@@ -720,6 +870,7 @@ async function init() {
   });
   document.getElementById('copy-btn').addEventListener('click', copyFlight);
   document.getElementById('brief-btn').addEventListener('click', openBrief);
+  dmInit();
 
   document.querySelectorAll('.radius-btns button').forEach((b) => {
     b.addEventListener('click', () => {

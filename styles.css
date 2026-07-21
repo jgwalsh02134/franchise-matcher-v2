@@ -386,6 +386,57 @@ tbody tr:last-child td { border-bottom: none; }
 }
 .contact { margin-top: 8px; color: var(--slate); }
 
+/* ---------- Decision-makers panel ---------- */
+.dm-card {
+  background: var(--lavender);
+  border: 1px solid var(--cool-grey);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.dm-head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 18px 22px;
+  text-align: left;
+}
+.dm-head .expander { color: var(--indigo); font-weight: 800; font-size: 15px; width: 16px; }
+.dm-title { font-size: 16px; font-weight: 800; color: var(--navy); }
+.dm-sub { font-size: 12px; color: var(--slate); }
+.dm-body { padding: 0 22px 22px; }
+.dm-inputs { display: flex; gap: 10px; flex-wrap: wrap; }
+.dm-inputs input {
+  flex: 1;
+  min-width: 200px;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--navy);
+  background: var(--white);
+  border: 1px solid var(--cool-grey);
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+.dm-inputs input:focus { outline: none; border-color: var(--indigo); }
+.dm-titles { margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap; }
+.dm-titles .chip.active {
+  background: var(--indigo);
+  color: var(--white);
+  border-color: var(--indigo);
+}
+.dm-actions { margin-top: 14px; }
+.dm-actions .btn-primary { font-size: 14px; padding: 10px 20px; }
+.dm-status { margin-top: 14px; font-size: 13px; color: var(--slate); }
+#dm-results { margin-top: 14px; }
+.dm-li { color: var(--indigo); display: inline-block; vertical-align: middle; }
+.dm-li:hover { color: #3a5be0; }
+.dm-muted { color: var(--slate); font-size: 12px; }
+.dm-email .btn-ghost { font-size: 12px; padding: 5px 11px; white-space: nowrap; }
+
 /* ---------- Publications manager ---------- */
 .nav-link {
   margin-left: auto;

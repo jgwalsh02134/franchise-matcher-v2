@@ -86,6 +86,42 @@
         </div>
       </div>
 
+      <!-- Decision-makers -->
+      <div class="section">
+        <div class="dm-card">
+          <button id="dm-toggle" class="dm-head" type="button">
+            <span class="expander" id="dm-expander">+</span>
+            <span class="dm-title">Decision-makers</span>
+            <span class="dm-sub">Find marketing &amp; franchise-development contacts</span>
+          </button>
+          <div id="dm-body" class="dm-body hidden">
+            <div class="dm-inputs">
+              <input id="dm-company" type="text" placeholder="Company name" autocomplete="off" />
+              <input id="dm-domain" type="text" placeholder="e.g. 7brew.com — improves accuracy" autocomplete="off" />
+            </div>
+            <div class="dm-titles" id="dm-titles"></div>
+            <div class="dm-actions">
+              <button id="dm-search" class="btn btn-primary">Search contacts</button>
+            </div>
+            <div id="dm-status" class="dm-status hidden"></div>
+            <div id="dm-results" class="table-wrap hidden">
+              <table id="dm-table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Title</th>
+                    <th>Location</th>
+                    <th>LinkedIn</th>
+                    <th>Email</th>
+                  </tr>
+                </thead>
+                <tbody id="dm-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Market table -->
       <div class="section">
         <div class="section-title">All markets</div>

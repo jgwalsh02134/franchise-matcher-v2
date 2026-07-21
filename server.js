@@ -341,6 +341,32 @@ function persistPublications() {
 function loadPublications() {
   if (fs.existsSync(LIVE_PATH)) {
     publications = JSON.parse(fs.readFileSync(LIVE_PATH, "utf8"));
+
+    // Migration: a live file written before the address/zip schema (no row has
+    // an address field) is stale seed data. Re-seed from the current
+    // publications.json, keeping any pubs that were added via the CRUD API,
+    // with a backup of the old file.
+    if (
+      publications.length &&
+      !publications.some((p) => p.address !== undefined)
+    ) {
+      const seed = withIds(JSON.parse(fs.readFileSync(SEED_PATH, "utf8")));
+      const seedKeys = new Set(
+        seed.map((p) => dupKey(p.name, p.city, p.state))
+      );
+      const userAdded = publications.filter(
+        (p) => !seedKeys.has(dupKey(p.name, p.city, p.state))
+      );
+      fs.copyFileSync(LIVE_PATH, BACKUP_PATH);
+      publications = withIds([...seed, ...userAdded]);
+      persistPublications();
+      console.log(
+        `Migrated publications-live.json to address/zip schema ` +
+          `(${seed.length} reseeded, ${userAdded.length} user-added kept, old file backed up)`
+      );
+      return;
+    }
+
     if (publications.some((p) => !p.id)) {
       publications = withIds(publications);
       persistPublications();

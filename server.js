@@ -652,6 +652,175 @@ app.post("/api/publications/import", requireAuth, (req, res) => {
   res.json({ ok: true, count: publications.length });
 });
 
+// ---------------------------------------------------------------------------
+// Apollo.io proxy
+// ---------------------------------------------------------------------------
+
+const APOLLO_SEARCH_URL = "https://api.apollo.io/api/v1/mixed_people/search";
+const APOLLO_MATCH_URL = "https://api.apollo.io/api/v1/people/match";
+const APOLLO_DEFAULT_TITLES = [
+  "chief marketing officer",
+  "vp marketing",
+  "director of marketing",
+  "director of franchise development",
+];
+const APOLLO_MIN_GAP_MS = 1500;
+const APOLLO_RETRY_DELAY_MS = 30_000;
+
+// search key -> { expires, payload }; enrich responses are never cached
+const apolloCache = new Map();
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+class ApolloRateLimitError extends Error {}
+
+// Apollo 429s aggressively: serialize every outbound call through one queue
+// with a minimum gap between requests.
+let apolloChain = Promise.resolve();
+let apolloLastRequestAt = 0;
+
+function apolloEnqueue(task) {
+  const run = apolloChain.then(task);
+  apolloChain = run.catch(() => {}); // keep the chain alive after failures
+  return run;
+}
+
+async function apolloHttp(url, body, apiKey) {
+  const wait = apolloLastRequestAt + APOLLO_MIN_GAP_MS - Date.now();
+  if (wait > 0) await sleep(wait);
+  apolloLastRequestAt = Date.now();
+
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+  try {
+    return await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Api-Key": apiKey,
+      },
+      body: JSON.stringify(body),
+      signal: controller.signal,
+    });
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+function apolloFetch(url, body, apiKey) {
+  return apolloEnqueue(async () => {
+    let res = await apolloHttp(url, body, apiKey);
+    if (res.status === 429) {
+      await sleep(APOLLO_RETRY_DELAY_MS); // wait out the rate limit, retry once
+      res = await apolloHttp(url, body, apiKey);
+      if (res.status === 429) throw new ApolloRateLimitError();
+    }
+    if (!res.ok) throw new Error(`Apollo HTTP ${res.status}`);
+    return res.json();
+  });
+}
+
+function logApollo(endpoint, target, cached, status) {
+  console.log(
+    `[apollo] endpoint=${endpoint} target="${target}" cached=${cached} status=${status}`
+  );
+}
+
+app.use("/api/apollo", express.json(), requireAuth, (req, res, next) => {
+  if (!process.env.APOLLO_API_KEY) return res.json({ available: false });
+  next();
+});
+
+app.post("/api/apollo/people-search", async (req, res) => {
+  const body = req.body || {};
+  const company = String(body.company || "").trim();
+  const domain = String(body.domain || "").trim();
+  if (!company && !domain) {
+    return res.status(400).json({ error: "company or domain is required" });
+  }
+  const titles =
+    Array.isArray(body.titles) && body.titles.length
+      ? body.titles.map((t) => String(t))
+      : APOLLO_DEFAULT_TITLES;
+
+  const target = domain || company;
+  const cacheKey =
+    target.toLowerCase() +
+    "|" +
+    titles.map((t) => t.toLowerCase()).sort().join(",");
+  const cached = apolloCache.get(cacheKey);
+  if (cached && cached.expires > Date.now()) {
+    logApollo("people-search", target, true, "ok");
+    return res.json(cached.payload);
+  }
+
+  const apolloBody = { person_titles: titles, page: 1, per_page: 10 };
+  if (domain) apolloBody.q_organization_domains_list = [domain];
+  else apolloBody.q_organization_name = company;
+
+  try {
+    const data = await apolloFetch(
+      APOLLO_SEARCH_URL,
+      apolloBody,
+      process.env.APOLLO_API_KEY
+    );
+    // never pass through raw emails or phone numbers from search results
+    const people = (Array.isArray(data.people) ? data.people : []).map((p) => ({
+      id: p.id,
+      name: p.name,
+      title: p.title,
+      company: (p.organization && p.organization.name) || company || domain,
+      city: p.city,
+      state: p.state,
+      linkedin_url: p.linkedin_url,
+      email_status: p.email_status,
+    }));
+    const payload = { available: true, count: people.length, people };
+    apolloCache.set(cacheKey, { expires: Date.now() + CACHE_TTL_MS, payload });
+    logApollo("people-search", target, false, "ok");
+    res.json(payload);
+  } catch (err) {
+    if (err instanceof ApolloRateLimitError) {
+      logApollo("people-search", target, false, "rate_limited");
+      return res.json({ available: false, error: "rate_limited" });
+    }
+    logApollo("people-search", target, false, "error");
+    res.json({ available: false, error: "apollo_failed" });
+  }
+});
+
+// Consumes Apollo credits — only ever called from an explicit user action,
+// never automatically.
+app.post("/api/apollo/enrich", async (req, res) => {
+  const id = String((req.body || {}).id || "").trim();
+  if (!id) return res.status(400).json({ error: "id is required" });
+
+  try {
+    const data = await apolloFetch(
+      APOLLO_MATCH_URL,
+      { id, reveal_personal_emails: false },
+      process.env.APOLLO_API_KEY
+    );
+    const p = data.person || {};
+    logApollo("enrich", id, false, "ok");
+    res.json({
+      available: true,
+      name: p.name,
+      title: p.title,
+      email: p.email,
+      email_status: p.email_status,
+      linkedin_url: p.linkedin_url,
+    });
+  } catch (err) {
+    if (err instanceof ApolloRateLimitError) {
+      logApollo("enrich", id, false, "rate_limited");
+      return res.json({ available: false, error: "rate_limited" });
+    }
+    logApollo("enrich", id, false, "error");
+    res.json({ available: false, error: "apollo_failed" });
+  }
+});
+
 // The live data files must never be publicly served (relevant when DATA_DIR
 // is the repo root, which express.static also serves).
 app.use((req, res, next) => {
@@ -671,6 +840,11 @@ app.listen(PORT, "0.0.0.0", () => {
       : "Google Places proxy: disabled (GOOGLE_PLACES_API_KEY not set) — OSM-only mode"
   );
   console.log(`Publications: ${publications.length} loaded (${LIVE_PATH})`);
+  console.log(
+    process.env.APOLLO_API_KEY
+      ? "Apollo proxy: enabled"
+      : "Apollo proxy: disabled (APOLLO_API_KEY not set)"
+  );
   if (!AUTH_USER || !AUTH_PASS) {
     console.warn(
       "WARNING: publications API is unprotected — set BASIC_AUTH_USER and BASIC_AUTH_PASS"

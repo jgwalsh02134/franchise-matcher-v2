@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AdSell.ai Local Presence Pilot — Brief</title>
+<script src="d3.min.js"></script>
+<script src="topojson.min.js"></script>
+<script src="us-data.js"></script>
+<style>
+  @font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:400;src:url('hanken-1.ttf') format('truetype');}
+  @font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:700;src:url('hanken-2.ttf') format('truetype');}
+  @font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:800;src:url('hanken-3.ttf') format('truetype');}
+  @font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:900;src:url('hanken-4.ttf') format('truetype');}
+  :root{
+    --indigo:#4A6CF7;
+    --navy:#0B1437;
+    --lavender:#F2F4FF;
+    --grey:#D9DDEE;
+    --slate:#5C6486;
+    --white:#FFFFFF;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{width:8.5in;}
+  body{
+    font-family:'Hanken Grotesk',sans-serif;
+    background:var(--white);
+    color:var(--navy);
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+  .page{
+    width:8.5in;height:11in;
+    padding:0.62in 0.62in 0.5in 0.62in;
+    display:flex;flex-direction:column;
+    overflow:hidden;
+    break-after:page;
+  }
+  .page:last-child{break-after:auto;}
+
+  /* ---------- header ---------- */
+  .eyebrow{
+    font-weight:700;font-size:11.5px;letter-spacing:0.14em;
+    text-transform:uppercase;color:var(--indigo);
+    margin-bottom:14px;
+  }
+  h1{
+    font-weight:800;font-size:40px;line-height:1.12;
+    color:var(--navy);letter-spacing:-0.015em;
+    max-width:6.6in;
+    margin-bottom:14px;
+  }
+  .support{
+    font-weight:400;font-size:15px;line-height:1.5;color:var(--slate);
+    max-width:6.4in;
+    margin-bottom:26px;
+  }
+
+  /* ---------- columns ---------- */
+  .cols{display:flex;gap:0.38in;flex:1;min-height:0;}
+  .left{width:57%;display:flex;flex-direction:column;}
+  .right{width:43%;display:flex;flex-direction:column;}
+
+  .body-copy{
+    font-size:13px;line-height:1.55;color:var(--navy);
+    margin-bottom:24px;
+  }
+
+  .how-title{
+    font-weight:800;font-size:14px;letter-spacing:0.02em;
+    color:var(--navy);margin-bottom:14px;
+    padding-top:18px;border-top:1.5px solid var(--grey);
+  }
+  .step{display:flex;gap:12px;margin-bottom:15px;}
+  .step-num{
+    flex:0 0 26px;height:26px;border-radius:6px;
+    background:var(--lavender);color:var(--navy);
+    font-weight:800;font-size:13px;
+    display:flex;align-items:center;justify-content:center;
+    margin-top:1px;
+  }
+  .step-text{font-size:12.5px;line-height:1.5;color:var(--slate);}
+  .step-text b{color:var(--navy);font-weight:700;}
+
+  .honesty{
+    margin-top:auto;
+    background:var(--lavender);
+    border-radius:8px;
+    padding:14px 16px;
+    font-size:11.5px;line-height:1.5;color:var(--slate);
+  }
+  .honesty b{color:var(--navy);font-weight:700;}
+
+  /* ---------- right column ---------- */
+  .map-panel{
+    background:var(--lavender);
+    border-radius:10px;
+    padding:16px 14px 10px 14px;
+  }
+  .map-panel svg{display:block;width:100%;height:auto;}
+  .map-caption{
+    font-size:10.5px;line-height:1.45;color:var(--slate);
+    padding:8px 4px 6px 4px;
+  }
+  .map-legend{
+    display:flex;gap:14px;padding:6px 4px 0 4px;
+    font-size:10px;font-weight:700;color:var(--navy);
+  }
+  .map-legend .lg{display:flex;align-items:center;gap:5px;}
+  .map-legend .dot{width:8px;height:8px;border-radius:50%;display:inline-block;}
+  .map-legend .dot-mkt{background:var(--indigo);}
+  .map-legend .dot-pub{background:var(--navy);}
+  .map-caption b{color:var(--navy);font-weight:700;}
+
+  .cost{
+    padding:16px 4px 14px 4px;
+    font-size:12.5px;line-height:1.5;color:var(--slate);
+  }
+  .cost b{color:var(--navy);font-weight:800;font-size:13px;display:block;margin-bottom:5px;}
+
+  .cta{
+    margin-top:auto;
+    background:var(--indigo);
+    border-radius:10px;
+    padding:20px 20px 18px 20px;
+    color:var(--white);
+  }
+  .cta .cta-head{font-weight:800;font-size:17px;line-height:1.25;margin-bottom:9px;}
+  .cta .cta-line{font-weight:400;font-size:12px;line-height:1.55;opacity:0.94;}
+  .cta .cta-contact{
+    margin-top:12px;padding-top:11px;
+    border-top:1px solid rgba(255,255,255,0.35);
+    font-weight:700;font-size:11.5px;letter-spacing:0.01em;line-height:1.7;
+  }
+
+  /* ---------- footer ---------- */
+  .footer{
+    margin-top:0.28in;
+    padding-top:14px;
+    border-top:1.5px solid var(--grey);
+    display:flex;align-items:baseline;justify-content:space-between;
+  }
+  .wordmark svg.wm{
+    height:16px;width:auto;display:block;
+  }
+  .powered{font-size:11px;color:var(--slate);}
+  .powered b{color:var(--navy);font-weight:700;}
+
+  /* ---------- page 2: market match appendix ---------- */
+  .p2 > *{flex-shrink:0;}
+  .p2 h2{
+    font-weight:800;font-size:27px;line-height:1.15;
+    color:var(--navy);letter-spacing:-0.01em;margin-bottom:10px;
+  }
+  .p2-intro{
+    font-size:12px;line-height:1.5;color:var(--slate);
+    max-width:6.9in;margin-bottom:16px;
+  }
+  .p2-intro b{color:var(--navy);font-weight:700;}
+  table.match{
+    width:100%;border-collapse:collapse;
+    font-size:10.5px;line-height:1.35;
+  }
+  table.match th{
+    text-align:left;font-weight:800;font-size:9px;
+    letter-spacing:0.09em;text-transform:uppercase;color:var(--slate);
+    padding:0 8px 6px 8px;border-bottom:1.5px solid var(--navy);
+  }
+  table.match td{
+    padding:4.5px 8px;border-bottom:1px solid var(--grey);
+    color:var(--slate);vertical-align:top;
+  }
+  table.match td.pub{font-weight:700;color:var(--navy);}
+  table.match tr.mkt-first td{border-top:1.5px solid #C5CBE3;}
+  table.match td.num{text-align:right;white-space:nowrap;}
+  .p2.compact table.match{font-size:9.5px;}
+  .p2.compact table.match td{padding:3px 7px;}
+  /* xcompact: applied automatically when content would overflow the page */
+  .p2.xcompact h2{font-size:22px;margin-bottom:8px;}
+  .p2.xcompact .p2-intro{font-size:10.5px;margin-bottom:10px;}
+  .p2.xcompact table.match{font-size:8.8px;line-height:1.28;}
+  .p2.xcompact table.match td{padding:2px 6px;}
+  .p2.xcompact table.match th{font-size:8px;padding-bottom:4px;}
+  .p2.xcompact .p2-bottom{padding-top:9px;}
+  .p2.xcompact .tl-item{padding:7px 9px;}
+  .p2.xcompact .tl-txt{font-size:9.5px;}
+  .p2.xcompact .tl-sub{font-size:9px;}
+  .p2.xcompact .terms li{font-size:9.5px;margin-bottom:3px;line-height:1.38;}
+  .p2.xcompact .terms .t-head{font-size:10.5px;padding-top:8px;margin-bottom:5px;}
+  .p2.xcompact .footer{margin-top:0.16in;padding-top:10px;}
+
+  .p2-bottom{margin-top:auto;padding-top:14px;}
+  .timeline{
+    display:flex;gap:10px;margin-bottom:14px;
+  }
+  .tl-item{
+    flex:1;background:var(--lavender);border-radius:8px;
+    padding:10px 12px;
+  }
+  .tl-wk{font-weight:800;font-size:9.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--indigo);margin-bottom:4px;}
+  .tl-txt{font-size:10.5px;line-height:1.4;color:var(--navy);font-weight:700;}
+  .tl-sub{font-size:10px;line-height:1.4;color:var(--slate);font-weight:400;}
+
+  .terms{display:flex;gap:14px;}
+  .terms .col{flex:1;}
+  .terms .t-head{
+    font-weight:800;font-size:11.5px;color:var(--navy);
+    margin-bottom:7px;padding-top:10px;border-top:1.5px solid var(--grey);
+  }
+  .terms ul{list-style:none;}
+  .terms li{
+    font-size:10.5px;line-height:1.45;color:var(--slate);
+    padding-left:13px;position:relative;margin-bottom:4.5px;
+  }
+  .terms li:before{content:"\2013";position:absolute;left:0;color:var(--indigo);font-weight:700;}
+
+  /* ---------- screen chrome (hidden in print) ---------- */
+  @page{size:letter;margin:0;}
+  @media screen{
+    html,body{width:auto;}
+    body{background:#E6E9F4;}
+    .toolbar{position:sticky;top:0;z-index:50;background:var(--navy);color:#fff;
+      display:flex;align-items:center;gap:16px;padding:12px 22px;
+      font-size:13.5px;font-weight:700;}
+    .toolbar .tb-note{font-weight:400;opacity:.8;flex:1;font-size:12px;line-height:1.4;}
+    .toolbar a{color:#fff;text-decoration:none;opacity:.85;font-weight:700;white-space:nowrap;}
+    .toolbar button{background:var(--indigo);color:#fff;border:none;border-radius:7px;
+      padding:9px 16px;font-family:inherit;font-size:13px;font-weight:800;cursor:pointer;white-space:nowrap;}
+    .toolbar button:hover{background:#3a5be0;}
+    .page{margin:26px auto;background:#fff;box-shadow:0 6px 30px rgba(11,20,55,.18);}
+    .nodata{max-width:520px;margin:80px auto;background:#fff;border-radius:12px;padding:34px;
+      font-size:14.5px;line-height:1.6;color:var(--slate);}
+    .nodata b{color:var(--navy);display:block;font-size:18px;margin-bottom:8px;}
+    .nodata a{color:var(--indigo);font-weight:700;}
+  }
+  @media print{
+    .toolbar,.nodata{display:none !important;}
+    body{background:#fff;}
+    .page{margin:0;box-shadow:none;}
+  }
+</style>
+</head>
+<body>
+<div class="toolbar">
+  <span>Pilot brief</span>
+  <span class="tb-note">Download PDF opens your print dialog — choose “Save as PDF”, Letter size, margins None, and turn on background graphics.</span>
+  <a href="index.html">← Back to matcher</a>
+  <button onclick="window.print()">Download PDF</button>
+</div>
+<div class="nodata" id="nodata" style="display:none">
+  <b>No brief data found</b>
+  Run a franchise search in the matcher first, then click “Generate pilot brief”.
+  <a href="index.html">Open the matcher</a>
+</div>
+<div class="page">
+
+  <div class="eyebrow" id="eyebrow">AdSell.ai Local Presence Pilot &nbsp;·&nbsp; 90-Day Multi-Market Flight</div>
+  <h1>Your brand, inside the local publications your customers already trust.</h1>
+  <div class="support">The AdSell.ai Local Presence Pilot puts your brand in trusted local and community publications across your operating markets — print and digital — with one order, one payment, and a response report at the end.</div>
+
+  <div class="cols">
+    <div class="left">
+      <div class="body-copy">
+        Buying local media across many markets has meant separate negotiations with every
+        publication. The Local Presence Pilot replaces that with one campaign request through
+        AdSell.ai, the marketplace connecting advertiser demand with publisher inventory —
+        powered by Vision&nbsp;Data, the software local and community publishers have relied
+        on since 1973.
+      </div>
+
+      <div class="how-title">HOW IT WORKS</div>
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text"><b>Match.</b> We select trusted local and community publications aligned to your markets — the pilot books one publication in each of eight markets.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text"><b>Approve.</b> You approve the plan. Each publication reviews and approves your ad before it runs — your brand appears with the publication's consent, inside the pages their readers trust.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text"><b>Run.</b> A 90-day flight, managed end to end by the AdSell.ai team.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-text"><b>Count.</b> Promo codes, QR codes, and tracked numbers on every placement. You get a response report by market and publication — counted responses, plainly reported.</div>
+      </div>
+
+      <div class="honesty">
+        <b>Presence, not proximity.</b> Most digital advertising places your brand near a community
+        on the open web. The Local Presence Pilot places it inside the publications that community
+        already reads and trusts — with every placement reviewed and approved by the publication itself.
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="map-panel">
+        <svg id="usmap" viewBox="0 0 640 400"></svg>
+        <div class="map-legend" id="map-legend" style="display:none">
+          <span class="lg"><span class="dot dot-mkt"></span>Your markets</span>
+          <span class="lg"><span class="dot dot-pub"></span>Publications in reach</span>
+        </div>
+        <div class="map-caption" id="map-caption"><b>Your footprint, matched.</b> We map your operating markets against publication coverage and propose the flight — before you commit to anything.</div>
+      </div>
+
+      <div class="cost">
+        <b>What it costs</b>
+        One package price for the full flight — eight markets, eight publications, one per market. Additional publications and markets can be added. Design-partner terms available for a limited number of pilots this year.
+      </div>
+
+      <div class="cta">
+        <div class="cta-head">Request a market match</div>
+        <div class="cta-line">Send us your operating markets. We'll return the publication match and a single package price for your 90-day flight.</div>
+        <div class="cta-contact"><span style="white-space:nowrap">info@adsell.ai</span> &nbsp;·&nbsp; <span style="white-space:nowrap">(838) 240-4104</span> &nbsp;·&nbsp; <span style="white-space:nowrap">adsell.ai</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="wordmark"><svg id="a" xmlns="http://www.w3.org/2000/svg" class="wm" role="img" aria-label="AdSell.ai" viewBox="0 0 1063.45 219"><path d="M0,214.5L87,5.4h34.5l86.7,209.1h-51.3l-52.5-138.9-53.1,138.9H0ZM62.4,179.1l14.7-42h54.3l15.3,42H62.4Z" fill="#4a6cf7"/><path d="M257.79,217.8c-12.8,0-23.7-3.35-32.7-10.05-9-6.7-15.85-15.9-20.55-27.6-4.7-11.7-7.05-24.95-7.05-39.75,0-16.6,2.7-30.6,8.1-42s12.7-20.1,21.9-26.1c9.2-6,19.3-9,30.3-9,7,0,13.8,1.5,20.4,4.5s12.3,7.9,17.1,14.7c4.8,6.8,8,16.1,9.6,27.9l-8.1-6.6V5.4h45v209.1h-45v-36.6l9.3-9c-2.4,13.8-6.3,24.2-11.7,31.2-5.4,7-11.35,11.7-17.85,14.1-6.5,2.4-12.75,3.6-18.75,3.6ZM271.89,176.4c6.2,0,11.45-1.45,15.75-4.35,4.3-2.9,7.6-7.05,9.9-12.45,2.3-5.4,3.45-11.8,3.45-19.2s-1.15-13.75-3.45-19.05c-2.3-5.3-5.6-9.4-9.9-12.3-4.3-2.9-9.55-4.35-15.75-4.35s-11.2,1.4-15.6,4.2c-4.4,2.8-7.75,6.85-10.05,12.15-2.3,5.3-3.45,11.75-3.45,19.35s1.15,14.1,3.45,19.5c2.3,5.4,5.65,9.5,10.05,12.3,4.4,2.8,9.6,4.2,15.6,4.2Z" fill="#4a6cf7"/><path d="M431.7,219c-23.2,0-42.2-6-57-18-14.8-12-23.8-28-27-48l45.9-11.4c2.2,12,6.75,20.95,13.65,26.85,6.9,5.9,15.55,8.85,25.95,8.85,5.2,0,9.85-.8,13.95-2.4,4.1-1.6,7.35-4,9.75-7.2,2.4-3.2,3.6-7,3.6-11.4,0-4-1.2-7.55-3.6-10.65-2.4-3.1-6.3-6.1-11.7-9-5.4-2.9-12.6-6.05-21.6-9.45-14.2-5.6-25.8-11.55-34.8-17.85-9-6.3-15.6-13.55-19.8-21.75-4.2-8.2-6.3-17.6-6.3-28.2,0-11.6,2.85-21.85,8.55-30.75,5.7-8.9,13.7-15.9,24-21,10.3-5.1,22.25-7.65,35.85-7.65,14.6,0,27.55,3.35,38.85,10.05,11.3,6.7,20.35,16.85,27.15,30.45l-37.5,22.8c-3.8-7-8.25-12.35-13.35-16.05-5.1-3.7-10.65-5.55-16.65-5.55-3.6,0-6.9.7-9.9,2.1-3,1.4-5.4,3.35-7.2,5.85-1.8,2.5-2.7,5.45-2.7,8.85s1.05,6.6,3.15,9.6c2.1,3,5.95,6.05,11.55,9.15,5.6,3.1,13.4,6.55,23.4,10.35,13.4,5,24.45,10.5,33.15,16.5,8.7,6,15.25,12.95,19.65,20.85,4.4,7.9,6.6,17.35,6.6,28.35,0,12.8-3.15,24.15-9.45,34.05-6.3,9.9-15.1,17.65-26.4,23.25-11.3,5.6-24.55,8.4-39.75,8.4Z" fill="#4a6cf7"/><path d="M584.42,217.8c-13.6,0-25.2-2.15-34.8-6.45-9.6-4.3-17.4-10.1-23.4-17.4-6-7.3-10.35-15.5-13.05-24.6-2.7-9.1-4.05-18.45-4.05-28.05s1.35-18.4,4.05-27.6c2.7-9.2,6.9-17.6,12.6-25.2,5.7-7.6,13.2-13.7,22.5-18.3,9.3-4.6,20.55-6.9,33.75-6.9,11.6,0,21.8,1.95,30.6,5.85,8.8,3.9,16.15,9.35,22.05,16.35,5.9,7,10.35,15.3,13.35,24.9s4.5,20.1,4.5,31.5c0,2-.05,4.1-.15,6.3-.1,2.2-.35,4.9-.75,8.1h-97.2c1.2,8,4.95,13.8,11.25,17.4,6.3,3.6,13.55,5.4,21.75,5.4,7.2,0,14.6-1.25,22.2-3.75,7.6-2.5,14.2-5.95,19.8-10.35l19.2,31.8c-7.8,5.2-14.9,9.35-21.3,12.45-6.4,3.1-12.95,5.3-19.65,6.6-6.7,1.3-14.45,1.95-23.25,1.95ZM608.12,133.8c.4-1.6.75-3.2,1.05-4.8.3-1.6.45-3.1.45-4.5,0-3.8-.7-7.15-2.1-10.05-1.4-2.9-3.35-5.35-5.85-7.35-2.5-2-5.35-3.55-8.55-4.65-3.2-1.1-6.6-1.65-10.2-1.65-6.6,0-11.95,1.2-16.05,3.6-4.1,2.4-7.15,5.3-9.15,8.7-2,3.4-3.3,6.7-3.9,9.9h69.3l-15,10.8Z" fill="#4a6cf7"/><path d="M700.49,217.8c-10.8,0-19.9-3.25-27.3-9.75-7.4-6.5-11.1-16.85-11.1-31.05V5.4h45v162.6c0,3,.85,5.1,2.55,6.3,1.7,1.2,3.85,1.8,6.45,1.8,1.6,0,3.15-.15,4.65-.45,1.5-.3,3.05-.65,4.65-1.05v38.4c-4.6,1.8-9.05,3.05-13.35,3.75-4.3.7-8.15,1.05-11.55,1.05Z" fill="#4a6cf7"/><path d="M770.06,217.8c-10.8,0-19.9-3.25-27.3-9.75-7.4-6.5-11.1-16.85-11.1-31.05V5.4h45v162.6c0,3,.85,5.1,2.55,6.3,1.7,1.2,3.85,1.8,6.45,1.8,1.6,0,3.15-.15,4.65-.45,1.5-.3,3.05-.65,4.65-1.05v38.4c-4.6,1.8-9.05,3.05-13.35,3.75-4.3.7-8.15,1.05-11.55,1.05Z" fill="#4a6cf7"/><path d="M806.12,214.5v-42.6h46.2v42.6h-46.2Z" fill="#4a6cf7"/><path d="M919.34,217.8c-10.6,0-20.25-2.05-28.95-6.15-8.7-4.1-15.6-9.95-20.7-17.55-5.1-7.6-7.65-16.4-7.65-26.4,0-8.6,1.85-16.1,5.55-22.5,3.7-6.4,8.65-11.3,14.85-14.7,4.6-2.6,9.8-4.5,15.6-5.7,5.8-1.2,12-1.8,18.6-1.8h44.4v33.3h-37.8c-2.4,0-4.55.2-6.45.6-1.9.4-3.55,1.1-4.95,2.1-1.4,1-2.5,2.25-3.3,3.75-.8,1.5-1.2,3.15-1.2,4.95,0,4.2,1.75,7.55,5.25,10.05,3.5,2.5,8.15,3.75,13.95,3.75s10.75-1.15,15.45-3.45c4.7-2.3,8.45-5.45,11.25-9.45,2.8-4,4.2-8.6,4.2-13.8l9.6,25.5c-3.8,10.2-8.35,18-13.65,23.4-5.3,5.4-10.9,9.1-16.8,11.1-5.9,2-11.65,3-17.25,3ZM961.04,214.5l-3.6-17.4v-76.5c0-7-2.5-12-7.5-15-5-3-11.2-4.5-18.6-4.5-7.8,0-16.1,1.45-24.9,4.35-8.8,2.9-16.2,6.45-22.2,10.65l-19.2-31.8c11.8-7.8,23.25-13.25,34.35-16.35,11.1-3.1,23.05-4.65,35.85-4.65,21,0,37.45,5.15,49.35,15.45,11.9,10.3,17.85,24.25,17.85,41.85v93.9h-41.4Z" fill="#4a6cf7"/><path d="M1017.25,46.2V5.4h46.2v40.8h-46.2ZM1017.55,214.5V66.6h45.3v147.9h-45.3Z" fill="#4a6cf7"/></svg></div>
+    <div class="powered">Powered by <b>Vision Data</b> — publisher software since 1973</div>
+  </div>
+
+</div>
+
+<div class="page p2" id="page2" style="display:none">
+  <div class="eyebrow" id="p2-eyebrow">Market Match</div>
+  <h2 id="p2-head">The publications matched to your footprint.</h2>
+  <div class="p2-intro" id="p2-intro"></div>
+
+  <div id="p2-table"></div>
+
+  <div class="p2-bottom">
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-wk">Weeks 1–2</div><div class="tl-txt">Match &amp; proposal <span class="tl-sub">— final plan and one package price</span></div></div>
+      <div class="tl-item"><div class="tl-wk">Weeks 3–4</div><div class="tl-txt">Creative &amp; approvals <span class="tl-sub">— each publication reviews your ad</span></div></div>
+      <div class="tl-item"><div class="tl-wk">Weeks 5–17</div><div class="tl-txt">90-day flight <span class="tl-sub">— managed end to end</span></div></div>
+      <div class="tl-item"><div class="tl-wk">Weeks 18–19</div><div class="tl-txt">Response report <span class="tl-sub">— and the flight-two decision</span></div></div>
+    </div>
+
+    <div class="terms">
+      <div class="col">
+        <div class="t-head">What's included</div>
+        <ul>
+          <li>Placement negotiation and booking through the AdSell.ai marketplace</li>
+          <li>Creative trafficked to each publication's specifications</li>
+          <li>Publication review and approval, managed for you</li>
+          <li>One order, one invoice, one point of contact</li>
+          <li>Promo codes, QR codes, and tracked numbers on every placement</li>
+          <li>End-of-flight response report by market and publication</li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="t-head">What we don't claim</div>
+        <ul>
+          <li>We report counted responses — not exact attribution, and not real-time ROI tracking</li>
+          <li>Market-level lift measurement is in development on our roadmap; when available it will be directional, statistically-backed lift against matched control markets — and we'll label it that way</li>
+          <li>No guaranteed response, revenue, or performance — in local media or anywhere else, no one can honestly promise that</li>
+          <li>Final availability, positioning, and rates are confirmed with each publication at proposal</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="wordmark"><svg id="a" xmlns="http://www.w3.org/2000/svg" class="wm" role="img" aria-label="AdSell.ai" viewBox="0 0 1063.45 219"><path d="M0,214.5L87,5.4h34.5l86.7,209.1h-51.3l-52.5-138.9-53.1,138.9H0ZM62.4,179.1l14.7-42h54.3l15.3,42H62.4Z" fill="#4a6cf7"/><path d="M257.79,217.8c-12.8,0-23.7-3.35-32.7-10.05-9-6.7-15.85-15.9-20.55-27.6-4.7-11.7-7.05-24.95-7.05-39.75,0-16.6,2.7-30.6,8.1-42s12.7-20.1,21.9-26.1c9.2-6,19.3-9,30.3-9,7,0,13.8,1.5,20.4,4.5s12.3,7.9,17.1,14.7c4.8,6.8,8,16.1,9.6,27.9l-8.1-6.6V5.4h45v209.1h-45v-36.6l9.3-9c-2.4,13.8-6.3,24.2-11.7,31.2-5.4,7-11.35,11.7-17.85,14.1-6.5,2.4-12.75,3.6-18.75,3.6ZM271.89,176.4c6.2,0,11.45-1.45,15.75-4.35,4.3-2.9,7.6-7.05,9.9-12.45,2.3-5.4,3.45-11.8,3.45-19.2s-1.15-13.75-3.45-19.05c-2.3-5.3-5.6-9.4-9.9-12.3-4.3-2.9-9.55-4.35-15.75-4.35s-11.2,1.4-15.6,4.2c-4.4,2.8-7.75,6.85-10.05,12.15-2.3,5.3-3.45,11.75-3.45,19.35s1.15,14.1,3.45,19.5c2.3,5.4,5.65,9.5,10.05,12.3,4.4,2.8,9.6,4.2,15.6,4.2Z" fill="#4a6cf7"/><path d="M431.7,219c-23.2,0-42.2-6-57-18-14.8-12-23.8-28-27-48l45.9-11.4c2.2,12,6.75,20.95,13.65,26.85,6.9,5.9,15.55,8.85,25.95,8.85,5.2,0,9.85-.8,13.95-2.4,4.1-1.6,7.35-4,9.75-7.2,2.4-3.2,3.6-7,3.6-11.4,0-4-1.2-7.55-3.6-10.65-2.4-3.1-6.3-6.1-11.7-9-5.4-2.9-12.6-6.05-21.6-9.45-14.2-5.6-25.8-11.55-34.8-17.85-9-6.3-15.6-13.55-19.8-21.75-4.2-8.2-6.3-17.6-6.3-28.2,0-11.6,2.85-21.85,8.55-30.75,5.7-8.9,13.7-15.9,24-21,10.3-5.1,22.25-7.65,35.85-7.65,14.6,0,27.55,3.35,38.85,10.05,11.3,6.7,20.35,16.85,27.15,30.45l-37.5,22.8c-3.8-7-8.25-12.35-13.35-16.05-5.1-3.7-10.65-5.55-16.65-5.55-3.6,0-6.9.7-9.9,2.1-3,1.4-5.4,3.35-7.2,5.85-1.8,2.5-2.7,5.45-2.7,8.85s1.05,6.6,3.15,9.6c2.1,3,5.95,6.05,11.55,9.15,5.6,3.1,13.4,6.55,23.4,10.35,13.4,5,24.45,10.5,33.15,16.5,8.7,6,15.25,12.95,19.65,20.85,4.4,7.9,6.6,17.35,6.6,28.35,0,12.8-3.15,24.15-9.45,34.05-6.3,9.9-15.1,17.65-26.4,23.25-11.3,5.6-24.55,8.4-39.75,8.4Z" fill="#4a6cf7"/><path d="M584.42,217.8c-13.6,0-25.2-2.15-34.8-6.45-9.6-4.3-17.4-10.1-23.4-17.4-6-7.3-10.35-15.5-13.05-24.6-2.7-9.1-4.05-18.45-4.05-28.05s1.35-18.4,4.05-27.6c2.7-9.2,6.9-17.6,12.6-25.2,5.7-7.6,13.2-13.7,22.5-18.3,9.3-4.6,20.55-6.9,33.75-6.9,11.6,0,21.8,1.95,30.6,5.85,8.8,3.9,16.15,9.35,22.05,16.35,5.9,7,10.35,15.3,13.35,24.9s4.5,20.1,4.5,31.5c0,2-.05,4.1-.15,6.3-.1,2.2-.35,4.9-.75,8.1h-97.2c1.2,8,4.95,13.8,11.25,17.4,6.3,3.6,13.55,5.4,21.75,5.4,7.2,0,14.6-1.25,22.2-3.75,7.6-2.5,14.2-5.95,19.8-10.35l19.2,31.8c-7.8,5.2-14.9,9.35-21.3,12.45-6.4,3.1-12.95,5.3-19.65,6.6-6.7,1.3-14.45,1.95-23.25,1.95ZM608.12,133.8c.4-1.6.75-3.2,1.05-4.8.3-1.6.45-3.1.45-4.5,0-3.8-.7-7.15-2.1-10.05-1.4-2.9-3.35-5.35-5.85-7.35-2.5-2-5.35-3.55-8.55-4.65-3.2-1.1-6.6-1.65-10.2-1.65-6.6,0-11.95,1.2-16.05,3.6-4.1,2.4-7.15,5.3-9.15,8.7-2,3.4-3.3,6.7-3.9,9.9h69.3l-15,10.8Z" fill="#4a6cf7"/><path d="M700.49,217.8c-10.8,0-19.9-3.25-27.3-9.75-7.4-6.5-11.1-16.85-11.1-31.05V5.4h45v162.6c0,3,.85,5.1,2.55,6.3,1.7,1.2,3.85,1.8,6.45,1.8,1.6,0,3.15-.15,4.65-.45,1.5-.3,3.05-.65,4.65-1.05v38.4c-4.6,1.8-9.05,3.05-13.35,3.75-4.3.7-8.15,1.05-11.55,1.05Z" fill="#4a6cf7"/><path d="M770.06,217.8c-10.8,0-19.9-3.25-27.3-9.75-7.4-6.5-11.1-16.85-11.1-31.05V5.4h45v162.6c0,3,.85,5.1,2.55,6.3,1.7,1.2,3.85,1.8,6.45,1.8,1.6,0,3.15-.15,4.65-.45,1.5-.3,3.05-.65,4.65-1.05v38.4c-4.6,1.8-9.05,3.05-13.35,3.75-4.3.7-8.15,1.05-11.55,1.05Z" fill="#4a6cf7"/><path d="M806.12,214.5v-42.6h46.2v42.6h-46.2Z" fill="#4a6cf7"/><path d="M919.34,217.8c-10.6,0-20.25-2.05-28.95-6.15-8.7-4.1-15.6-9.95-20.7-17.55-5.1-7.6-7.65-16.4-7.65-26.4,0-8.6,1.85-16.1,5.55-22.5,3.7-6.4,8.65-11.3,14.85-14.7,4.6-2.6,9.8-4.5,15.6-5.7,5.8-1.2,12-1.8,18.6-1.8h44.4v33.3h-37.8c-2.4,0-4.55.2-6.45.6-1.9.4-3.55,1.1-4.95,2.1-1.4,1-2.5,2.25-3.3,3.75-.8,1.5-1.2,3.15-1.2,4.95,0,4.2,1.75,7.55,5.25,10.05,3.5,2.5,8.15,3.75,13.95,3.75s10.75-1.15,15.45-3.45c4.7-2.3,8.45-5.45,11.25-9.45,2.8-4,4.2-8.6,4.2-13.8l9.6,25.5c-3.8,10.2-8.35,18-13.65,23.4-5.3,5.4-10.9,9.1-16.8,11.1-5.9,2-11.65,3-17.25,3ZM961.04,214.5l-3.6-17.4v-76.5c0-7-2.5-12-7.5-15-5-3-11.2-4.5-18.6-4.5-7.8,0-16.1,1.45-24.9,4.35-8.8,2.9-16.2,6.45-22.2,10.65l-19.2-31.8c11.8-7.8,23.25-13.25,34.35-16.35,11.1-3.1,23.05-4.65,35.85-4.65,21,0,37.45,5.15,49.35,15.45,11.9,10.3,17.85,24.25,17.85,41.85v93.9h-41.4Z" fill="#4a6cf7"/><path d="M1017.25,46.2V5.4h46.2v40.8h-46.2ZM1017.55,214.5V66.6h45.3v147.9h-45.3Z" fill="#4a6cf7"/></svg></div>
+    <div class="powered">Powered by <b>Vision Data</b> — publisher software since 1973</div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const us = window.US_DATA;
+  const states = topojson.feature(us, us.objects.states);
+  const svg = d3.select("#usmap");
+
+  // Default example footprint (southeast regional chain); overridden by prospect-data.js
+  let markets = [
+    [-77.95, 34.24], [-78.64, 35.78], [-80.84, 35.23], [-79.79, 36.07],
+    [-81.03, 34.00], [-79.93, 32.78], [-84.39, 33.75], [-81.66, 30.33],
+    [-86.80, 36.16], [-77.44, 37.54]
+  ];
+
+  let P = null;
+  try { P = JSON.parse(sessionStorage.getItem("adsell_brief") || "null"); } catch (e) {}
+  if (!P || !P.markets || !P.markets.length) {
+    document.getElementById("nodata").style.display = "block";
+    document.querySelectorAll(".page").forEach(function(el){ el.style.display = "none"; });
+    window.__mapReady = true;
+    return;
+  }
+  document.title = "AdSell.ai Local Presence Pilot \u2014 " + P.name;
+  const pubs = (P && P.pubs) ? P.pubs.map(p => [p.lon, p.lat]) : [];
+  if (P && P.markets && P.markets.length) {
+    markets = P.markets.map(m => [m.lon, m.lat]);
+    document.getElementById("eyebrow").innerHTML =
+      "AdSell.ai Local Presence Pilot &nbsp;\u00b7&nbsp; Prepared for " + P.name;
+    let cap = "<b>" + P.name + "'s footprint, matched.</b> " + P.markets.length +
+      " operating markets";
+    if (pubs.length) {
+      cap += " \u00b7 " + pubs.length +
+        " trusted local and community publication" + (pubs.length > 1 ? "s" : "") +
+        " in reach";
+    }
+    cap += " \u2014 we propose the flight before you commit to anything.";
+    document.getElementById("map-caption").innerHTML = cap;
+  }
+
+  // Auto-zoom: tight regional footprints get a regional crop; wide ones get the national view.
+  const fitPts = markets.concat(pubs);
+  const lons = markets.map(m => m[0]), lats = markets.map(m => m[1]);
+  const lonSpan = d3.max(lons) - d3.min(lons);
+  const latSpan = d3.max(lats) - d3.min(lats);
+  const regional = lonSpan < 16 && latSpan < 10;
+
+  const proj = d3.geoAlbersUsa();
+  if (regional) {
+    proj.fitExtent(
+      [[70, 55], [570, 335]],
+      { type: "MultiPoint", coordinates: fitPts }
+    );
+  } else {
+    proj.fitSize([640, 380], states);
+  }
+  const path = d3.geoPath(proj);
+
+  svg.append("g").selectAll("path")
+    .data(states.features)
+    .join("path")
+    .attr("d", path)
+    .attr("fill", "#FFFFFF")
+    .attr("stroke", regional ? "#C5CBE3" : "#D9DDEE")
+    .attr("stroke-width", regional ? 1.1 : 0.8);
+
+  // State abbreviation labels (regional mode only, states visible in frame)
+  if (regional) {
+    const FIPS_ABBR = {"01":"AL","02":"AK","04":"AZ","05":"AR","06":"CA","08":"CO","09":"CT","10":"DE","11":"DC","12":"FL","13":"GA","15":"HI","16":"ID","17":"IL","18":"IN","19":"IA","20":"KS","21":"KY","22":"LA","23":"ME","24":"MD","25":"MA","26":"MI","27":"MN","28":"MS","29":"MO","30":"MT","31":"NE","32":"NV","33":"NH","34":"NJ","35":"NM","36":"NY","37":"NC","38":"ND","39":"OH","40":"OK","41":"OR","42":"PA","44":"RI","45":"SC","46":"SD","47":"TN","48":"TX","49":"UT","50":"VT","51":"VA","53":"WA","54":"WV","55":"WI","56":"WY"};
+    svg.append("g").selectAll("text")
+      .data(states.features.filter(f => {
+        const c = path.centroid(f);
+        return c[0] > 20 && c[0] < 620 && c[1] > 20 && c[1] < 365 && path.area(f) > 9000;
+      }))
+      .join("text")
+      .attr("x", f => path.centroid(f)[0])
+      .attr("y", f => path.centroid(f)[1])
+      .attr("text-anchor", "middle")
+      .attr("fill", "#B9BFD9")
+      .attr("font-family", "'Hanken Grotesk',sans-serif")
+      .attr("font-size", "19px")
+      .attr("font-weight", "700")
+      .attr("letter-spacing", "2.5px")
+      .text(f => FIPS_ABBR[f.id] || "");
+  }
+
+  const labeled = markets.map((m, i) => ({
+    xy: proj(m),
+    label: (P && P.markets && P.markets[i] && P.markets[i].label)
+      ? P.markets[i].label.replace(/,\s*[A-Z]{2}$/, "") : null
+  })).filter(d => d.xy);
+
+  const g = svg.append("g");
+
+  // Matched publication dots (beneath market pins)
+  const pubPts = pubs.map(p => proj(p)).filter(Boolean);
+  g.selectAll("circle.pub").data(pubPts).join("circle")
+    .attr("cx", d=>d[0]).attr("cy", d=>d[1]).attr("r", regional ? 3.4 : 2.6)
+    .attr("fill", "#0B1437").attr("stroke", "#FFFFFF").attr("stroke-width", 1.1);
+
+  g.selectAll("circle.halo").data(labeled).join("circle")
+    .attr("cx", d=>d.xy[0]).attr("cy", d=>d.xy[1]).attr("r", regional ? 11 : 9)
+    .attr("fill", "#4A6CF7").attr("opacity", 0.18);
+  g.selectAll("circle.pin").data(labeled).join("circle")
+    .attr("cx", d=>d.xy[0]).attr("cy", d=>d.xy[1]).attr("r", regional ? 5 : 4.2)
+    .attr("fill", "#4A6CF7").attr("stroke", "#FFFFFF").attr("stroke-width", 1.4);
+
+  if (P && pubs.length) {
+    const lg = document.getElementById("map-legend");
+    lg.style.display = "flex";
+  }
+
+  // Pin labels (regional mode, when market names are known)
+  if (regional && labeled.every(d => d.label) && labeled.length <= 14) {
+    const placed = [];
+    labeled.slice().sort((a,b) => a.xy[1] - b.xy[1]).forEach(d => {
+      const right = d.xy[0] < 480;
+      let lx = right ? d.xy[0] + 13 : d.xy[0] - 13;
+      let ly = d.xy[1] + 6;
+      // nudge down if overlapping a previously placed label on the same side
+      placed.forEach(p => {
+        if (Math.abs(p.ly - ly) < 22 && Math.abs(p.lx - lx) < 150) ly = p.ly + 22;
+      });
+      placed.push({lx, ly});
+      g.append("text")
+        .attr("x", lx).attr("y", ly)
+        .attr("text-anchor", right ? "start" : "end")
+        .attr("fill", "#0B1437")
+        .attr("font-family", "'Hanken Grotesk',sans-serif")
+        .attr("font-size", "17px")
+        .attr("font-weight", "700")
+        .attr("stroke", "#F8F9FF").attr("stroke-width", 4)
+        .attr("paint-order", "stroke")
+        .text(d.label);
+    });
+  }
+
+  // ---------- Page 2: market match appendix ----------
+  if (P && P.pubs && P.pubs.length) {
+    const page2 = document.getElementById("page2");
+    page2.style.display = "flex";
+    document.getElementById("p2-eyebrow").innerHTML =
+      "Market Match &nbsp;\u00b7&nbsp; Prepared for " + P.name;
+    document.getElementById("p2-intro").innerHTML =
+      "Every publication below is within " + Math.round(P.radius) +
+      " miles of one of <b>" + P.name + "</b>'s " + P.markets.length +
+      " operating markets. Each one reviews and approves your ad before it runs. " +
+      "The pilot books one publication per market \u2014 eight in the standard flight; " +
+      "the match below is your full available reach, and additional publications can " +
+      "be added. The final plan, positioning, and rates are confirmed with each " +
+      "publication in your proposal.";
+
+    const n = P.pubs.length;
+    const host = document.getElementById("p2-table");
+    if (n > 24) page2.classList.add("compact");
+
+    let pubRows = P.pubs, extra = 0;
+    if (pubRows.length > 46) { extra = pubRows.length - 44; pubRows = pubRows.slice(0, 44); }
+    let seen = {};
+    const rows = pubRows.map(p => {
+      const first = !seen[p.near]; seen[p.near] = true;
+      return "<tr" + (first ? " class='mkt-first'" : "") + ">" +
+        "<td class='pub'>" + p.name + "</td>" +
+        "<td>" + p.city + ", " + p.state + "</td>" +
+        "<td>" + p.near + "</td>" +
+        "<td class='num'>" + (p.near_mi === 0 ? "in market" : p.near_mi + " mi") + "</td>" +
+        "<td>" + (p.website || "\u2014") + "</td></tr>";
+    }).join("");
+    host.innerHTML =
+      "<table class='match'><thead><tr>" +
+      "<th>Publication</th><th>Home base</th><th>Nearest market</th>" +
+      "<th style='text-align:right'>Distance</th><th>Website</th>" +
+      "</tr></thead><tbody>" + rows + "</tbody></table>" +
+      (extra > 0 ? "<div style='font-size:10px;color:var(--slate);padding-top:6px'>+ " +
+        extra + " more publications in reach \u2014 full list provided at proposal.</div>" : "");
+  }
+
+  // Fit page 2 after fonts load, then signal ready for print.
+  document.fonts.ready.then(function(){
+    const page2 = document.getElementById("page2");
+    if (page2 && page2.style.display !== "none") {
+      const over = function(){
+        const bottom = page2.getBoundingClientRect().bottom;
+        let max = 0;
+        page2.querySelectorAll("*").forEach(function(el){
+          const b = el.getBoundingClientRect().bottom;
+          if (b > max) max = b;
+        });
+        return max > bottom + 0.5 || page2.scrollHeight > page2.clientHeight + 1;
+      };
+      if (over()) page2.classList.add("compact");
+      if (over()) page2.classList.add("xcompact");
+    }
+    window.__mapReady = true;
+  });
+})();
+</script>
+</body>
+</html>

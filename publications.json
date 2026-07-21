@@ -1,0 +1,2082 @@
+[
+ {
+  "name": "Anchorage Press",
+  "city": "Anchorage",
+  "state": "AK",
+  "lat": 61.1743,
+  "lon": -149.2843,
+  "website": "anchoragepress.com"
+ },
+ {
+  "name": "Mat-Su Valley Frontiersman",
+  "city": "Wasilla",
+  "state": "AK",
+  "lat": 61.5811,
+  "lon": -149.4608,
+  "website": "frontiersman.com"
+ },
+ {
+  "name": "Saline Courier",
+  "city": "Benton",
+  "state": "AR",
+  "lat": 34.5774,
+  "lon": -92.5726,
+  "website": "bentoncourier.com"
+ },
+ {
+  "name": "Ashley News Observer",
+  "city": "Crossett",
+  "state": "AR",
+  "lat": 33.1228,
+  "lon": -91.9581,
+  "website": "ashleynewsobserver.com"
+ },
+ {
+  "name": "Chicot County Spectator",
+  "city": "Crossett",
+  "state": "AR",
+  "lat": 33.1228,
+  "lon": -91.9581,
+  "website": "chicotnewspapers.com"
+ },
+ {
+  "name": "The Eudora Enterprise",
+  "city": "Crossett",
+  "state": "AR",
+  "lat": 33.1228,
+  "lon": -91.9581,
+  "website": "chicotnewspapers.com"
+ },
+ {
+  "name": "Dumas Clarion",
+  "city": "Dumas",
+  "state": "AR",
+  "lat": 33.8834,
+  "lon": -91.4856,
+  "website": "dumasclarion.com"
+ },
+ {
+  "name": "The Ashley County Ledger",
+  "city": "Hamburg",
+  "state": "AR",
+  "lat": 33.2248,
+  "lon": -91.7972,
+  "website": "ashleycountyledger.com"
+ },
+ {
+  "name": "Malvern Daily Record",
+  "city": "Malvern",
+  "state": "AR",
+  "lat": 34.3736,
+  "lon": -92.8213,
+  "website": "malvern-online.com"
+ },
+ {
+  "name": "The Mena Star",
+  "city": "Mena",
+  "state": "AR",
+  "lat": 34.5808,
+  "lon": -94.2371,
+  "website": "menastar.com"
+ },
+ {
+  "name": "San Pedro Valley News-Sun",
+  "city": "Benson",
+  "state": "AZ",
+  "lat": 31.9145,
+  "lon": -110.3286,
+  "website": "local.bensonnews-sun.com"
+ },
+ {
+  "name": "Bisbee Review",
+  "city": "Bisbee",
+  "state": "AZ",
+  "lat": 31.398,
+  "lon": -109.9318,
+  "website": "myheraldreview.com"
+ },
+ {
+  "name": "Casa Grande Valley",
+  "city": "Casa Grande",
+  "state": "AZ",
+  "lat": 32.9069,
+  "lon": -111.7635,
+  "website": "pinalcentral.com"
+ },
+ {
+  "name": "Copper Era",
+  "city": "Clifton",
+  "state": "AZ",
+  "lat": 33.0296,
+  "lon": -109.284,
+  "website": "eacourier.com"
+ },
+ {
+  "name": "Douglas Dispatch",
+  "city": "Douglas",
+  "state": "AZ",
+  "lat": 31.3993,
+  "lon": -109.5413,
+  "website": "myheraldreview.com/news/douglas"
+ },
+ {
+  "name": "Arizona Daily Sun",
+  "city": "Flagstaff",
+  "state": "AZ",
+  "lat": 35.1852,
+  "lon": -111.6207,
+  "website": "azdailysun.com"
+ },
+ {
+  "name": "Green Valley News & Sun",
+  "city": "Green Valley",
+  "state": "AZ",
+  "lat": 31.8408,
+  "lon": -111.0045,
+  "website": "gvnews.com"
+ },
+ {
+  "name": "Todays News-Herald",
+  "city": "Lake Havasu",
+  "state": "AZ",
+  "lat": 34.4839,
+  "lon": -114.3225,
+  "website": "havasunews.com"
+ },
+ {
+  "name": "Nogales International",
+  "city": "Nogales",
+  "state": "AZ",
+  "lat": 31.3619,
+  "lon": -110.9348,
+  "website": "nogalesinternational.com"
+ },
+ {
+  "name": "Parker Pioneer",
+  "city": "Parker",
+  "state": "AZ",
+  "lat": 34.034,
+  "lon": -114.2281,
+  "website": "havasunews.com/parker_pioneer"
+ },
+ {
+  "name": "Eastern Arizona Courier",
+  "city": "Safford",
+  "state": "AZ",
+  "lat": 32.8333,
+  "lon": -109.6974,
+  "website": "eacourier.com"
+ },
+ {
+  "name": "Sahuarita Sun",
+  "city": "Sahuarita",
+  "state": "AZ",
+  "lat": 31.9322,
+  "lon": -110.9654,
+  "website": "sahuaritasun.com"
+ },
+ {
+  "name": "Herald/Review",
+  "city": "Sierra Vista",
+  "state": "AZ",
+  "lat": 31.5654,
+  "lon": -110.3145,
+  "website": "myheraldreview.com"
+ },
+ {
+  "name": "Sierra Vista Herald",
+  "city": "Sierra Vista",
+  "state": "AZ",
+  "lat": 31.5654,
+  "lon": -110.3145,
+  "website": "myheraldreview.com"
+ },
+ {
+  "name": "The Weekly Bulletin",
+  "city": "Sonoita",
+  "state": "AZ",
+  "lat": 31.6656,
+  "lon": -110.6391,
+  "website": "nogalesinternational.com"
+ },
+ {
+  "name": "The Daily Territorial",
+  "city": "Tucson",
+  "state": "AZ",
+  "lat": 32.153,
+  "lon": -110.8708,
+  "website": "dailyterritorial.com"
+ },
+ {
+  "name": "Arizona Range News",
+  "city": "Willcox",
+  "state": "AZ",
+  "lat": 32.2518,
+  "lon": -109.8357,
+  "website": "myheraldreview.com"
+ },
+ {
+  "name": "Half Moon Bay Review",
+  "city": "Half Moon Bay",
+  "state": "CA",
+  "lat": 37.4673,
+  "lon": -122.4405,
+  "website": "coastsidenews.com"
+ },
+ {
+  "name": "Ledger Dispatch",
+  "city": "Jackson",
+  "state": "CA",
+  "lat": 38.3485,
+  "lon": -120.7728,
+  "website": "ledger.news"
+ },
+ {
+  "name": "Madera Tribune",
+  "city": "Madera",
+  "state": "CA",
+  "lat": 36.9658,
+  "lon": -120.0862,
+  "website": "maderatribune.com"
+ },
+ {
+  "name": "The Mountain Democrat",
+  "city": "Placerville",
+  "state": "CA",
+  "lat": 38.7311,
+  "lon": -120.7977,
+  "website": "mtdemocrat.com"
+ },
+ {
+  "name": "Montrose Daily Press",
+  "city": "Montrose",
+  "state": "CO",
+  "lat": 38.4688,
+  "lon": -107.8589,
+  "website": "montrosepress.com"
+ },
+ {
+  "name": "The Bristol Press",
+  "city": "Bristol",
+  "state": "CT",
+  "lat": 41.6816,
+  "lon": -72.9407,
+  "website": "bristolpress.com"
+ },
+ {
+  "name": "New Britain Herald",
+  "city": "New Britain",
+  "state": "CT",
+  "lat": 41.6766,
+  "lon": -72.7862,
+  "website": "newbritainherald.com"
+ },
+ {
+  "name": "New London",
+  "city": "New London",
+  "state": "CT",
+  "lat": 41.333,
+  "lon": -72.0962,
+  "website": "theday.com"
+ },
+ {
+  "name": "The Day",
+  "city": "New London",
+  "state": "CT",
+  "lat": 41.333,
+  "lon": -72.0962,
+  "website": "theday.com"
+ },
+ {
+  "name": "The Newtown Bee",
+  "city": "Newtown",
+  "state": "CT",
+  "lat": 41.4119,
+  "lon": -73.3119,
+  "website": "newtownbee.com"
+ },
+ {
+  "name": "Willimantic Chronicle",
+  "city": "Willimantic",
+  "state": "CT",
+  "lat": 41.7166,
+  "lon": -72.2117,
+  "website": "thechronicle.com"
+ },
+ {
+  "name": "Delaware State News",
+  "city": "Dover",
+  "state": "DE",
+  "lat": 39.1606,
+  "lon": -75.5217,
+  "website": "baytobaynews.com"
+ },
+ {
+  "name": "Nassau County Record",
+  "city": "Callahan",
+  "state": "FL",
+  "lat": 30.5654,
+  "lon": -81.8319,
+  "website": "nassaucountyrecord.com"
+ },
+ {
+  "name": "Fernandina Beach News Leader",
+  "city": "Fernandina Beach",
+  "state": "FL",
+  "lat": 30.6581,
+  "lon": -81.4515,
+  "website": "fbnewsleader.com"
+ },
+ {
+  "name": "Lake City Reporter",
+  "city": "Lake City",
+  "state": "FL",
+  "lat": 30.1886,
+  "lon": -82.6422,
+  "website": "lakecityreporter.com"
+ },
+ {
+  "name": "The Albany Herald",
+  "city": "Albany",
+  "state": "GA",
+  "lat": 31.5781,
+  "lon": -84.1762,
+  "website": "albanyherald.com"
+ },
+ {
+  "name": "Athens Banner-Herald",
+  "city": "Athens",
+  "state": "GA",
+  "lat": 33.9519,
+  "lon": -83.3576,
+  "website": "onlineathens.com"
+ },
+ {
+  "name": "Farmers and Consumers Market Bulletin",
+  "city": "Atlanta",
+  "state": "GA",
+  "lat": 33.7629,
+  "lon": -84.4227,
+  "website": "agr.georgia.gov/market-bulletin"
+ },
+ {
+  "name": "Georgia Market Bulletin",
+  "city": "Atlanta",
+  "state": "GA",
+  "lat": 33.7629,
+  "lon": -84.4227,
+  "website": "agr.georgia.gov/market-bulletin"
+ },
+ {
+  "name": "The Brunswick News",
+  "city": "Brunswick",
+  "state": "GA",
+  "lat": 31.1361,
+  "lon": -81.4669,
+  "website": "thebrunswicknews.com"
+ },
+ {
+  "name": "Calhoun Times",
+  "city": "Calhoun",
+  "state": "GA",
+  "lat": 34.4998,
+  "lon": -84.9331,
+  "website": "calhountimes.com"
+ },
+ {
+  "name": "Cherokee Tribune",
+  "city": "Canton",
+  "state": "GA",
+  "lat": 34.2472,
+  "lon": -84.4907,
+  "website": "cherokeetribune.com"
+ },
+ {
+  "name": "The Clayton Tribune",
+  "city": "Clayton",
+  "state": "GA",
+  "lat": 34.8766,
+  "lon": -83.4033,
+  "website": "theclaytontribune.com"
+ },
+ {
+  "name": "White County News",
+  "city": "Cleveland",
+  "state": "GA",
+  "lat": 34.597,
+  "lon": -83.7607,
+  "website": "whitecountynews.net"
+ },
+ {
+  "name": "The Northeast Georgian",
+  "city": "Cornelia",
+  "state": "GA",
+  "lat": 34.5166,
+  "lon": -83.5315,
+  "website": "thenortheastgeorgian.com"
+ },
+ {
+  "name": "The Dahlonega Nugget",
+  "city": "Dahlonega",
+  "state": "GA",
+  "lat": 34.5299,
+  "lon": -83.9796,
+  "website": "thedahloneganugget.com"
+ },
+ {
+  "name": "The Elberton Star",
+  "city": "Elberton",
+  "state": "GA",
+  "lat": 34.1068,
+  "lon": -82.8727,
+  "website": "elberton.com"
+ },
+ {
+  "name": "The Hartwell Sun",
+  "city": "Hartwell",
+  "state": "GA",
+  "lat": 34.3496,
+  "lon": -82.928,
+  "website": "hartwellsun.com"
+ },
+ {
+  "name": "The Press-Sentinel",
+  "city": "Jesup",
+  "state": "GA",
+  "lat": 31.5946,
+  "lon": -81.8957,
+  "website": "thepress-sentinel.com"
+ },
+ {
+  "name": "Franklin County Citizen-Leader",
+  "city": "Lavonia",
+  "state": "GA",
+  "lat": 34.4339,
+  "lon": -83.108,
+  "website": "franklincountycitizen.com"
+ },
+ {
+  "name": "Gwinnett Daily Post",
+  "city": "Lawrenceville",
+  "state": "GA",
+  "lat": 33.9529,
+  "lon": -83.9922,
+  "website": "gwinnettdailypost.com"
+ },
+ {
+  "name": "Marietta Daily Journal",
+  "city": "Marietta",
+  "state": "GA",
+  "lat": 33.9536,
+  "lon": -84.5425,
+  "website": "mdjonline.com"
+ },
+ {
+  "name": "Rome News-Tribune",
+  "city": "Rome",
+  "state": "GA",
+  "lat": 34.2661,
+  "lon": -85.1861,
+  "website": "northwestgeorgianews.com/rome"
+ },
+ {
+  "name": "Tribune & Georgian",
+  "city": "St. Marys",
+  "state": "GA",
+  "lat": 30.7542,
+  "lon": -81.5726,
+  "website": "tribune-georgian.com"
+ },
+ {
+  "name": "The McDuffie Progress",
+  "city": "Thomson",
+  "state": "GA",
+  "lat": 33.4693,
+  "lon": -82.4951,
+  "website": "mcduffieprogress.com"
+ },
+ {
+  "name": "The Toccoa Record",
+  "city": "Toccoa",
+  "state": "GA",
+  "lat": 34.5821,
+  "lon": -83.3272,
+  "website": "thetoccoarecord.com"
+ },
+ {
+  "name": "Monroe County News",
+  "city": "Albia",
+  "state": "IA",
+  "lat": 41.0265,
+  "lon": -92.8038,
+  "website": "albianews.com"
+ },
+ {
+  "name": "Moravia Union",
+  "city": "Albia",
+  "state": "IA",
+  "lat": 41.0265,
+  "lon": -92.8038,
+  "website": "albianews.com"
+ },
+ {
+  "name": "Cascade Pioneer",
+  "city": "Cascade",
+  "state": "IA",
+  "lat": 42.3018,
+  "lon": -91.0047,
+  "website": "cpioneer.com"
+ },
+ {
+  "name": "The Chariton Leader",
+  "city": "Chariton",
+  "state": "IA",
+  "lat": 41.0174,
+  "lon": -93.3096,
+  "website": "charitonleader.com"
+ },
+ {
+  "name": "Clinton Herald",
+  "city": "Clinton",
+  "state": "IA",
+  "lat": 41.8424,
+  "lon": -90.2428,
+  "website": "clintonherald.com"
+ },
+ {
+  "name": "Times-Republican",
+  "city": "Corydon",
+  "state": "IA",
+  "lat": 40.7579,
+  "lon": -93.3176,
+  "website": "corydontimes.com"
+ },
+ {
+  "name": "Creston News Advertiser",
+  "city": "Creston",
+  "state": "IA",
+  "lat": 41.0603,
+  "lon": -94.3647,
+  "website": "shawlocal.com/creston-news-advertiser"
+ },
+ {
+  "name": "Telegraph Herald",
+  "city": "Dubuque",
+  "state": "IA",
+  "lat": 42.4989,
+  "lon": -90.7073,
+  "website": "telegraphherald.com"
+ },
+ {
+  "name": "Dyersville Commercial",
+  "city": "Dyersville",
+  "state": "IA",
+  "lat": 42.4815,
+  "lon": -91.1166,
+  "website": "dyersvillecommercial.com"
+ },
+ {
+  "name": "Adair County Free Press",
+  "city": "Fontanelle",
+  "state": "IA",
+  "lat": 41.29,
+  "lon": -94.5602,
+  "website": "shawlocal.com/adair-county-free-press"
+ },
+ {
+  "name": "The Fontanelle Observer",
+  "city": "Fontanelle",
+  "state": "IA",
+  "lat": 41.29,
+  "lon": -94.5602,
+  "website": "shawlocal.com/fontanelle-observer"
+ },
+ {
+  "name": "Times Citizen Communication",
+  "city": "Iowa Falls",
+  "state": "IA",
+  "lat": 42.5192,
+  "lon": -93.2661,
+  "website": "tccadvertising.com"
+ },
+ {
+  "name": "Manchester Press",
+  "city": "Manchester",
+  "state": "IA",
+  "lat": 42.4853,
+  "lon": -91.4561,
+  "website": "manchesterpress.com"
+ },
+ {
+  "name": "Newton Daily News",
+  "city": "Newton",
+  "state": "IA",
+  "lat": 41.6963,
+  "lon": -93.0405,
+  "website": "newtondailynews.com"
+ },
+ {
+  "name": "Osceola Sentinel-Tribune",
+  "city": "Osceola",
+  "state": "IA",
+  "lat": 41.0297,
+  "lon": -93.7853,
+  "website": "shawlocal.com/osceola-sentinel-tribune"
+ },
+ {
+  "name": "The Weekly",
+  "city": "Osceola",
+  "state": "IA",
+  "lat": 41.0297,
+  "lon": -93.7853,
+  "website": "shawlocal.com/clarke-county-now"
+ },
+ {
+  "name": "The Oskaloosa Herald",
+  "city": "Oskaloosa",
+  "state": "IA",
+  "lat": 41.2922,
+  "lon": -92.6409,
+  "website": "oskaloosa.com"
+ },
+ {
+  "name": "Ottumwa Courier",
+  "city": "Ottumwa",
+  "state": "IA",
+  "lat": 41.0223,
+  "lon": -92.4233,
+  "website": "ottumwacourier.com"
+ },
+ {
+  "name": "Northwest Herald",
+  "city": "Crystal Lake",
+  "state": "IL",
+  "lat": 42.2332,
+  "lon": -88.3344,
+  "website": "shawlocal.com/northwest-herald"
+ },
+ {
+  "name": "Commercial-News",
+  "city": "Danville",
+  "state": "IL",
+  "lat": 40.1426,
+  "lon": -87.6107,
+  "website": "commercial-news.com"
+ },
+ {
+  "name": "Suburban Life",
+  "city": "Darien",
+  "state": "IL",
+  "lat": 41.7457,
+  "lon": -87.9815,
+  "website": "shawlocal.com/suburban-life"
+ },
+ {
+  "name": "Daily Chronicle",
+  "city": "DeKalb",
+  "state": "IL",
+  "lat": 41.9289,
+  "lon": -88.7464,
+  "website": "shawlocal.com/dekalb"
+ },
+ {
+  "name": "Northern Star",
+  "city": "DeKalb",
+  "state": "IL",
+  "lat": 41.9289,
+  "lon": -88.7464,
+  "website": "northernstar.info"
+ },
+ {
+  "name": "Telegraph",
+  "city": "Dixon",
+  "state": "IL",
+  "lat": 41.8448,
+  "lon": -89.4765,
+  "website": "shawlocal.com/sauk-valley"
+ },
+ {
+  "name": "Elburn Herald",
+  "city": "Elburn",
+  "state": "IL",
+  "lat": 41.886,
+  "lon": -88.4609,
+  "website": "shawlocal.com/kane-county-chronicle"
+ },
+ {
+  "name": "The Review",
+  "city": "Erie",
+  "state": "IL",
+  "lat": 41.6586,
+  "lon": -90.0813,
+  "website": "shawlocal.com/whiteside"
+ },
+ {
+  "name": "Fulton Journal",
+  "city": "Fulton",
+  "state": "IL",
+  "lat": 41.8652,
+  "lon": -90.1587,
+  "website": "shawlocal.com/whiteside"
+ },
+ {
+  "name": "Lake County Journal",
+  "city": "Grayslake",
+  "state": "IL",
+  "lat": 42.3408,
+  "lon": -88.0336,
+  "website": "shawlocal.com/lake-county-journal"
+ },
+ {
+  "name": "The Putnam County Record",
+  "city": "Hennepin",
+  "state": "IL",
+  "lat": 41.2505,
+  "lon": -89.3141,
+  "website": "shawlocal.com/illinois-valley"
+ },
+ {
+  "name": "The Herald-News",
+  "city": "Joliet",
+  "state": "IL",
+  "lat": 41.5177,
+  "lon": -88.1488,
+  "website": "shawlocal.com/herald-news"
+ },
+ {
+  "name": "Daily Journal (Kankakee)",
+  "city": "Kankakee",
+  "state": "IL",
+  "lat": 41.1017,
+  "lon": -87.8637,
+  "website": "daily-journal.com"
+ },
+ {
+  "name": "AgriNews",
+  "city": "LaSalle",
+  "state": "IL",
+  "lat": 41.3352,
+  "lon": -89.0972,
+  "website": "agrinews-pubs.com"
+ },
+ {
+  "name": "NewsTribune",
+  "city": "LaSalle",
+  "state": "IL",
+  "lat": 41.3352,
+  "lon": -89.0972,
+  "website": "shawlocal.com/illinois-valley"
+ },
+ {
+  "name": "The Mendota Reporter",
+  "city": "Mendota",
+  "state": "IL",
+  "lat": 41.5567,
+  "lon": -89.1005,
+  "website": "shawlocal.com/illinois-valley"
+ },
+ {
+  "name": "Morris Herald News",
+  "city": "Morris",
+  "state": "IL",
+  "lat": 41.3802,
+  "lon": -88.4243,
+  "website": "shawlocal.com/grundy-county-now"
+ },
+ {
+  "name": "Ogle County Life",
+  "city": "Oregon",
+  "state": "IL",
+  "lat": 42.0127,
+  "lon": -89.3358,
+  "website": "oglecountylife.com"
+ },
+ {
+  "name": "Oswego Ledger",
+  "city": "Oswego",
+  "state": "IL",
+  "lat": 41.6832,
+  "lon": -88.3388,
+  "website": "shawlocal.com/kendall-county-now"
+ },
+ {
+  "name": "Ottawa Times",
+  "city": "Ottawa",
+  "state": "IL",
+  "lat": 41.354,
+  "lon": -88.8234,
+  "website": "mywebtimes.com"
+ },
+ {
+  "name": "The Times",
+  "city": "Ottawa",
+  "state": "IL",
+  "lat": 41.354,
+  "lon": -88.8234,
+  "website": "shawlocal.com/illinois-valley"
+ },
+ {
+  "name": "Plano Record",
+  "city": "Plano",
+  "state": "IL",
+  "lat": 41.6804,
+  "lon": -88.5363,
+  "website": "shawlocal.com/kendall-county-now"
+ },
+ {
+  "name": "Bureau County Republican",
+  "city": "Princeton",
+  "state": "IL",
+  "lat": 41.3806,
+  "lon": -89.4641,
+  "website": "shawlocal.com/bureau-county-republican"
+ },
+ {
+  "name": "The Prophetstown Echo",
+  "city": "Prophetstown",
+  "state": "IL",
+  "lat": 41.6697,
+  "lon": -89.9347,
+  "website": "shawlocal.com/whiteside"
+ },
+ {
+  "name": "Rochelle News-Leader",
+  "city": "Rochelle",
+  "state": "IL",
+  "lat": 41.9191,
+  "lon": -89.0637,
+  "website": "shawlocal.com/ogle-county"
+ },
+ {
+  "name": "Sandwich Record",
+  "city": "Sandwich",
+  "state": "IL",
+  "lat": 41.6501,
+  "lon": -88.619,
+  "website": "shawlocal.com/kendall-county-now"
+ },
+ {
+  "name": "Kane County Chronicle",
+  "city": "St. Charles",
+  "state": "IL",
+  "lat": 41.9194,
+  "lon": -88.3107,
+  "website": "shawlocal.com/kane-county-chronicle"
+ },
+ {
+  "name": "Gazette",
+  "city": "Sterling",
+  "state": "IL",
+  "lat": 41.7997,
+  "lon": -89.6959,
+  "website": "shawlocal.com/sauk-valley"
+ },
+ {
+  "name": "Sauk Valley Weekend",
+  "city": "Sterling",
+  "state": "IL",
+  "lat": 41.7997,
+  "lon": -89.6959,
+  "website": "shawlocal.com/sauk-valley"
+ },
+ {
+  "name": "Whiteside News Sentinel",
+  "city": "Sterling",
+  "state": "IL",
+  "lat": 41.7997,
+  "lon": -89.6959,
+  "website": "shawlocal.com/whiteside"
+ },
+ {
+  "name": "The MidWeek",
+  "city": "Sycamore",
+  "state": "IL",
+  "lat": 41.9967,
+  "lon": -88.6776,
+  "website": "shawlocal.com/dekalb"
+ },
+ {
+  "name": "Kendall County Record",
+  "city": "Yorkville",
+  "state": "IL",
+  "lat": 41.6617,
+  "lon": -88.4286,
+  "website": "shawlocal.com/kendall-county-now"
+ },
+ {
+  "name": "The Herald Bulletin",
+  "city": "Anderson",
+  "state": "IN",
+  "lat": 40.0898,
+  "lon": -85.6894,
+  "website": "theheraldbulletin.com"
+ },
+ {
+  "name": "Culver Citizen",
+  "city": "Culver",
+  "state": "IN",
+  "lat": 41.2166,
+  "lon": -86.4243,
+  "website": "thepilotnews.com"
+ },
+ {
+  "name": "News and Tribune",
+  "city": "Jeffersonville",
+  "state": "IN",
+  "lat": 38.3324,
+  "lon": -85.6961,
+  "website": "newsandtribune.com"
+ },
+ {
+  "name": "The Leader",
+  "city": "Knox",
+  "state": "IN",
+  "lat": 41.291,
+  "lon": -86.6212,
+  "website": "thepilotnews.com"
+ },
+ {
+  "name": "The Review",
+  "city": "Knox",
+  "state": "IN",
+  "lat": 41.291,
+  "lon": -86.6212,
+  "website": "thepilotnews.com"
+ },
+ {
+  "name": "Kokomo Tribune",
+  "city": "Kokomo",
+  "state": "IN",
+  "lat": 40.464,
+  "lon": -86.1273,
+  "website": "kokomotribune.com"
+ },
+ {
+  "name": "Heartland News",
+  "city": "Nappanee, Wakarusa, Bremen, Bourbon",
+  "state": "IN",
+  "lat": 41.4428,
+  "lon": -86.0011,
+  "website": "thepilotnews.com"
+ },
+ {
+  "name": "The Pilot News",
+  "city": "Plymouth",
+  "state": "IN",
+  "lat": 41.3488,
+  "lon": -86.3193,
+  "website": "thepilotnews.com"
+ },
+ {
+  "name": "The Shopper",
+  "city": "Plymouth",
+  "state": "IN",
+  "lat": 41.3488,
+  "lon": -86.3193,
+  "website": "thepilotnews.com"
+ },
+ {
+  "name": "The Daily Independent",
+  "city": "Ashland",
+  "state": "KY",
+  "lat": 38.4595,
+  "lon": -82.6451,
+  "website": "dailyindependent.com"
+ },
+ {
+  "name": "Georgetown News-Graphic",
+  "city": "Georgetown",
+  "state": "KY",
+  "lat": 38.2602,
+  "lon": -84.5349,
+  "website": "news-graphic.com"
+ },
+ {
+  "name": "Hazard Herald",
+  "city": "Hazard",
+  "state": "KY",
+  "lat": 37.2605,
+  "lon": -83.1982,
+  "website": "hazard-herald.com"
+ },
+ {
+  "name": "The Murray Ledger & Times",
+  "city": "Murray",
+  "state": "KY",
+  "lat": 36.6142,
+  "lon": -88.3221,
+  "website": "murrayledger.com"
+ },
+ {
+  "name": "The Paintsville Herald",
+  "city": "Paintsville",
+  "state": "KY",
+  "lat": 37.8203,
+  "lon": -82.806,
+  "website": "paintsvilleherald.com"
+ },
+ {
+  "name": "Appalachian News-Express",
+  "city": "Pikeville",
+  "state": "KY",
+  "lat": 37.4769,
+  "lon": -82.5288,
+  "website": "news-expressky.com"
+ },
+ {
+  "name": "Floyd County Chronicle & Times",
+  "city": "Prestonsburg",
+  "state": "KY",
+  "lat": 37.6816,
+  "lon": -82.7659,
+  "website": "floydct.com"
+ },
+ {
+  "name": "Richmond Register",
+  "city": "Richmond",
+  "state": "KY",
+  "lat": 37.7291,
+  "lon": -84.2994,
+  "website": "richmondregister.com"
+ },
+ {
+  "name": "Commonwealth Journal",
+  "city": "Somerset",
+  "state": "KY",
+  "lat": 37.0865,
+  "lon": -84.6054,
+  "website": "somerset-kentucky.com"
+ },
+ {
+  "name": "The Era-Leader",
+  "city": "Franklinton",
+  "state": "LA",
+  "lat": 30.8482,
+  "lon": -90.1459,
+  "website": "era-leader.com"
+ },
+ {
+  "name": "Daily Iberian",
+  "city": "New Iberia",
+  "state": "LA",
+  "lat": 30.0055,
+  "lon": -91.8203,
+  "website": "thedailyiberian.com"
+ },
+ {
+  "name": "The Madison Journal",
+  "city": "Tallulah",
+  "state": "LA",
+  "lat": 32.4067,
+  "lon": -91.1917,
+  "website": "madisonjournal.com"
+ },
+ {
+  "name": "Sun Chronicle",
+  "city": "Attleboro",
+  "state": "MA",
+  "lat": 41.9317,
+  "lon": -71.2945,
+  "website": "thesunchronicle.com"
+ },
+ {
+  "name": "Gloucester Daily Times",
+  "city": "Gloucester",
+  "state": "MA",
+  "lat": 42.6288,
+  "lon": -70.6859,
+  "website": "gloucestertimes.com"
+ },
+ {
+  "name": "The Daily News of Newburyport",
+  "city": "Newburyport",
+  "state": "MA",
+  "lat": 42.8121,
+  "lon": -70.8866,
+  "website": "newburyportnews.com"
+ },
+ {
+  "name": "The Eagle-Tribune",
+  "city": "North Andover",
+  "state": "MA",
+  "lat": 42.6987,
+  "lon": -71.1351,
+  "website": "eagletribune.com"
+ },
+ {
+  "name": "The Salem News",
+  "city": "Salem",
+  "state": "MA",
+  "lat": 42.4992,
+  "lon": -70.8982,
+  "website": "salemnews.com"
+ },
+ {
+  "name": "Daily Times Chronicle",
+  "city": "Woburn",
+  "state": "MA",
+  "lat": 42.4887,
+  "lon": -71.1544,
+  "website": "homenewshere.com/daily_times_chronicle"
+ },
+ {
+  "name": "Cumberland Times-News",
+  "city": "Cumberland",
+  "state": "MD",
+  "lat": 39.6519,
+  "lon": -78.7584,
+  "website": "times-news.com"
+ },
+ {
+  "name": "The Globe (formerly Ironwood Daily Globe)",
+  "city": "Ironwood",
+  "state": "MI",
+  "lat": 46.4522,
+  "lon": -90.1504,
+  "website": "yourdailyglobe.com"
+ },
+ {
+  "name": "Traverse City Record-Eagle",
+  "city": "Traverse City",
+  "state": "MI",
+  "lat": 44.7543,
+  "lon": -85.603,
+  "website": "record-eagle.com"
+ },
+ {
+  "name": "Mankato Free Press",
+  "city": "Mankato",
+  "state": "MN",
+  "lat": 44.1711,
+  "lon": -93.9764,
+  "website": "mankatofreepress.com"
+ },
+ {
+  "name": "Outdoor News",
+  "city": "Plymouth",
+  "state": "MN",
+  "lat": 45.0223,
+  "lon": -93.4629,
+  "website": "outdoornews.com"
+ },
+ {
+  "name": "Press Publications",
+  "city": "White Bear Lk",
+  "state": "MN",
+  "lat": 45.0847,
+  "lon": -92.9966,
+  "website": "presspubs.com/white_bear"
+ },
+ {
+  "name": "The Ozark County Times",
+  "city": "Gainesville",
+  "state": "MO",
+  "lat": 36.6063,
+  "lon": -92.4246,
+  "website": "ozarkcountytimes.com"
+ },
+ {
+  "name": "Branson Tri Lakes News",
+  "city": "Hollister",
+  "state": "MO",
+  "lat": 36.6072,
+  "lon": -93.232,
+  "website": "bransontrilakesnews.com"
+ },
+ {
+  "name": "The Joplin Globe",
+  "city": "Joplin",
+  "state": "MO",
+  "lat": 37.0752,
+  "lon": -94.5013,
+  "website": "joplinglobe.com"
+ },
+ {
+  "name": "Lebanon Daily Record",
+  "city": "Lebanon",
+  "state": "MO",
+  "lat": 37.6721,
+  "lon": -92.6597,
+  "website": "laclederecord.com"
+ },
+ {
+  "name": "Missourian Media",
+  "city": "Washington",
+  "state": "MO",
+  "lat": 38.5519,
+  "lon": -91.0155,
+  "website": "missourian.com"
+ },
+ {
+  "name": "Washington Missourian",
+  "city": "Washington",
+  "state": "MO",
+  "lat": 38.5519,
+  "lon": -91.0155,
+  "website": "emissourian.com"
+ },
+ {
+  "name": "The Sun-Sentinel",
+  "city": "Charleston",
+  "state": "MS",
+  "lat": 34.0077,
+  "lon": -90.0552,
+  "website": "tallahatchienews.ms"
+ },
+ {
+  "name": "Clarksdale Press Register",
+  "city": "Clarksdale",
+  "state": "MS",
+  "lat": 34.1938,
+  "lon": -90.5686,
+  "website": "pressregister.com"
+ },
+ {
+  "name": "Columbian Progress",
+  "city": "Columbia",
+  "state": "MS",
+  "lat": 31.2569,
+  "lon": -89.8254,
+  "website": "columbianprogress.com"
+ },
+ {
+  "name": "Scott County Times",
+  "city": "Forest",
+  "state": "MS",
+  "lat": 32.3598,
+  "lon": -89.4759,
+  "website": "sctonline.net"
+ },
+ {
+  "name": "Delta Democrat Times",
+  "city": "Greenville",
+  "state": "MS",
+  "lat": 33.3835,
+  "lon": -91.0523,
+  "website": "ddtonline.com"
+ },
+ {
+  "name": "The Greenwood Commonwealth",
+  "city": "Greenwood",
+  "state": "MS",
+  "lat": 33.5125,
+  "lon": -90.199,
+  "website": "gwcommonwealth.com"
+ },
+ {
+  "name": "Grenada Star",
+  "city": "Grenada",
+  "state": "MS",
+  "lat": 33.7814,
+  "lon": -89.8115,
+  "website": "grenadastar.com"
+ },
+ {
+  "name": "Pine Belt News",
+  "city": "Hattiesburg",
+  "state": "MS",
+  "lat": 31.3073,
+  "lon": -89.3174,
+  "website": "hubcityspokes.com"
+ },
+ {
+  "name": "The Enterprise-Tocsin",
+  "city": "Indianola",
+  "state": "MS",
+  "lat": 33.4489,
+  "lon": -90.6438,
+  "website": "enterprise-tocsin.com"
+ },
+ {
+  "name": "The Northside Sun",
+  "city": "Jackson",
+  "state": "MS",
+  "lat": 32.3158,
+  "lon": -90.2129,
+  "website": "northsidesun.com"
+ },
+ {
+  "name": "The Star-Herald",
+  "city": "Kosciusko",
+  "state": "MS",
+  "lat": 33.0582,
+  "lon": -89.5894,
+  "website": "starherald.net"
+ },
+ {
+  "name": "Red Hills News",
+  "city": "Louisville",
+  "state": "MS",
+  "lat": 33.1229,
+  "lon": -89.0549,
+  "website": "redhillsmsnews.com"
+ },
+ {
+  "name": "Magee Courier-Simpson County News",
+  "city": "Magee",
+  "state": "MS",
+  "lat": 31.873,
+  "lon": -89.734,
+  "website": "simpsoncounty.ms"
+ },
+ {
+  "name": "Enterprise-Journal",
+  "city": "McComb",
+  "state": "MS",
+  "lat": 31.2445,
+  "lon": -90.4716,
+  "website": "enterprise-journal.com"
+ },
+ {
+  "name": "Clarke County Tribune",
+  "city": "Quitman",
+  "state": "MS",
+  "lat": 32.0415,
+  "lon": -88.7205,
+  "website": "clarkecountytrib.com"
+ },
+ {
+  "name": "Tate Record",
+  "city": "Senatobia",
+  "state": "MS",
+  "lat": 34.6086,
+  "lon": -89.981,
+  "website": "taterecord.com"
+ },
+ {
+  "name": "The Newton County Appeal",
+  "city": "Union",
+  "state": "MS",
+  "lat": 32.5711,
+  "lon": -89.1152,
+  "website": "newtoncountyappeal.com"
+ },
+ {
+  "name": "Stone County Enterprise",
+  "city": "Wiggins",
+  "state": "MS",
+  "lat": 30.856,
+  "lon": -89.139,
+  "website": "stonecountyenterprise.com"
+ },
+ {
+  "name": "Winona Times/Carroll Conservative",
+  "city": "Winona",
+  "state": "MS",
+  "lat": 33.4903,
+  "lon": -89.7293,
+  "website": "winonatimes.com"
+ },
+ {
+  "name": "The Yazoo Herald",
+  "city": "Yazoo City",
+  "state": "MS",
+  "lat": 32.8622,
+  "lon": -90.408,
+  "website": "yazooherald.net"
+ },
+ {
+  "name": "Sidney Herald",
+  "city": "Sidney",
+  "state": "MT",
+  "lat": 47.7155,
+  "lon": -104.1672,
+  "website": "sidneyherald.com"
+ },
+ {
+  "name": "Daily Herald",
+  "city": "Roanoke Rapids",
+  "state": "NC",
+  "lat": 36.446,
+  "lon": -77.6486,
+  "website": "rrdailyherald.com"
+ },
+ {
+  "name": "The Mountaineer",
+  "city": "Waynesville",
+  "state": "NC",
+  "lat": 35.4856,
+  "lon": -82.9993,
+  "website": "themountaineer.com"
+ },
+ {
+  "name": "Daily News",
+  "city": "Wahpeton",
+  "state": "ND",
+  "lat": 46.2721,
+  "lon": -96.6122,
+  "website": "wahpetondailynews.com"
+ },
+ {
+  "name": "Williston Herald",
+  "city": "Williston",
+  "state": "ND",
+  "lat": 48.1895,
+  "lon": -103.6491,
+  "website": "willistonherald.com"
+ },
+ {
+  "name": "Custer County Chief",
+  "city": "Broken Bow",
+  "state": "NE",
+  "lat": 41.4052,
+  "lon": -99.6408,
+  "website": "custercountychief.com"
+ },
+ {
+  "name": "Keene Publishing Corporation",
+  "city": "Keene",
+  "state": "NH",
+  "lat": 42.9538,
+  "lon": -72.3069,
+  "website": "sentinelsource.com"
+ },
+ {
+  "name": "Keene Sentinel",
+  "city": "Keene",
+  "state": "NH",
+  "lat": 42.9538,
+  "lon": -72.3069,
+  "website": "keenesentinel.com"
+ },
+ {
+  "name": "Laconia Daily Sun",
+  "city": "Laconia",
+  "state": "NH",
+  "lat": 43.5765,
+  "lon": -71.4823,
+  "website": "laconiadailysun.com"
+ },
+ {
+  "name": "Littleton Record",
+  "city": "Littleton",
+  "state": "NH",
+  "lat": 44.3308,
+  "lon": -71.7687,
+  "website": "caledonianrecord.com"
+ },
+ {
+  "name": "The NH Chronicle",
+  "city": "Manchester",
+  "state": "NH",
+  "lat": 42.9849,
+  "lon": -71.4441,
+  "website": "wmur.com/chronicle"
+ },
+ {
+  "name": "The Conway Daily Sun",
+  "city": "North Conway",
+  "state": "NH",
+  "lat": 44.0357,
+  "lon": -71.1172,
+  "website": "conwaydailysun.com"
+ },
+ {
+  "name": "El Especialito",
+  "city": "Union City",
+  "state": "NJ",
+  "lat": 40.7674,
+  "lon": -74.0323,
+  "website": "elespecial.com"
+ },
+ {
+  "name": "Clovis News-Journal",
+  "city": "Clovis",
+  "state": "NM",
+  "lat": 34.4386,
+  "lon": -103.1942,
+  "website": "easternnewmexiconews.com"
+ },
+ {
+  "name": "Eastern New Mexico News",
+  "city": "Clovis",
+  "state": "NM",
+  "lat": 34.4386,
+  "lon": -103.1942,
+  "website": "easternnewmexiconews.com"
+ },
+ {
+  "name": "Capital Region Ind. Media",
+  "city": "Clifton Park",
+  "state": "NY",
+  "lat": 42.8623,
+  "lon": -73.7727,
+  "website": "theupstater.com"
+ },
+ {
+  "name": "The Spotlight",
+  "city": "Clifton Park",
+  "state": "NY",
+  "lat": 42.8623,
+  "lon": -73.7727,
+  "website": "spotlightnews.com"
+ },
+ {
+  "name": "Cortland Standard Printing",
+  "city": "Cortland",
+  "state": "NY",
+  "lat": 42.6009,
+  "lon": -76.1791,
+  "website": "samplenewsgroup.com"
+ },
+ {
+  "name": "Denton Publications",
+  "city": "Elizabethtown",
+  "state": "NY",
+  "lat": 44.2261,
+  "lon": -73.5889,
+  "website": "suncommunitynews.com"
+ },
+ {
+  "name": "Neighbor Newspapers",
+  "city": "Farmingdale",
+  "state": "NY",
+  "lat": 40.7328,
+  "lon": -73.4468,
+  "website": "longislandmediagroup.com"
+ },
+ {
+  "name": "The Valley News",
+  "city": "Fulton",
+  "state": "NY",
+  "lat": 43.3192,
+  "lon": -76.4197,
+  "website": "oswegocountynewsnow.com"
+ },
+ {
+  "name": "Our Towne",
+  "city": "Hyde Park",
+  "state": "NY",
+  "lat": 41.7836,
+  "lon": -73.9347,
+  "website": "ourtowne.net"
+ },
+ {
+  "name": "The National Herald",
+  "city": "L.I. City",
+  "state": "NY",
+  "lat": 40.7447,
+  "lon": -73.9485,
+  "website": "thenationalherald.com"
+ },
+ {
+  "name": "Ethnikos Kirix",
+  "city": "Long Island City",
+  "state": "NY",
+  "lat": 40.7447,
+  "lon": -73.9485,
+  "website": "ekirikas.com"
+ },
+ {
+  "name": "Oswego County News",
+  "city": "Mexico",
+  "state": "NY",
+  "lat": 43.4652,
+  "lon": -76.2326,
+  "website": "oswegocountynewsnow.com"
+ },
+ {
+  "name": "The Chief Leader",
+  "city": "New York",
+  "state": "NY",
+  "lat": 40.6627,
+  "lon": -73.9387,
+  "website": "thechiefleader.com"
+ },
+ {
+  "name": "The Niagara Gazette",
+  "city": "Niagara Falls",
+  "state": "NY",
+  "lat": 43.0928,
+  "lon": -79.0147,
+  "website": "niagara-gazette.com"
+ },
+ {
+  "name": "The Daily Star (Oneonta)",
+  "city": "Oneonta",
+  "state": "NY",
+  "lat": 42.4548,
+  "lon": -75.0669,
+  "website": "thedailystar.com"
+ },
+ {
+  "name": "The Oswego Shopper",
+  "city": "Oswego",
+  "state": "NY",
+  "lat": 43.4581,
+  "lon": -76.5037,
+  "website": "oswegocountynewsnow.com"
+ },
+ {
+  "name": "The Palladium-Times",
+  "city": "Oswego",
+  "state": "NY",
+  "lat": 43.4581,
+  "lon": -76.5037,
+  "website": "oswegocountynewsnow.com"
+ },
+ {
+  "name": "The Press Republican",
+  "city": "Plattsburgh",
+  "state": "NY",
+  "lat": 44.692,
+  "lon": -73.4583,
+  "website": "pressrepublican.com"
+ },
+ {
+  "name": "Capital Region Living",
+  "city": "Saratoga Springs",
+  "state": "NY",
+  "lat": 43.0677,
+  "lon": -73.7781,
+  "website": "crlmag.com"
+ },
+ {
+  "name": "Saratoga Living",
+  "city": "Saratoga Springs",
+  "state": "NY",
+  "lat": 43.0677,
+  "lon": -73.7781,
+  "website": "saratogaliving.com"
+ },
+ {
+  "name": "Chagrin Valley Times",
+  "city": "Chagrin Falls",
+  "state": "OH",
+  "lat": 41.431,
+  "lon": -81.389,
+  "website": "chagrinvalleytoday.com"
+ },
+ {
+  "name": "Geauga Times Courier",
+  "city": "Chardon",
+  "state": "OH",
+  "lat": 41.5793,
+  "lon": -81.2091,
+  "website": "chagrinvalleytoday.com"
+ },
+ {
+  "name": "Community Post",
+  "city": "Minster",
+  "state": "OH",
+  "lat": 40.3948,
+  "lon": -84.3789,
+  "website": "minstercommunitypost.com"
+ },
+ {
+  "name": "Douthit Communications",
+  "city": "Sandusky",
+  "state": "OH",
+  "lat": 41.4559,
+  "lon": -82.7144,
+  "website": "westlifenews.com"
+ },
+ {
+  "name": "Shelby Daily Globe",
+  "city": "Shelby",
+  "state": "OH",
+  "lat": 40.8851,
+  "lon": -82.6583,
+  "website": "sdgnewsgroup.com"
+ },
+ {
+  "name": "Solon Times",
+  "city": "Solon",
+  "state": "OH",
+  "lat": 41.386,
+  "lon": -81.4408,
+  "website": "chagrinvalleytoday.com"
+ },
+ {
+  "name": "The Evening Leader",
+  "city": "St. Marys",
+  "state": "OH",
+  "lat": 40.5476,
+  "lon": -84.3923,
+  "website": "theeveningleader.com"
+ },
+ {
+  "name": "Wapakoneta Daily News",
+  "city": "Wapakoneta",
+  "state": "OH",
+  "lat": 40.5652,
+  "lon": -84.1907,
+  "website": "wapakdailynews.com"
+ },
+ {
+  "name": "Enid News & Eagle",
+  "city": "Enid",
+  "state": "OK",
+  "lat": 36.4067,
+  "lon": -97.8699,
+  "website": "enidnews.com"
+ },
+ {
+  "name": "Guymon Daily Herald",
+  "city": "Guymon",
+  "state": "OK",
+  "lat": 36.6901,
+  "lon": -101.477,
+  "website": "guymondailyherald.com"
+ },
+ {
+  "name": "Poteau News & Sun",
+  "city": "Poteau",
+  "state": "OK",
+  "lat": 35.0667,
+  "lon": -94.6103,
+  "website": "poteaudailynews.com"
+ },
+ {
+  "name": "Argus Observer",
+  "city": "Ontario",
+  "state": "OR",
+  "lat": 44.025,
+  "lon": -116.9788,
+  "website": "argusobserver.com"
+ },
+ {
+  "name": "The News-Review",
+  "city": "Roseburg",
+  "state": "OR",
+  "lat": 43.2236,
+  "lon": -123.352,
+  "website": "nrtoday.com"
+ },
+ {
+  "name": "Butler Eagle",
+  "city": "Butler",
+  "state": "PA",
+  "lat": 40.8616,
+  "lon": -79.8962,
+  "website": "butlereagle.com"
+ },
+ {
+  "name": "The Tribune-Democrat",
+  "city": "Johnstown",
+  "state": "PA",
+  "lat": 40.3261,
+  "lon": -78.9191,
+  "website": "tribdem.com"
+ },
+ {
+  "name": "Morning Times",
+  "city": "Sayre",
+  "state": "PA",
+  "lat": 41.9857,
+  "lon": -76.5208,
+  "website": "morning-times.com"
+ },
+ {
+  "name": "Towanda Printing Company",
+  "city": "Sayre",
+  "state": "PA",
+  "lat": 41.9857,
+  "lon": -76.5208,
+  "website": "morning-times.com"
+ },
+ {
+  "name": "Scranton Times-Tribune",
+  "city": "Scranton",
+  "state": "PA",
+  "lat": 41.4042,
+  "lon": -75.6659,
+  "website": "thetimes-tribune.com"
+ },
+ {
+  "name": "News-Item",
+  "city": "Shamokin",
+  "state": "PA",
+  "lat": 40.7881,
+  "lon": -76.555,
+  "website": "newsitem.com"
+ },
+ {
+  "name": "The Herald",
+  "city": "Sharon",
+  "state": "PA",
+  "lat": 41.234,
+  "lon": -80.4998,
+  "website": "sharonherald.com"
+ },
+ {
+  "name": "The Daily Review",
+  "city": "Towanda",
+  "state": "PA",
+  "lat": 41.7709,
+  "lon": -76.4465,
+  "website": "thedailyreview.com"
+ },
+ {
+  "name": "Coventry Courier",
+  "city": "Coventry",
+  "state": "RI",
+  "lat": 41.7001,
+  "lon": -71.6617,
+  "website": "mediapost.com/publications/article/388524/two-rhode-island-weeklies-set-to-close.html?edition="
+ },
+ {
+  "name": "Block Island Times",
+  "city": "New Shoreham",
+  "state": "RI",
+  "lat": 41.1721,
+  "lon": -71.5583,
+  "website": "blockislandtimes.com"
+ },
+ {
+  "name": "Standard Times",
+  "city": "North Kingstown",
+  "state": "RI",
+  "lat": 41.5501,
+  "lon": -71.4662,
+  "website": "southkingstownri.gov/1385/americas-newspapers---online-newspapers"
+ },
+ {
+  "name": "The Times",
+  "city": "Pawtucket",
+  "state": "RI",
+  "lat": 41.8748,
+  "lon": -71.3733,
+  "website": "pawtuckettimes.com"
+ },
+ {
+  "name": "Narragansett Times",
+  "city": "Wakefield",
+  "state": "RI",
+  "lat": 41.431,
+  "lon": -71.5009,
+  "website": "facebook.com/srinewspapers"
+ },
+ {
+  "name": "Southern RI Newspapers",
+  "city": "Wakefield",
+  "state": "RI",
+  "lat": 41.431,
+  "lon": -71.5009,
+  "website": "ricentral.com"
+ },
+ {
+  "name": "The Independent",
+  "city": "Wakefield",
+  "state": "RI",
+  "lat": 41.431,
+  "lon": -71.5009,
+  "website": "independentri.com"
+ },
+ {
+  "name": "The Westerly Sun",
+  "city": "Westerly",
+  "state": "RI",
+  "lat": 41.3733,
+  "lon": -71.8068,
+  "website": "thewesterlysun.com"
+ },
+ {
+  "name": "Call & Times",
+  "city": "Woonsocket",
+  "state": "RI",
+  "lat": 42.0017,
+  "lon": -71.4999,
+  "website": "woonsocketcall.com"
+ },
+ {
+  "name": "Madison Daily Leader",
+  "city": "Madison",
+  "state": "SD",
+  "lat": 44.0062,
+  "lon": -97.1085,
+  "website": "madisondailyleader.com"
+ },
+ {
+  "name": "Capital Journal",
+  "city": "Pierre",
+  "state": "SD",
+  "lat": 44.3752,
+  "lon": -100.32,
+  "website": "capjournal.com"
+ },
+ {
+  "name": "Press & Dakotan",
+  "city": "Yankton",
+  "state": "SD",
+  "lat": 42.8898,
+  "lon": -97.3927,
+  "website": "yankton.net"
+ },
+ {
+  "name": "Yankton Daily Press",
+  "city": "Yankton",
+  "state": "SD",
+  "lat": 42.8898,
+  "lon": -97.3927,
+  "website": "yankton.net"
+ },
+ {
+  "name": "Editor & Publisher",
+  "city": "Hendersonville",
+  "state": "TN",
+  "lat": 36.3073,
+  "lon": -86.5989,
+  "website": "editorandpublisher.com"
+ },
+ {
+  "name": "Big Spring Herald",
+  "city": "Big Spring",
+  "state": "TX",
+  "lat": 32.2383,
+  "lon": -101.4857,
+  "website": "bigspringherald.com"
+ },
+ {
+  "name": "Borger News-Herald",
+  "city": "Borger",
+  "state": "TX",
+  "lat": 35.6594,
+  "lon": -101.4024,
+  "website": "borgernewsherald.com"
+ },
+ {
+  "name": "Denton Media Company",
+  "city": "Denton",
+  "state": "TX",
+  "lat": 33.2174,
+  "lon": -97.1413,
+  "website": "dentonrc.com"
+ },
+ {
+  "name": "Moore County News Press",
+  "city": "Dumas",
+  "state": "TX",
+  "lat": 35.862,
+  "lon": -101.965,
+  "website": "moorenews.com"
+ },
+ {
+  "name": "The Huntsville Item",
+  "city": "Huntsville",
+  "state": "TX",
+  "lat": 30.7005,
+  "lon": -95.5549,
+  "website": "itemonline.com"
+ },
+ {
+  "name": "Sweetwater Reporter",
+  "city": "Sweetwater",
+  "state": "TX",
+  "lat": 32.4694,
+  "lon": -100.4087,
+  "website": "sweetwaterreporter.com"
+ },
+ {
+  "name": "Weatherford Democrat",
+  "city": "Weatherford",
+  "state": "TX",
+  "lat": 32.7532,
+  "lon": -97.7719,
+  "website": "weatherforddemocrat.com"
+ },
+ {
+  "name": "Womack Publishing",
+  "city": "Chatham",
+  "state": "VA",
+  "lat": 36.8119,
+  "lon": -79.4001,
+  "website": "womackpublishing.com"
+ },
+ {
+  "name": "The Caledonian-Record",
+  "city": "St Johnsbury",
+  "state": "VT",
+  "lat": 44.4304,
+  "lon": -72.0086,
+  "website": "caledonianrecord.com"
+ },
+ {
+  "name": "The Wenatchee World",
+  "city": "Wenatchee",
+  "state": "WA",
+  "lat": 47.436,
+  "lon": -120.3293,
+  "website": "wenatcheeworld.com"
+ },
+ {
+  "name": "Lakeland Times",
+  "city": "Minocqua",
+  "state": "WI",
+  "lat": 45.8792,
+  "lon": -89.7036,
+  "website": "lakelandtimes.com"
+ },
+ {
+  "name": "Unified Newspapers",
+  "city": "Oregon",
+  "state": "WI",
+  "lat": 42.9252,
+  "lon": -89.3891,
+  "website": "oregonobserver.com"
+ },
+ {
+  "name": "The Journal",
+  "city": "Platteville",
+  "state": "WI",
+  "lat": 42.7279,
+  "lon": -90.4681,
+  "website": "swnews4u.com"
+ },
+ {
+  "name": "Wisconsin Shopper",
+  "city": "Prairie du Chien",
+  "state": "WI",
+  "lat": 43.0433,
+  "lon": -91.1373,
+  "website": "facebook.com/p/shopping-news-wisconsin-iowa-100063480433476"
+ },
+ {
+  "name": "Richland Center Shopper",
+  "city": "Richland Center",
+  "state": "WI",
+  "lat": 43.3405,
+  "lon": -90.3834,
+  "website": "richlandcentershoppingnews.com"
+ },
+ {
+  "name": "The Register-Herald",
+  "city": "Beckley",
+  "state": "WV",
+  "lat": 37.7731,
+  "lon": -81.1616,
+  "website": "register-herald.com"
+ },
+ {
+  "name": "Bluefield Daily Telegraph",
+  "city": "Bluefield",
+  "state": "WV",
+  "lat": 37.2628,
+  "lon": -81.2113,
+  "website": "bdtonline.com"
+ },
+ {
+  "name": "The Mingo Messenger",
+  "city": "Delbarton",
+  "state": "WV",
+  "lat": 37.7052,
+  "lon": -82.1861,
+  "website": "mingomessenger.com"
+ },
+ {
+  "name": "Times West Virginian",
+  "city": "Fairmont",
+  "state": "WV",
+  "lat": 39.4769,
+  "lon": -80.1491,
+  "website": "timeswv.com"
+ },
+ {
+  "name": "The Dominion Post",
+  "city": "Morgantown",
+  "state": "WV",
+  "lat": 39.6375,
+  "lon": -79.9469,
+  "website": "dominionpostlive.com"
+ }
+]

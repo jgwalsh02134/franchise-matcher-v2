@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Franchise Footprint Matcher — AdSell.ai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <img class="wordmark" src="wordmark-blue.svg" alt="AdSell.ai" />
+      <span class="tool-title">Franchise Footprint Matcher</span>
+      <span class="tag">Internal tool</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Search -->
+    <div class="search-card">
+      <p class="search-lead">Enter a franchise or chain name. The tool finds every US location in OpenStreetMap and matches it against the AdSell.ai publication network.</p>
+      <div class="search-row">
+        <input id="franchise-input" type="text" placeholder="e.g. 7 Brew" autocomplete="off" />
+        <button id="go-btn" class="btn btn-primary">Go</button>
+      </div>
+      <div class="chips">
+        <span class="chips-label">Try:</span>
+        <button class="chip" data-q="7 Brew">7 Brew</button>
+        <button class="chip" data-q="Crumbl Cookies">Crumbl Cookies</button>
+        <button class="chip" data-q="Jersey Mike's">Jersey Mike's</button>
+        <button class="chip" data-q="Scooter's Coffee">Scooter's Coffee</button>
+        <button class="chip" data-q="Dutch Bros">Dutch Bros</button>
+      </div>
+      <div class="radius-control">
+        <span class="lbl">Coverage radius</span>
+        <span class="radius-btns">
+          <button data-r="20">20 mi</button>
+          <button data-r="30" class="active">30 mi</button>
+          <button data-r="40">40 mi</button>
+        </span>
+      </div>
+    </div>
+
+    <!-- Status -->
+    <div id="status" class="status hidden"></div>
+
+    <!-- Results -->
+    <div id="results" class="hidden">
+      <!-- KPIs -->
+      <div class="section">
+        <div id="kpi-row" class="kpi-row"></div>
+      </div>
+
+      <!-- Map -->
+      <div class="section">
+        <div class="section-title">Footprint map</div>
+        <div id="map"></div>
+        <div class="legend">
+          <span class="item"><span class="swatch navy"></span> Franchise location</span>
+          <span class="item"><span class="swatch indigo"></span> Publication</span>
+          <span class="item"><span class="swatch ring"></span> Suggested flight market</span>
+        </div>
+      </div>
+
+      <!-- Flight -->
+      <div class="section">
+        <div class="flight-card">
+          <div class="flight-head">
+            <div>
+              <h2>Suggested 8-market flight</h2>
+              <p class="flight-sub">Greedy maximum-coverage selection — each market adds the most new publications.</p>
+            </div>
+            <div class="flight-total" id="flight-total"></div>
+          </div>
+          <div class="flight-list" id="flight-list"></div>
+          <div class="copy-row">
+            <div class="copy-string" id="copy-string"></div>
+            <button id="copy-btn" class="btn btn-ghost">Copy market string</button>
+            <button id="brief-btn" class="btn btn-primary">Generate pilot brief</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Market table -->
+      <div class="section">
+        <div class="section-title">All markets</div>
+        <div class="table-wrap">
+          <table id="market-table">
+            <thead>
+              <tr>
+                <th data-key="label">Market</th>
+                <th data-key="state">State</th>
+                <th data-key="locations" class="num-col">Locations</th>
+                <th data-key="pubs" class="num-col">Pubs in reach</th>
+              </tr>
+            </thead>
+            <tbody id="market-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- State summary -->
+      <div class="section">
+        <div class="section-title">Per-state summary</div>
+        <div class="table-wrap">
+          <table id="state-table">
+            <thead>
+              <tr>
+                <th>State</th>
+                <th class="num-col">Locations</th>
+                <th class="num-col">Pubs in network</th>
+              </tr>
+            </thead>
+            <tbody id="state-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footnote -->
+    <p class="footnote">
+      Location data from OpenStreetMap and may undercount newer stores. A publication match means the publication's home base falls within the selected radius of a franchise location. It indicates reach, not a booking — final availability is confirmed at proposal. Publication counts are shown because this is an internal tool.
+      <span class="contact">AdSell.ai · info@adsell.ai · (838) 240-4104 · powered by Vision Data</span>
+    </p>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="app.js"></script>
+</body>
+</html>

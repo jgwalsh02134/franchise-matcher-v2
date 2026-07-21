@@ -728,6 +728,12 @@ function dmRenderPeople(people) {
   }).join('');
   document.getElementById('dm-results').classList.remove('hidden');
 
+  // Apollo masks last names / location / LinkedIn in search results on some
+  // plans; the enrich call made by Reveal returns the complete record.
+  if (people.some((p) => /\*/.test(p.name || ''))) {
+    dmStatus('Apollo masks some fields in search results \u2014 Reveal completes the name, location, LinkedIn, and email for that contact.');
+  }
+
   tbody.querySelectorAll('.dm-reveal').forEach((b) => {
     b.addEventListener('click', () => dmReveal(b));
   });
@@ -738,7 +744,8 @@ async function dmReveal(btn) {
   if (!window.confirm('Reveal this email? This uses 1 Apollo credit.')) return;
   btn.disabled = true;
   btn.textContent = 'Revealing\u2026';
-  const cell = btn.closest('td');
+  const row = btn.closest('tr');
+  const cells = row.children; // name, title, location, linkedin, email
   try {
     const resp = await fetch('/api/apollo/enrich', {
       method: 'POST',
@@ -747,12 +754,20 @@ async function dmReveal(btn) {
     });
     const data = await resp.json();
     if (resp.ok && data && data.available && data.email) {
-      cell.innerHTML = `<a href="mailto:${esc(data.email)}">${esc(data.email)}</a>`;
+      // enrich returns the un-obfuscated record — complete the whole row
+      if (data.name) cells[0].textContent = data.name;
+      if (data.title) cells[1].textContent = data.title;
+      const loc = [data.city, data.state].filter(Boolean).join(', ');
+      if (loc) cells[2].textContent = loc;
+      if (data.linkedin_url) {
+        cells[3].innerHTML = `<a class="dm-li" href="${esc(data.linkedin_url)}" target="_blank" rel="noopener" title="LinkedIn profile">${LINKEDIN_SVG}</a>`;
+      }
+      cells[4].innerHTML = `<a href="mailto:${esc(data.email)}">${esc(data.email)}</a>`;
     } else {
-      cell.innerHTML = '<span class="dm-muted">reveal failed</span>';
+      cells[4].innerHTML = '<span class="dm-muted">reveal failed</span>';
     }
   } catch (e) {
-    cell.innerHTML = '<span class="dm-muted">reveal failed</span>';
+    cells[4].innerHTML = '<span class="dm-muted">reveal failed</span>';
   }
 }
 

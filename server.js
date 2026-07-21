@@ -861,6 +861,8 @@ app.post("/api/apollo/enrich", async (req, res) => {
     );
     const p = data.person || {};
     logApollo("enrich", id, false, "ok");
+    // enrich returns the full record even on plans whose search results are
+    // obfuscated — pass along name/location/linkedin so the row can be completed
     res.json({
       available: true,
       name: p.name,
@@ -868,6 +870,8 @@ app.post("/api/apollo/enrich", async (req, res) => {
       email: p.email,
       email_status: p.email_status,
       linkedin_url: p.linkedin_url,
+      city: p.city,
+      state: p.state,
     });
   } catch (err) {
     if (err instanceof ApolloRateLimitError) {

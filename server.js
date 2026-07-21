@@ -434,13 +434,21 @@ async function geocodeCityState(city, state) {
 
 const GEOCODE_WARNING = "geocoding failed; saved with lat/lon null";
 
-app.use("/api/publications", express.json({ limit: "10mb" }), requireAuth);
+app.use("/api/publications", express.json({ limit: "10mb" }));
 
+// The list GET is public: the matcher frontend reads it, and the same data is
+// already served statically as publications.json. Everything else is gated.
 app.get("/api/publications", (req, res) => {
   res.json(publications);
 });
 
-app.get("/api/publications/export", (req, res) => {
+// Gate the manager page itself so the browser prompts for credentials on
+// navigation and reuses them for the page's API calls.
+app.get("/publications.html", requireAuth, (req, res) => {
+  res.sendFile(path.join(__dirname, "publications.html"));
+});
+
+app.get("/api/publications/export", requireAuth, (req, res) => {
   const date = new Date().toISOString().slice(0, 10);
   res.setHeader("Content-Type", "application/json");
   res.setHeader(
@@ -450,7 +458,7 @@ app.get("/api/publications/export", (req, res) => {
   res.send(JSON.stringify(publications, null, 2));
 });
 
-app.post("/api/publications", async (req, res) => {
+app.post("/api/publications", requireAuth, async (req, res) => {
   const body = req.body || {};
   for (const k of ["name", "city", "state"]) {
     const err = checkCoreField(body[k], k);
@@ -502,7 +510,7 @@ app.post("/api/publications", async (req, res) => {
   res.status(201).json(warning ? { ...pub, warning } : pub);
 });
 
-app.put("/api/publications/:id", async (req, res) => {
+app.put("/api/publications/:id", requireAuth, async (req, res) => {
   const pub = publications.find((p) => p.id === req.params.id);
   if (!pub) return res.status(404).json({ error: "publication not found" });
 
@@ -565,7 +573,7 @@ app.put("/api/publications/:id", async (req, res) => {
   res.json(warning ? { ...pub, warning } : pub);
 });
 
-app.delete("/api/publications/:id", (req, res) => {
+app.delete("/api/publications/:id", requireAuth, (req, res) => {
   const idx = publications.findIndex((p) => p.id === req.params.id);
   if (idx < 0) return res.status(404).json({ error: "publication not found" });
   const [removed] = publications.splice(idx, 1);
@@ -573,7 +581,7 @@ app.delete("/api/publications/:id", (req, res) => {
   res.json({ ok: true, deleted: removed.id });
 });
 
-app.post("/api/publications/import", (req, res) => {
+app.post("/api/publications/import", requireAuth, (req, res) => {
   const rows = req.body;
   if (!Array.isArray(rows)) {
     return res

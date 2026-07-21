@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publication Network — AdSell.ai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <img class="wordmark" src="wordmark-blue.svg" alt="AdSell.ai" />
+      <span class="tool-title">Franchise Footprint Matcher</span>
+      <span class="tag">Internal tool</span>
+      <a class="nav-link" href="index.html">&larr; Matcher</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Page header -->
+    <div class="page-head">
+      <h1>Publication Network</h1>
+      <span class="pub-count" id="pub-count">Loading…</span>
+      <div class="page-actions">
+        <button id="add-btn" class="btn btn-primary">Add publication</button>
+        <button id="export-btn" class="btn btn-ghost">Export JSON</button>
+        <button id="import-btn" class="btn btn-ghost">Import JSON</button>
+        <input id="import-file" type="file" accept=".json,application/json" class="hidden" />
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="pub-controls">
+      <input id="pub-search" type="text" placeholder="Filter by name or city" autocomplete="off" />
+      <select id="state-filter">
+        <option value="">All states</option>
+      </select>
+    </div>
+
+    <!-- Table -->
+    <div class="section">
+      <div class="table-wrap">
+        <table id="pub-table">
+          <thead>
+            <tr>
+              <th data-key="name">Name</th>
+              <th data-key="city">City</th>
+              <th data-key="state">State</th>
+              <th data-key="website">Website</th>
+              <th class="no-sort">Coords</th>
+              <th class="no-sort actions-col">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="pub-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- Add/Edit modal -->
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div class="modal">
+      <h2 id="modal-title">Add publication</h2>
+      <form id="pub-form" novalidate>
+        <div class="form-grid">
+          <div class="form-field full">
+            <label for="f-name">Name</label>
+            <input id="f-name" type="text" autocomplete="off" />
+          </div>
+          <div class="form-field">
+            <label for="f-city">City</label>
+            <input id="f-city" type="text" autocomplete="off" />
+          </div>
+          <div class="form-field">
+            <label for="f-state">State</label>
+            <select id="f-state"></select>
+          </div>
+          <div class="form-field full">
+            <label for="f-website">Website</label>
+            <input id="f-website" type="text" placeholder="example.com" autocomplete="off" />
+          </div>
+          <div class="form-field">
+            <label for="f-lat">Latitude</label>
+            <input id="f-lat" type="text" inputmode="decimal" autocomplete="off" />
+          </div>
+          <div class="form-field">
+            <label for="f-lon">Longitude</label>
+            <input id="f-lon" type="text" inputmode="decimal" autocomplete="off" />
+          </div>
+        </div>
+        <p class="form-note">Left blank = auto-geocoded from city/state.</p>
+        <div id="modal-error" class="modal-error hidden"></div>
+        <div class="modal-actions">
+          <button type="button" id="cancel-btn" class="btn btn-ghost">Cancel</button>
+          <button type="submit" id="save-btn" class="btn btn-primary">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast-wrap" class="toast-wrap"></div>
+
+  <script src="publications.js"></script>
+</body>
+</html>

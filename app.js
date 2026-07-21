@@ -685,11 +685,19 @@ function fallbackCopy(str, done) {
 
 /* ---------- Init ---------- */
 async function init() {
+  // Live publication list (managed via publications.html). Falls back to the
+  // static seed file if the API is unavailable.
   try {
-    const resp = await fetch('publications.json');
+    const resp = await fetch('/api/publications');
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
     PUBS = await resp.json();
   } catch (e) {
-    PUBS = window.PUBLICATIONS || [];
+    try {
+      const resp = await fetch('publications.json');
+      PUBS = await resp.json();
+    } catch (e2) {
+      PUBS = window.PUBLICATIONS || [];
+    }
   }
 
   document.getElementById('go-btn').addEventListener('click', () => {

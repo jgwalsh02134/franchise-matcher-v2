@@ -158,6 +158,18 @@ async function runOverpass(name) {
   return brandEls.concat(nameEls);
 }
 
+/* ---------- Google Places proxy ---------- */
+// Server-side proxy (see server.js). Never errors: any network/parse failure
+// degrades to {available:false} so the search falls back to OSM-only.
+async function fetchPlaces(name) {
+  try {
+    const resp = await fetch('/api/places?query=' + encodeURIComponent(name));
+    return await resp.json();
+  } catch (e) {
+    return { available: false, locations: [] };
+  }
+}
+
 /* ---------- Parse + dedupe locations ---------- */
 function parseLocations(elements) {
   const locs = [];
@@ -322,16 +334,45 @@ async function doSearch(name) {
   hide('results');
   setBtn(true);
 
-  let elements;
-  try {
-    elements = await runOverpass(name);
-  } catch (e) {
-    showStatus('error', name, e.message);
+  const [overpassRes, placesRes] = await Promise.allSettled([
+    runOverpass(name),
+    fetchPlaces(name),
+  ]);
+
+  const places =
+    placesRes.status === 'fulfilled' ? placesRes.value : { available: false, locations: [] };
+  const placesOk = !!(places && places.available && Array.isArray(places.locations));
+
+  // Both sources down -> existing error state. Places-only is a valid result.
+  if (overpassRes.status === 'rejected' && !placesOk) {
+    showStatus('error', name, overpassRes.reason && overpassRes.reason.message);
     setBtn(false);
     return;
   }
 
-  const locs = parseLocations(elements);
+  const locs =
+    overpassRes.status === 'fulfilled' ? parseLocations(overpassRes.value) : [];
+
+  if (placesOk) {
+    for (const g of places.locations) {
+      if (!g || g.lat == null || g.lon == null) continue;
+      // skip Places results within 0.15 mi of an existing OSM location
+      let dup = false;
+      for (const k of locs) {
+        if (haversineMiles(g.lat, g.lon, k.lat, k.lon) < 0.15) { dup = true; break; }
+      }
+      if (!dup) {
+        locs.push({
+          lat: g.lat,
+          lon: g.lon,
+          city: g.city || null,
+          state: g.state || null,
+          name: g.name || '',
+        });
+      }
+    }
+  }
+
   if (!locs.length) {
     showStatus('empty', name);
     setBtn(false);
@@ -342,7 +383,7 @@ async function doSearch(name) {
   const markets = rawMarkets.sort((a, b) => b.pubs.length - a.pubs.length || b.locations.length - a.locations.length);
   const flight = greedyFlight(markets, 8);
 
-  currentResult = { name, locs, markets, flight };
+  currentResult = { name, locs, markets, flight, usedPlaces: placesOk };
   renderResults(currentResult);
   setBtn(false);
 }
@@ -384,6 +425,12 @@ function setBtn(loading) {
 function renderResults(r) {
   hideStatus();
   show('results');
+  const foot = document.getElementById('foot-src');
+  if (foot) {
+    foot.textContent = r.usedPlaces
+      ? 'Location data from OpenStreetMap and Google Places.'
+      : 'Location data from OpenStreetMap and may undercount newer stores.';
+  }
   renderKPIs(r);
   renderMap(r);
   renderFlight(r);
@@ -398,9 +445,13 @@ function renderKPIs(r) {
   const uniquePubs = new Set();
   for (const m of r.markets) for (const k of m.pubKeys) uniquePubs.add(k);
 
+  const source = r.usedPlaces
+    ? 'Source: OpenStreetMap + Google Places'
+    : 'Source: OpenStreetMap';
+
   const row = document.getElementById('kpi-row');
   row.innerHTML = `
-    ${kpi(r.locs.length, 'Locations found')}
+    <div class="kpi"><div class="num">${r.locs.length}</div><div class="lab">Locations found</div><div class="src">${source}</div></div>
     ${kpi(states.size, 'States')}
     ${kpi(marketsWithCoverage, 'Markets with coverage')}
     ${kpi(uniquePubs.size, 'Publications in reach')}`;

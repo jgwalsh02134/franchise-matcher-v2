@@ -232,6 +232,12 @@ a:hover { text-decoration: underline; }
   margin-top: 8px;
   font-weight: 700;
 }
+.kpi .src {
+  font-size: 11px;
+  color: var(--slate);
+  margin-top: 4px;
+  font-weight: 400;
+}
 
 /* ---------- Map ---------- */
 #map {

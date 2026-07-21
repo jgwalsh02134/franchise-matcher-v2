@@ -1,5 +1,6 @@
 "use strict";
 
+const fs = require("fs");
 const path = require("path");
 const express = require("express");
 
@@ -279,7 +280,347 @@ app.get("/api/places", async (req, res) => {
   }
 });
 
+// ---------------------------------------------------------------------------
+// Publications store
+// ---------------------------------------------------------------------------
+
+const DATA_DIR = process.env.DATA_DIR || ".";
+const LIVE_PATH = path.join(DATA_DIR, "publications-live.json");
+const BACKUP_PATH = path.join(DATA_DIR, "publications-live.backup.json");
+const SEED_PATH = path.join(__dirname, "publications.json");
+const GEOCODER_URL =
+  "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress";
+
+let publications = [];
+
+function slugify(s) {
+  return String(s)
+    .toLowerCase()
+    .replace(/['\u2019]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function makeId(name, city, state, taken) {
+  const base = slugify(`${name} ${city} ${state}`) || "pub";
+  let id = base;
+  let n = 2;
+  while (taken.has(id)) id = `${base}-${n++}`;
+  taken.add(id);
+  return id;
+}
+
+// Assign stable ids, keeping valid unique ids already present on the rows.
+function withIds(rows) {
+  const taken = new Set();
+  return rows.map((r) => {
+    let id = typeof r.id === "string" && r.id && !taken.has(r.id) ? r.id : null;
+    if (id) taken.add(id);
+    else id = makeId(r.name, r.city, r.state, taken);
+    return {
+      id,
+      name: r.name,
+      city: r.city,
+      state: r.state,
+      website: r.website || "",
+      lat: r.lat != null ? r.lat : null,
+      lon: r.lon != null ? r.lon : null,
+    };
+  });
+}
+
+function persistPublications() {
+  fs.mkdirSync(DATA_DIR, { recursive: true });
+  const tmp = LIVE_PATH + ".tmp";
+  fs.writeFileSync(tmp, JSON.stringify(publications, null, 2));
+  fs.renameSync(tmp, LIVE_PATH); // atomic replace
+}
+
+function loadPublications() {
+  if (fs.existsSync(LIVE_PATH)) {
+    publications = JSON.parse(fs.readFileSync(LIVE_PATH, "utf8"));
+    if (publications.some((p) => !p.id)) {
+      publications = withIds(publications);
+      persistPublications();
+    }
+  } else {
+    publications = withIds(JSON.parse(fs.readFileSync(SEED_PATH, "utf8")));
+    persistPublications();
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Publications API
+// ---------------------------------------------------------------------------
+
+const AUTH_USER = process.env.BASIC_AUTH_USER;
+const AUTH_PASS = process.env.BASIC_AUTH_PASS;
+
+function requireAuth(req, res, next) {
+  if (!AUTH_USER || !AUTH_PASS) return next(); // gate disabled; warned at startup
+  const header = String(req.headers.authorization || "");
+  if (header.startsWith("Basic ")) {
+    const decoded = Buffer.from(header.slice(6), "base64").toString();
+    const i = decoded.indexOf(":");
+    if (
+      i > -1 &&
+      decoded.slice(0, i) === AUTH_USER &&
+      decoded.slice(i + 1) === AUTH_PASS
+    ) {
+      return next();
+    }
+  }
+  res.set("WWW-Authenticate", 'Basic realm="publications"');
+  res.status(401).json({ error: "unauthorized" });
+}
+
+function checkCoreField(value, key) {
+  if (typeof value !== "string" || !value.trim()) {
+    return `${key} is required and must be a non-empty string`;
+  }
+  return null;
+}
+
+function checkState(state) {
+  if (!US_STATE_CODES.has(String(state).trim().toUpperCase())) {
+    return "state must be a valid 2-letter US state code";
+  }
+  return null;
+}
+
+function checkOptionalFields(row) {
+  if (row.website !== undefined && typeof row.website !== "string") {
+    return "website must be a string";
+  }
+  for (const k of ["lat", "lon"]) {
+    if (row[k] !== undefined && row[k] !== null && !Number.isFinite(row[k])) {
+      return `${k} must be a number or null`;
+    }
+  }
+  return null;
+}
+
+function dupKey(name, city, state) {
+  return [
+    String(name).trim().toLowerCase(),
+    String(city).trim().toLowerCase(),
+    String(state).trim().toUpperCase(),
+  ].join("|");
+}
+
+async function geocodeCityState(city, state) {
+  const url =
+    `${GEOCODER_URL}?address=${encodeURIComponent(`${city}, ${state}`)}` +
+    `&benchmark=Public_AR_Current&format=json`;
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+  try {
+    const res = await fetch(url, { signal: controller.signal });
+    if (!res.ok) return null;
+    const data = await res.json();
+    const match =
+      data &&
+      data.result &&
+      Array.isArray(data.result.addressMatches) &&
+      data.result.addressMatches[0];
+    if (!match || !match.coordinates) return null;
+    return { lat: match.coordinates.y, lon: match.coordinates.x };
+  } catch {
+    return null;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+const GEOCODE_WARNING = "geocoding failed; saved with lat/lon null";
+
+app.use("/api/publications", express.json({ limit: "10mb" }), requireAuth);
+
+app.get("/api/publications", (req, res) => {
+  res.json(publications);
+});
+
+app.get("/api/publications/export", (req, res) => {
+  const date = new Date().toISOString().slice(0, 10);
+  res.setHeader("Content-Type", "application/json");
+  res.setHeader(
+    "Content-Disposition",
+    `attachment; filename="publications-${date}.json"`
+  );
+  res.send(JSON.stringify(publications, null, 2));
+});
+
+app.post("/api/publications", async (req, res) => {
+  const body = req.body || {};
+  for (const k of ["name", "city", "state"]) {
+    const err = checkCoreField(body[k], k);
+    if (err) return res.status(400).json({ error: err });
+  }
+  const stateErr = checkState(body.state);
+  if (stateErr) return res.status(400).json({ error: stateErr });
+  const optErr = checkOptionalFields(body);
+  if (optErr) return res.status(400).json({ error: optErr });
+
+  const name = body.name.trim();
+  const city = body.city.trim();
+  const state = body.state.trim().toUpperCase();
+
+  const key = dupKey(name, city, state);
+  if (publications.some((p) => dupKey(p.name, p.city, p.state) === key)) {
+    return res
+      .status(400)
+      .json({ error: "duplicate publication (same name, city, and state)" });
+  }
+
+  let lat = Number.isFinite(body.lat) ? body.lat : null;
+  let lon = Number.isFinite(body.lon) ? body.lon : null;
+  let warning;
+  if (lat == null || lon == null) {
+    const geo = await geocodeCityState(city, state);
+    if (geo) {
+      lat = geo.lat;
+      lon = geo.lon;
+    } else {
+      lat = null;
+      lon = null;
+      warning = GEOCODE_WARNING;
+    }
+  }
+
+  const taken = new Set(publications.map((p) => p.id));
+  const pub = {
+    id: makeId(name, city, state, taken),
+    name,
+    city,
+    state,
+    website: String(body.website || "").trim(),
+    lat,
+    lon,
+  };
+  publications.push(pub);
+  persistPublications();
+  res.status(201).json(warning ? { ...pub, warning } : pub);
+});
+
+app.put("/api/publications/:id", async (req, res) => {
+  const pub = publications.find((p) => p.id === req.params.id);
+  if (!pub) return res.status(404).json({ error: "publication not found" });
+
+  const body = req.body || {};
+  for (const k of ["name", "city", "state"]) {
+    if (body[k] !== undefined) {
+      const err = checkCoreField(body[k], k);
+      if (err) return res.status(400).json({ error: err });
+    }
+  }
+  if (body.state !== undefined) {
+    const err = checkState(body.state);
+    if (err) return res.status(400).json({ error: err });
+  }
+  const optErr = checkOptionalFields(body);
+  if (optErr) return res.status(400).json({ error: optErr });
+
+  const name = body.name !== undefined ? body.name.trim() : pub.name;
+  const city = body.city !== undefined ? body.city.trim() : pub.city;
+  const state =
+    body.state !== undefined ? body.state.trim().toUpperCase() : pub.state;
+
+  const key = dupKey(name, city, state);
+  if (
+    publications.some((p) => p !== pub && dupKey(p.name, p.city, p.state) === key)
+  ) {
+    return res
+      .status(400)
+      .json({ error: "duplicate publication (same name, city, and state)" });
+  }
+
+  let lat = body.lat !== undefined ? body.lat : pub.lat;
+  let lon = body.lon !== undefined ? body.lon : pub.lon;
+  let warning;
+  // Re-geocode when the location changed without explicit coordinates, or
+  // when coordinates are still missing from an earlier failed geocode.
+  const locationChanged =
+    (body.city !== undefined || body.state !== undefined) &&
+    body.lat === undefined &&
+    body.lon === undefined;
+  if (locationChanged || lat == null || lon == null) {
+    const geo = await geocodeCityState(city, state);
+    if (geo) {
+      lat = geo.lat;
+      lon = geo.lon;
+    } else {
+      lat = null;
+      lon = null;
+      warning = GEOCODE_WARNING;
+    }
+  }
+
+  pub.name = name;
+  pub.city = city;
+  pub.state = state;
+  if (body.website !== undefined) pub.website = String(body.website).trim();
+  pub.lat = lat;
+  pub.lon = lon;
+  persistPublications();
+  res.json(warning ? { ...pub, warning } : pub);
+});
+
+app.delete("/api/publications/:id", (req, res) => {
+  const idx = publications.findIndex((p) => p.id === req.params.id);
+  if (idx < 0) return res.status(404).json({ error: "publication not found" });
+  const [removed] = publications.splice(idx, 1);
+  persistPublications();
+  res.json({ ok: true, deleted: removed.id });
+});
+
+app.post("/api/publications/import", (req, res) => {
+  const rows = req.body;
+  if (!Array.isArray(rows)) {
+    return res
+      .status(400)
+      .json({ error: "body must be a JSON array of publications" });
+  }
+  for (let i = 0; i < rows.length; i++) {
+    const row = rows[i];
+    if (!row || typeof row !== "object" || Array.isArray(row)) {
+      return res.status(400).json({ error: `row ${i}: must be an object` });
+    }
+    for (const k of ["name", "city", "state"]) {
+      const err = checkCoreField(row[k], k);
+      if (err) return res.status(400).json({ error: `row ${i}: ${err}` });
+    }
+    const stateErr = checkState(row.state);
+    if (stateErr) return res.status(400).json({ error: `row ${i}: ${stateErr}` });
+    const optErr = checkOptionalFields(row);
+    if (optErr) return res.status(400).json({ error: `row ${i}: ${optErr}` });
+  }
+
+  if (fs.existsSync(LIVE_PATH)) fs.copyFileSync(LIVE_PATH, BACKUP_PATH); // one-deep backup
+  publications = withIds(
+    rows.map((r) => ({
+      id: r.id,
+      name: r.name.trim(),
+      city: r.city.trim(),
+      state: r.state.trim().toUpperCase(),
+      website: String(r.website || "").trim(),
+      lat: Number.isFinite(r.lat) ? r.lat : null,
+      lon: Number.isFinite(r.lon) ? r.lon : null,
+    }))
+  );
+  persistPublications();
+  res.json({ ok: true, count: publications.length });
+});
+
+// The live data files must never be publicly served (relevant when DATA_DIR
+// is the repo root, which express.static also serves).
+app.use((req, res, next) => {
+  if (req.path.startsWith("/publications-live")) return res.status(404).end();
+  next();
+});
+
 app.use(express.static(path.join(__dirname)));
+
+loadPublications();
 
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`franchise-matcher-v2 listening on port ${PORT}`);
@@ -288,4 +629,10 @@ app.listen(PORT, "0.0.0.0", () => {
       ? `Google Places proxy: enabled (daily request budget: ${DAILY_LIMIT})`
       : "Google Places proxy: disabled (GOOGLE_PLACES_API_KEY not set) — OSM-only mode"
   );
+  console.log(`Publications: ${publications.length} loaded (${LIVE_PATH})`);
+  if (!AUTH_USER || !AUTH_PASS) {
+    console.warn(
+      "WARNING: publications API is unprotected — set BASIC_AUTH_USER and BASIC_AUTH_PASS"
+    );
+  }
 });

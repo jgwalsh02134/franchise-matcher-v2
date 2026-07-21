@@ -1,3 +1,5 @@
 .DS_Store
 ._*
 node_modules/
+publications-live.json
+publications-live.backup.json

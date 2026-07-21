@@ -817,15 +817,21 @@ app.post("/api/apollo/people-search", async (req, res) => {
       });
       if (filtered.length) rawPeople = filtered;
     }
+    // api_search field names vary by plan: name may come as first_name +
+    // last_name (sometimes obfuscated), and email availability as has_email
     const people = rawPeople.map((p) => ({
       id: p.id,
-      name: p.name,
+      name:
+        p.name ||
+        [p.first_name, p.last_name || p.last_name_obfuscated]
+          .filter(Boolean)
+          .join(" "),
       title: p.title,
       company: (p.organization && p.organization.name) || company || domain,
       city: p.city,
       state: p.state,
       linkedin_url: p.linkedin_url,
-      email_status: p.email_status,
+      email_status: p.email_status || (p.has_email ? "likely" : null),
     }));
     const payload = { available: true, count: people.length, people };
     apolloCache.set(cacheKey, { expires: Date.now() + CACHE_TTL_MS, payload });

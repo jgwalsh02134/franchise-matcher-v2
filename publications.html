@@ -34,7 +34,7 @@
 
     <!-- Controls -->
     <div class="pub-controls">
-      <input id="pub-search" type="text" placeholder="Filter by name or city" autocomplete="off" />
+      <input id="pub-search" type="text" placeholder="Filter by name, city, address, or zip" autocomplete="off" />
       <select id="state-filter">
         <option value="">All states</option>
       </select>
@@ -49,6 +49,8 @@
               <th data-key="name">Name</th>
               <th data-key="city">City</th>
               <th data-key="state">State</th>
+              <th class="no-sort">Address</th>
+              <th data-key="zip">Zip</th>
               <th data-key="website">Website</th>
               <th class="no-sort">Coords</th>
               <th class="no-sort actions-col">Actions</th>
@@ -79,6 +81,15 @@
             <select id="f-state"></select>
           </div>
           <div class="form-field full">
+            <label for="f-address">Address</label>
+            <input id="f-address" type="text" placeholder="123 Main St, Springfield, IL 62701" autocomplete="off" />
+            <p class="field-note">Used for geocoding when provided.</p>
+          </div>
+          <div class="form-field">
+            <label for="f-zip">Zip</label>
+            <input id="f-zip" type="text" inputmode="numeric" maxlength="5" autocomplete="off" />
+          </div>
+          <div class="form-field">
             <label for="f-website">Website</label>
             <input id="f-website" type="text" placeholder="example.com" autocomplete="off" />
           </div>

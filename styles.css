@@ -458,6 +458,15 @@ tbody tr:last-child td { border-bottom: none; }
 }
 .badge-ok { color: var(--indigo); background: var(--indigo-soft); }
 .badge-warn { color: #8A6100; background: #FCF3DC; }
+.badge-muted { color: var(--slate); background: var(--lavender); font-weight: 400; }
+
+#pub-table .addr-col {
+  max-width: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.field-note { font-size: 11px; color: var(--slate); margin-top: 3px; }
 
 /* ---------- Modal ---------- */
 .modal-overlay {

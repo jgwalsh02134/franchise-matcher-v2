@@ -67,7 +67,9 @@ function currentRows() {
     if (!q) return true;
     return (
       String(p.name).toLowerCase().includes(q) ||
-      String(p.city).toLowerCase().includes(q)
+      String(p.city).toLowerCase().includes(q) ||
+      String(p.address || '').toLowerCase().includes(q) ||
+      String(p.zip || '').includes(q)
     );
   });
 
@@ -98,13 +100,18 @@ function render() {
 
   const tbody = document.getElementById('pub-tbody');
   if (!rows.length) {
-    tbody.innerHTML = '<tr><td colspan="6" class="no-pubs">No publications match.</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="8" class="no-pubs">No publications match.</td></tr>';
     return;
   }
   tbody.innerHTML = rows.map((p) => {
+    const webHref = /^https?:\/\//.test(p.website || '') ? p.website : 'https://' + p.website;
+    const webShown = String(p.website || '').replace(/^https?:\/\//, '').replace(/\/+$/, '');
     const web = p.website
-      ? '<a class="web-link" href="https://' + esc(p.website) + '" target="_blank" rel="noopener" title="' + esc(p.website) + '">' + esc(p.website) + '</a>'
+      ? '<a class="web-link" href="' + esc(webHref) + '" target="_blank" rel="noopener" title="' + esc(webShown) + '">' + esc(webShown) + '</a>'
       : '<span class="no-pubs">—</span>';
+    const address = p.address && p.address.trim()
+      ? '<span title="' + esc(p.address) + '">' + esc(p.address) + '</span>'
+      : '<span class="badge badge-muted">no address</span>';
     const coords = p.lat != null && p.lon != null
       ? '<span class="badge badge-ok" title="' + p.lat.toFixed(4) + ', ' + p.lon.toFixed(4) + '">&#10003; mapped</span>'
       : '<span class="badge badge-warn">no coords</span>';
@@ -112,6 +119,8 @@ function render() {
       '<td class="market-label">' + esc(p.name) + '</td>' +
       '<td>' + esc(p.city) + '</td>' +
       '<td>' + esc(p.state) + '</td>' +
+      '<td class="addr-col">' + address + '</td>' +
+      '<td>' + esc(p.zip || '') + '</td>' +
       '<td class="web-col">' + web + '</td>' +
       '<td>' + coords + '</td>' +
       '<td class="actions-col">' +
@@ -161,6 +170,8 @@ function openModal(id) {
   document.getElementById('f-name').value = pub ? pub.name : '';
   document.getElementById('f-city').value = pub ? pub.city : '';
   document.getElementById('f-state').value = pub ? pub.state : 'AL';
+  document.getElementById('f-address').value = pub ? pub.address || '' : '';
+  document.getElementById('f-zip').value = pub ? pub.zip || '' : '';
   document.getElementById('f-website').value = pub ? pub.website || '' : '';
   document.getElementById('f-lat').value = pub && pub.lat != null ? pub.lat : '';
   document.getElementById('f-lon').value = pub && pub.lon != null ? pub.lon : '';
@@ -193,8 +204,13 @@ async function savePub(e) {
     name: document.getElementById('f-name').value.trim(),
     city: document.getElementById('f-city').value.trim(),
     state: document.getElementById('f-state').value,
+    address: document.getElementById('f-address').value.trim(),
+    zip: document.getElementById('f-zip').value.trim(),
     website: document.getElementById('f-website').value.trim(),
   };
+  if (body.zip && !/^\d{5}$/.test(body.zip)) {
+    return showModalError('Zip must be 5 digits.');
+  }
   if (latRaw !== '') {
     const lat = Number(latRaw);
     if (!Number.isFinite(lat)) return showModalError('Latitude must be a number.');

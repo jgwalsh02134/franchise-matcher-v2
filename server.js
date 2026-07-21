@@ -322,6 +322,8 @@ function withIds(rows) {
       name: r.name,
       city: r.city,
       state: r.state,
+      address: r.address || "",
+      zip: r.zip || "",
       website: r.website || "",
       lat: r.lat != null ? r.lat : null,
       lon: r.lon != null ? r.lon : null,
@@ -389,8 +391,13 @@ function checkState(state) {
 }
 
 function checkOptionalFields(row) {
-  if (row.website !== undefined && typeof row.website !== "string") {
-    return "website must be a string";
+  for (const k of ["website", "address", "zip"]) {
+    if (row[k] !== undefined && row[k] !== null && typeof row[k] !== "string") {
+      return `${k} must be a string`;
+    }
+  }
+  if (row.zip != null && String(row.zip).trim() !== "" && !/^\d{5}$/.test(String(row.zip).trim())) {
+    return "zip must be a 5-digit string";
   }
   for (const k of ["lat", "lon"]) {
     if (row[k] !== undefined && row[k] !== null && !Number.isFinite(row[k])) {
@@ -408,9 +415,9 @@ function dupKey(name, city, state) {
   ].join("|");
 }
 
-async function geocodeCityState(city, state) {
+async function censusLookup(oneline) {
   const url =
-    `${GEOCODER_URL}?address=${encodeURIComponent(`${city}, ${state}`)}` +
+    `${GEOCODER_URL}?address=${encodeURIComponent(oneline)}` +
     `&benchmark=Public_AR_Current&format=json`;
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
@@ -430,6 +437,19 @@ async function geocodeCityState(city, state) {
   } finally {
     clearTimeout(timer);
   }
+}
+
+// Street-address lookup when available (the Census geocoder needs a street
+// address to match reliably), falling back to city + state.
+async function geocodePub({ address, city, state, zip }) {
+  if (address && address.trim()) {
+    // the address field may already contain city/state/zip; the geocoder
+    // tolerates repetition, so always append them for completeness
+    const oneline = `${address.trim()}, ${city}, ${state}${zip ? " " + zip : ""}`;
+    const hit = await censusLookup(oneline);
+    if (hit) return hit;
+  }
+  return censusLookup(`${city}, ${state}`);
 }
 
 const GEOCODE_WARNING = "geocoding failed; saved with lat/lon null";
@@ -472,6 +492,8 @@ app.post("/api/publications", requireAuth, async (req, res) => {
   const name = body.name.trim();
   const city = body.city.trim();
   const state = body.state.trim().toUpperCase();
+  const address = String(body.address || "").trim();
+  const zip = String(body.zip || "").trim();
 
   const key = dupKey(name, city, state);
   if (publications.some((p) => dupKey(p.name, p.city, p.state) === key)) {
@@ -484,7 +506,7 @@ app.post("/api/publications", requireAuth, async (req, res) => {
   let lon = Number.isFinite(body.lon) ? body.lon : null;
   let warning;
   if (lat == null || lon == null) {
-    const geo = await geocodeCityState(city, state);
+    const geo = await geocodePub({ address, city, state, zip });
     if (geo) {
       lat = geo.lat;
       lon = geo.lon;
@@ -501,6 +523,8 @@ app.post("/api/publications", requireAuth, async (req, res) => {
     name,
     city,
     state,
+    address,
+    zip,
     website: String(body.website || "").trim(),
     lat,
     lon,
@@ -532,6 +556,9 @@ app.put("/api/publications/:id", requireAuth, async (req, res) => {
   const city = body.city !== undefined ? body.city.trim() : pub.city;
   const state =
     body.state !== undefined ? body.state.trim().toUpperCase() : pub.state;
+  const address =
+    body.address !== undefined ? String(body.address).trim() : pub.address || "";
+  const zip = body.zip !== undefined ? String(body.zip).trim() : pub.zip || "";
 
   const key = dupKey(name, city, state);
   if (
@@ -548,11 +575,13 @@ app.put("/api/publications/:id", requireAuth, async (req, res) => {
   // Re-geocode when the location changed without explicit coordinates, or
   // when coordinates are still missing from an earlier failed geocode.
   const locationChanged =
-    (body.city !== undefined || body.state !== undefined) &&
+    (body.city !== undefined ||
+      body.state !== undefined ||
+      body.address !== undefined) &&
     body.lat === undefined &&
     body.lon === undefined;
   if (locationChanged || lat == null || lon == null) {
-    const geo = await geocodeCityState(city, state);
+    const geo = await geocodePub({ address, city, state, zip });
     if (geo) {
       lat = geo.lat;
       lon = geo.lon;
@@ -566,6 +595,8 @@ app.put("/api/publications/:id", requireAuth, async (req, res) => {
   pub.name = name;
   pub.city = city;
   pub.state = state;
+  pub.address = address;
+  pub.zip = zip;
   if (body.website !== undefined) pub.website = String(body.website).trim();
   pub.lat = lat;
   pub.lon = lon;
@@ -610,6 +641,8 @@ app.post("/api/publications/import", requireAuth, (req, res) => {
       name: r.name.trim(),
       city: r.city.trim(),
       state: r.state.trim().toUpperCase(),
+      address: String(r.address || "").trim(),
+      zip: String(r.zip || "").trim(),
       website: String(r.website || "").trim(),
       lat: Number.isFinite(r.lat) ? r.lat : null,
       lon: Number.isFinite(r.lon) ? r.lon : null,

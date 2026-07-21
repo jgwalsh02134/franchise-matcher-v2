@@ -3,2080 +3,2680 @@
   "name": "Anchorage Press",
   "city": "Anchorage",
   "state": "AK",
+  "address": "540 E 5th Ave, Anchorage, AK 99501",
+  "zip": "99501",
+  "website": "https://www.anchoragepress.com/",
   "lat": 61.1743,
-  "lon": -149.2843,
-  "website": "anchoragepress.com"
+  "lon": -149.2843
  },
  {
   "name": "Mat-Su Valley Frontiersman",
   "city": "Wasilla",
   "state": "AK",
+  "address": "5751 E Mayflower Ct, Wasilla, AK 99654",
+  "zip": "99654",
+  "website": "https://www.frontiersman.com/",
   "lat": 61.5811,
-  "lon": -149.4608,
-  "website": "frontiersman.com"
+  "lon": -149.4608
  },
  {
   "name": "Saline Courier",
   "city": "Benton",
   "state": "AR",
+  "address": "321 N. Market Street, Benton, AR 72015",
+  "zip": "72015",
+  "website": "https://www.bentoncourier.com/",
   "lat": 34.5774,
-  "lon": -92.5726,
-  "website": "bentoncourier.com"
+  "lon": -92.5726
  },
  {
   "name": "Ashley News Observer",
   "city": "Crossett",
   "state": "AR",
+  "address": "106 E 2nd Ave, Crossett, AR 71635",
+  "zip": "71635",
+  "website": "https://www.ashleynewsobserver.com",
   "lat": 33.1228,
-  "lon": -91.9581,
-  "website": "ashleynewsobserver.com"
+  "lon": -91.9581
  },
  {
   "name": "Chicot County Spectator",
   "city": "Crossett",
   "state": "AR",
+  "address": "105 N Court St, Lake Village, AR 71653",
+  "zip": "71653",
+  "website": "https://www.chicotnewspapers.com",
   "lat": 33.1228,
-  "lon": -91.9581,
-  "website": "chicotnewspapers.com"
+  "lon": -91.9581
  },
  {
   "name": "The Eudora Enterprise",
   "city": "Crossett",
   "state": "AR",
+  "address": "106 E Second Ave, Crossett, AR 71635",
+  "zip": "71635",
+  "website": "https://www.chicotnewspapers.com",
   "lat": 33.1228,
-  "lon": -91.9581,
-  "website": "chicotnewspapers.com"
+  "lon": -91.9581
  },
  {
   "name": "Dumas Clarion",
   "city": "Dumas",
   "state": "AR",
+  "address": "136 East Waterman St, Dumas, AR 71639",
+  "zip": "71639",
+  "website": "https://www.dumasclarion.com/",
   "lat": 33.8834,
-  "lon": -91.4856,
-  "website": "dumasclarion.com"
+  "lon": -91.4856
  },
  {
   "name": "The Ashley County Ledger",
   "city": "Hamburg",
   "state": "AR",
+  "address": "107 N Main St, Hamburg, AR 71646",
+  "zip": "71646",
+  "website": "https://www.ashleycountyledger.com",
   "lat": 33.2248,
-  "lon": -91.7972,
-  "website": "ashleycountyledger.com"
+  "lon": -91.7972
  },
  {
   "name": "Malvern Daily Record",
   "city": "Malvern",
   "state": "AR",
+  "address": "219 Locust St, Malvern, AR 72104",
+  "zip": "72104",
+  "website": "https://www.malvern-online.com",
   "lat": 34.3736,
-  "lon": -92.8213,
-  "website": "malvern-online.com"
+  "lon": -92.8213
  },
  {
   "name": "The Mena Star",
   "city": "Mena",
   "state": "AR",
+  "address": "501 Mena Street, Mena, AR 71953",
+  "zip": "71953",
+  "website": "http://www.menastar.com",
   "lat": 34.5808,
-  "lon": -94.2371,
-  "website": "menastar.com"
+  "lon": -94.2371
  },
  {
   "name": "San Pedro Valley News-Sun",
   "city": "Benson",
   "state": "AZ",
+  "address": "200 S Ocotillo, Benson, AZ 85602",
+  "zip": "85602",
+  "website": "https://local.bensonnews-sun.com",
   "lat": 31.9145,
-  "lon": -110.3286,
-  "website": "local.bensonnews-sun.com"
+  "lon": -110.3286
  },
  {
   "name": "Bisbee Review",
   "city": "Bisbee",
   "state": "AZ",
+  "address": "12 Main St, Bisbee, AZ 85603",
+  "zip": "85603",
+  "website": "https://www.myheraldreview.com",
   "lat": 31.398,
-  "lon": -109.9318,
-  "website": "myheraldreview.com"
+  "lon": -109.9318
  },
  {
   "name": "Casa Grande Valley",
   "city": "Casa Grande",
   "state": "AZ",
+  "address": "200 W 2nd St, Casa Grande, AZ 85122",
+  "zip": "85122",
+  "website": "https://pinalcentral.com",
   "lat": 32.9069,
-  "lon": -111.7635,
-  "website": "pinalcentral.com"
+  "lon": -111.7635
  },
  {
   "name": "Copper Era",
   "city": "Clifton",
   "state": "AZ",
+  "address": "PO Box 908, Clifton, AZ 85533",
+  "zip": "85533",
+  "website": "https://www.eacourier.com",
   "lat": 33.0296,
-  "lon": -109.284,
-  "website": "eacourier.com"
+  "lon": -109.284
  },
  {
   "name": "Douglas Dispatch",
   "city": "Douglas",
   "state": "AZ",
+  "address": "530 E 11th St, Douglas, AZ 85607",
+  "zip": "85607",
+  "website": "https://myheraldreview.com/news/douglas",
   "lat": 31.3993,
-  "lon": -109.5413,
-  "website": "myheraldreview.com/news/douglas"
+  "lon": -109.5413
  },
  {
   "name": "Arizona Daily Sun",
   "city": "Flagstaff",
   "state": "AZ",
+  "address": "1300 W University Ave Ste 100, Flagstaff, AZ 86001",
+  "zip": "86001",
+  "website": "https://azdailysun.com/",
   "lat": 35.1852,
-  "lon": -111.6207,
-  "website": "azdailysun.com"
+  "lon": -111.6207
  },
  {
   "name": "Green Valley News & Sun",
   "city": "Green Valley",
   "state": "AZ",
+  "address": "101 S La Ca\u00f1ada Dr Ste 24, Green Valley, AZ 85614",
+  "zip": "85614",
+  "website": "https://www.gvnews.com/",
   "lat": 31.8408,
-  "lon": -111.0045,
-  "website": "gvnews.com"
+  "lon": -111.0045
  },
  {
   "name": "Todays News-Herald",
   "city": "Lake Havasu",
   "state": "AZ",
+  "address": "94 S. Acoma Blvd., Suite 100, Lake Havasu City, AZ 86403",
+  "zip": "86403",
+  "website": "https://www.havasunews.com",
   "lat": 34.4839,
-  "lon": -114.3225,
-  "website": "havasunews.com"
+  "lon": -114.3225
  },
  {
   "name": "Nogales International",
   "city": "Nogales",
   "state": "AZ",
+  "address": "268 W Viewpoint Dr, Nogales, AZ 85621",
+  "zip": "85621",
+  "website": "https://www.nogalesinternational.com/",
   "lat": 31.3619,
-  "lon": -110.9348,
-  "website": "nogalesinternational.com"
+  "lon": -110.9348
  },
  {
   "name": "Parker Pioneer",
   "city": "Parker",
   "state": "AZ",
+  "address": "1317 S Joshua Ave, Parker, AZ 85344",
+  "zip": "85344",
+  "website": "https://www.havasunews.com/parker_pioneer/",
   "lat": 34.034,
-  "lon": -114.2281,
-  "website": "havasunews.com/parker_pioneer"
+  "lon": -114.2281
  },
  {
   "name": "Eastern Arizona Courier",
   "city": "Safford",
   "state": "AZ",
+  "address": "301 E Hwy 70, Suite A, Safford, AZ 85546",
+  "zip": "85546",
+  "website": "https://eacourier.com",
   "lat": 32.8333,
-  "lon": -109.6974,
-  "website": "eacourier.com"
+  "lon": -109.6974
  },
  {
   "name": "Sahuarita Sun",
   "city": "Sahuarita",
   "state": "AZ",
+  "address": "101 S La Ca\u00f1ada Dr Ste 24, Green Valley, AZ 85614",
+  "zip": "85614",
+  "website": "https://www.sahuaritasun.com",
   "lat": 31.9322,
-  "lon": -110.9654,
-  "website": "sahuaritasun.com"
+  "lon": -110.9654
  },
  {
   "name": "Herald/Review",
   "city": "Sierra Vista",
   "state": "AZ",
+  "address": "102 S Fab Ave, Sierra Vista, AZ 85635",
+  "zip": "85635",
+  "website": "https://www.myheraldreview.com/",
   "lat": 31.5654,
-  "lon": -110.3145,
-  "website": "myheraldreview.com"
+  "lon": -110.3145
  },
  {
   "name": "Sierra Vista Herald",
   "city": "Sierra Vista",
   "state": "AZ",
+  "address": "102 S Fab Ave, Sierra Vista, AZ 85635",
+  "zip": "85635",
+  "website": "https://www.myheraldreview.com",
   "lat": 31.5654,
-  "lon": -110.3145,
-  "website": "myheraldreview.com"
+  "lon": -110.3145
  },
  {
   "name": "The Weekly Bulletin",
   "city": "Sonoita",
   "state": "AZ",
+  "address": "3244 Highway 82, Sonoita, AZ 85637",
+  "zip": "85637",
+  "website": "https://www.nogalesinternational.com",
   "lat": 31.6656,
-  "lon": -110.6391,
-  "website": "nogalesinternational.com"
+  "lon": -110.6391
  },
  {
   "name": "The Daily Territorial",
   "city": "Tucson",
   "state": "AZ",
+  "address": "3280 E. Hemisphere Loop, #180, Tucson, AZ 85706",
+  "zip": "85706",
+  "website": "https://dailyterritorial.com",
   "lat": 32.153,
-  "lon": -110.8708,
-  "website": "dailyterritorial.com"
+  "lon": -110.8708
  },
  {
   "name": "Arizona Range News",
   "city": "Willcox",
   "state": "AZ",
+  "address": "122 S. Haskell, Willcox, AZ 85643",
+  "zip": "85643",
+  "website": "https://www.myheraldreview.com",
   "lat": 32.2518,
-  "lon": -109.8357,
-  "website": "myheraldreview.com"
+  "lon": -109.8357
  },
  {
   "name": "Half Moon Bay Review",
   "city": "Half Moon Bay",
   "state": "CA",
+  "address": "714 Kelly St, Half Moon Bay, CA 94019",
+  "zip": "94019",
+  "website": "https://www.coastsidenews.com",
   "lat": 37.4673,
-  "lon": -122.4405,
-  "website": "coastsidenews.com"
+  "lon": -122.4405
  },
  {
   "name": "Ledger Dispatch",
   "city": "Jackson",
   "state": "CA",
+  "address": "106 Water Street, Jackson, CA 95642",
+  "zip": "95642",
+  "website": "http://www.ledger.news",
   "lat": 38.3485,
-  "lon": -120.7728,
-  "website": "ledger.news"
+  "lon": -120.7728
  },
  {
   "name": "Madera Tribune",
   "city": "Madera",
   "state": "CA",
+  "address": "2591 Mitchell Court, Suite 107, Madera, CA 93637",
+  "zip": "93637",
+  "website": "https://www.maderatribune.com/",
   "lat": 36.9658,
-  "lon": -120.0862,
-  "website": "maderatribune.com"
+  "lon": -120.0862
  },
  {
   "name": "The Mountain Democrat",
   "city": "Placerville",
   "state": "CA",
+  "address": "2889 Ray Lawyer Dr, Placerville, CA 95667",
+  "zip": "95667",
+  "website": "https://www.mtdemocrat.com",
   "lat": 38.7311,
-  "lon": -120.7977,
-  "website": "mtdemocrat.com"
+  "lon": -120.7977
  },
  {
   "name": "Montrose Daily Press",
   "city": "Montrose",
   "state": "CO",
+  "address": "3684 N Townsend Ave, Montrose, CO 81401",
+  "zip": "81401",
+  "website": "https://www.montrosepress.com",
   "lat": 38.4688,
-  "lon": -107.8589,
-  "website": "montrosepress.com"
+  "lon": -107.8589
  },
  {
   "name": "The Bristol Press",
   "city": "Bristol",
   "state": "CT",
+  "address": "188 Main St, Bristol, CT 06010",
+  "zip": "06010",
+  "website": "https://www.bristolpress.com",
   "lat": 41.6816,
-  "lon": -72.9407,
-  "website": "bristolpress.com"
+  "lon": -72.9407
  },
  {
   "name": "New Britain Herald",
   "city": "New Britain",
   "state": "CT",
+  "address": "1 Herald Sq, New Britain, CT 06051",
+  "zip": "06051",
+  "website": "http://www.newbritainherald.com",
   "lat": 41.6766,
-  "lon": -72.7862,
-  "website": "newbritainherald.com"
+  "lon": -72.7862
  },
  {
   "name": "New London",
   "city": "New London",
   "state": "CT",
+  "address": "47 Eugene O'Neill Dr, New London, CT 06320",
+  "zip": "06320",
+  "website": "https://www.theday.com",
   "lat": 41.333,
-  "lon": -72.0962,
-  "website": "theday.com"
+  "lon": -72.0962
  },
  {
   "name": "The Day",
   "city": "New London",
   "state": "CT",
+  "address": "47 Eugene O'Neill Drive, New London, CT 06320",
+  "zip": "06320",
+  "website": "https://www.theday.com/",
   "lat": 41.333,
-  "lon": -72.0962,
-  "website": "theday.com"
+  "lon": -72.0962
+ },
+ {
+  "name": "The Bee / Newtown",
+  "city": "Newtown",
+  "state": "CT",
+  "address": "5 Church Hill Road, Newtown, CT 06470",
+  "zip": "06470",
+  "website": "https://www.newtownbee.com",
+  "lat": 41.4119,
+  "lon": -73.31195
  },
  {
   "name": "The Newtown Bee",
   "city": "Newtown",
   "state": "CT",
+  "address": "5 Church Hill Road, Newtown, CT 06470",
+  "zip": "06470",
+  "website": "https://www.newtownbee.com/",
   "lat": 41.4119,
-  "lon": -73.3119,
-  "website": "newtownbee.com"
+  "lon": -73.3119
  },
  {
   "name": "Willimantic Chronicle",
   "city": "Willimantic",
   "state": "CT",
+  "address": "1 Chronicle Rd, Willimantic, CT 06226",
+  "zip": "06226",
+  "website": "https://thechronicle.com",
   "lat": 41.7166,
-  "lon": -72.2117,
-  "website": "thechronicle.com"
+  "lon": -72.2117
  },
  {
   "name": "Delaware State News",
   "city": "Dover",
   "state": "DE",
+  "address": "110 Galaxy Drive, Dover, DE 19901",
+  "zip": "19901",
+  "website": "https://baytobaynews.com/",
   "lat": 39.1606,
-  "lon": -75.5217,
-  "website": "baytobaynews.com"
+  "lon": -75.5217
  },
  {
   "name": "Nassau County Record",
   "city": "Callahan",
   "state": "FL",
+  "address": "617317 Brandies Avenue, Callahan, FL 32011",
+  "zip": "32011",
+  "website": "https://www.nassaucountyrecord.com",
   "lat": 30.5654,
-  "lon": -81.8319,
-  "website": "nassaucountyrecord.com"
+  "lon": -81.8319
  },
  {
   "name": "Fernandina Beach News Leader",
   "city": "Fernandina Beach",
   "state": "FL",
+  "address": "1235 South 10th Street, Fernandina Beach, FL 32034",
+  "zip": "32034",
+  "website": "https://www.fbnewsleader.com",
   "lat": 30.6581,
-  "lon": -81.4515,
-  "website": "fbnewsleader.com"
+  "lon": -81.4515
  },
  {
   "name": "Lake City Reporter",
   "city": "Lake City",
   "state": "FL",
+  "address": "1086 SW Main Blvd., Suite 103, Lake City, FL 32025",
+  "zip": "32025",
+  "website": "https://www.lakecityreporter.com",
   "lat": 30.1886,
-  "lon": -82.6422,
-  "website": "lakecityreporter.com"
+  "lon": -82.6422
  },
  {
   "name": "The Albany Herald",
   "city": "Albany",
   "state": "GA",
+  "address": "The Albany Herald, 306 West Broad Ave., Albany, GA 31701",
+  "zip": "31701",
+  "website": "https://albanyherald.com",
   "lat": 31.5781,
-  "lon": -84.1762,
-  "website": "albanyherald.com"
+  "lon": -84.1762
  },
  {
   "name": "Athens Banner-Herald",
   "city": "Athens",
   "state": "GA",
+  "address": "1 Press Place, Athens, GA 30601",
+  "zip": "30601",
+  "website": "https://www.onlineathens.com/",
   "lat": 33.9519,
-  "lon": -83.3576,
-  "website": "onlineathens.com"
+  "lon": -83.3576
  },
  {
   "name": "Farmers and Consumers Market Bulletin",
   "city": "Atlanta",
   "state": "GA",
+  "address": "19 Martin Luther King Jr. Drive SW, Atlanta, GA 30334-4250",
+  "zip": "30334",
+  "website": "https://www.agr.georgia.gov/market-bulletin",
   "lat": 33.7629,
-  "lon": -84.4227,
-  "website": "agr.georgia.gov/market-bulletin"
+  "lon": -84.4227
  },
  {
   "name": "Georgia Market Bulletin",
   "city": "Atlanta",
   "state": "GA",
+  "address": "19 Martin Luther King Jr. Drive SW, Atlanta, GA 30334-4250",
+  "zip": "30334",
+  "website": "https://www.agr.georgia.gov/market-bulletin",
   "lat": 33.7629,
-  "lon": -84.4227,
-  "website": "agr.georgia.gov/market-bulletin"
+  "lon": -84.4227
  },
  {
   "name": "The Brunswick News",
   "city": "Brunswick",
   "state": "GA",
+  "address": "3011 Altama Ave, Brunswick, GA 31520",
+  "zip": "31520",
+  "website": "https://www.thebrunswicknews.com",
   "lat": 31.1361,
-  "lon": -81.4669,
-  "website": "thebrunswicknews.com"
+  "lon": -81.4669
  },
  {
   "name": "Calhoun Times",
   "city": "Calhoun",
   "state": "GA",
+  "address": "216 W Belmont Dr, Calhoun, GA 30701",
+  "zip": "30701",
+  "website": "https://calhountimes.com/",
   "lat": 34.4998,
-  "lon": -84.9331,
-  "website": "calhountimes.com"
+  "lon": -84.9331
  },
  {
   "name": "Cherokee Tribune",
   "city": "Canton",
   "state": "GA",
+  "address": "521 E Main St, Canton, GA 30114",
+  "zip": "30114",
+  "website": "https://cherokeetribune.com/",
   "lat": 34.2472,
-  "lon": -84.4907,
-  "website": "cherokeetribune.com"
+  "lon": -84.4907
  },
  {
   "name": "The Clayton Tribune",
   "city": "Clayton",
   "state": "GA",
+  "address": "239 Highway 441 South, Clayton, GA 30525",
+  "zip": "30525",
+  "website": "https://www.theclaytontribune.com",
   "lat": 34.8766,
-  "lon": -83.4033,
-  "website": "theclaytontribune.com"
+  "lon": -83.4033
  },
  {
   "name": "White County News",
   "city": "Cleveland",
   "state": "GA",
+  "address": "13 E. Jarrard St., Cleveland, GA 30528",
+  "zip": "30528",
+  "website": "https://www.whitecountynews.net",
   "lat": 34.597,
-  "lon": -83.7607,
-  "website": "whitecountynews.net"
+  "lon": -83.7607
  },
  {
   "name": "The Northeast Georgian",
   "city": "Cornelia",
   "state": "GA",
+  "address": "2440 Old Athens Hwy, Cornelia, GA 30531",
+  "zip": "30531",
+  "website": "https://www.thenortheastgeorgian.com",
   "lat": 34.5166,
-  "lon": -83.5315,
-  "website": "thenortheastgeorgian.com"
+  "lon": -83.5315
  },
  {
   "name": "The Dahlonega Nugget",
   "city": "Dahlonega",
   "state": "GA",
+  "address": "1074 Morrison Moore Parkway, Dahlonega, GA 30533",
+  "zip": "30533",
+  "website": "https://www.dahloneganugget.com",
   "lat": 34.5299,
-  "lon": -83.9796,
-  "website": "thedahloneganugget.com"
+  "lon": -83.9796
  },
  {
   "name": "The Elberton Star",
   "city": "Elberton",
   "state": "GA",
+  "address": "25 N. Public Square, Elberton, GA 30635",
+  "zip": "30635",
+  "website": "https://www.elberton.com",
   "lat": 34.1068,
-  "lon": -82.8727,
-  "website": "elberton.com"
+  "lon": -82.8727
  },
  {
   "name": "The Hartwell Sun",
   "city": "Hartwell",
   "state": "GA",
+  "address": "8 Benson St, Hartwell, GA 30643",
+  "zip": "30643",
+  "website": "https://www.hartwellsun.com",
   "lat": 34.3496,
-  "lon": -82.928,
-  "website": "hartwellsun.com"
+  "lon": -82.928
  },
  {
   "name": "The Press-Sentinel",
   "city": "Jesup",
   "state": "GA",
+  "address": "252 West Walnut Street, Jesup, GA 31598",
+  "zip": "31598",
+  "website": "https://www.thepress-sentinel.com",
   "lat": 31.5946,
-  "lon": -81.8957,
-  "website": "thepress-sentinel.com"
+  "lon": -81.8957
  },
  {
   "name": "Franklin County Citizen-Leader",
   "city": "Lavonia",
   "state": "GA",
+  "address": "12150 Augusta Road, Lavonia, GA 30553",
+  "zip": "30553",
+  "website": "https://www.franklincountycitizen.com",
   "lat": 34.4339,
-  "lon": -83.108,
-  "website": "franklincountycitizen.com"
+  "lon": -83.108
  },
  {
   "name": "Gwinnett Daily Post",
   "city": "Lawrenceville",
   "state": "GA",
+  "address": "185 N. Perry Street, Lawrenceville, GA 30046",
+  "zip": "30046",
+  "website": "https://www.gwinnettdailypost.com/",
   "lat": 33.9529,
-  "lon": -83.9922,
-  "website": "gwinnettdailypost.com"
+  "lon": -83.9922
  },
  {
   "name": "Marietta Daily Journal",
   "city": "Marietta",
   "state": "GA",
+  "address": "580 Fairground St SE, Marietta, GA 30060",
+  "zip": "30060",
+  "website": "https://www.mdjonline.com/",
   "lat": 33.9536,
-  "lon": -84.5425,
-  "website": "mdjonline.com"
+  "lon": -84.5425
  },
  {
   "name": "Rome News-Tribune",
   "city": "Rome",
   "state": "GA",
+  "address": "305 E 6th Ave, Rome, GA 30161-6007",
+  "zip": "30161",
+  "website": "https://www.northwestgeorgianews.com/rome/",
   "lat": 34.2661,
-  "lon": -85.1861,
-  "website": "northwestgeorgianews.com/rome"
+  "lon": -85.1861
  },
  {
   "name": "Tribune & Georgian",
   "city": "St. Marys",
   "state": "GA",
+  "address": "4445 Ga. Highway 40, Suite 402, St. Marys, GA 31558",
+  "zip": "31558",
+  "website": "https://www.tribune-georgian.com",
   "lat": 30.7542,
-  "lon": -81.5726,
-  "website": "tribune-georgian.com"
+  "lon": -81.5726
  },
  {
   "name": "The McDuffie Progress",
   "city": "Thomson",
   "state": "GA",
+  "address": "PO Box 1090, Thomson, GA 30824",
+  "zip": "30824",
+  "website": "https://www.mcduffieprogress.com",
   "lat": 33.4693,
-  "lon": -82.4951,
-  "website": "mcduffieprogress.com"
+  "lon": -82.4951
  },
  {
   "name": "The Toccoa Record",
   "city": "Toccoa",
   "state": "GA",
+  "address": "67 W. Doyle Street, Toccoa, GA 30577",
+  "zip": "30577",
+  "website": "https://www.toccoarecord.com",
   "lat": 34.5821,
-  "lon": -83.3272,
-  "website": "thetoccoarecord.com"
+  "lon": -83.3272
  },
  {
   "name": "Monroe County News",
   "city": "Albia",
   "state": "IA",
+  "address": "109 Benton Ave E, Albia, IA 52531",
+  "zip": "52531",
+  "website": "https://www.albianews.com",
   "lat": 41.0265,
-  "lon": -92.8038,
-  "website": "albianews.com"
+  "lon": -92.8038
  },
  {
   "name": "Moravia Union",
   "city": "Albia",
   "state": "IA",
+  "address": "109 Benton Ave E, Albia, IA 52531",
+  "zip": "52531",
+  "website": "https://www.albianews.com",
   "lat": 41.0265,
-  "lon": -92.8038,
-  "website": "albianews.com"
+  "lon": -92.8038
  },
  {
   "name": "Cascade Pioneer",
   "city": "Cascade",
   "state": "IA",
+  "address": "716 1st Ave E, Cascade, IA 52033",
+  "zip": "52033",
+  "website": "https://www.cpioneer.com",
   "lat": 42.3018,
-  "lon": -91.0047,
-  "website": "cpioneer.com"
+  "lon": -91.0047
  },
  {
   "name": "The Chariton Leader",
   "city": "Chariton",
   "state": "IA",
+  "address": "815 Braden Ave, Chariton, IA 50049",
+  "zip": "50049",
+  "website": "https://www.charitonleader.com",
   "lat": 41.0174,
-  "lon": -93.3096,
-  "website": "charitonleader.com"
+  "lon": -93.3096
  },
  {
   "name": "Clinton Herald",
   "city": "Clinton",
   "state": "IA",
+  "address": "221 Sixth Avenue South, Clinton, IA 52732",
+  "zip": "52732",
+  "website": "https://www.clintonherald.com",
   "lat": 41.8424,
-  "lon": -90.2428,
-  "website": "clintonherald.com"
+  "lon": -90.2428
  },
  {
   "name": "Times-Republican",
   "city": "Corydon",
   "state": "IA",
+  "address": "205 W Jackson St, Corydon, IA 50060",
+  "zip": "50060",
+  "website": "https://www.corydontimes.com",
   "lat": 40.7579,
-  "lon": -93.3176,
-  "website": "corydontimes.com"
+  "lon": -93.3176
  },
  {
   "name": "Creston News Advertiser",
   "city": "Creston",
   "state": "IA",
+  "address": "503 West Adams Street, Creston, IA 50801",
+  "zip": "50801",
+  "website": "https://www.shawlocal.com/creston-news-advertiser/",
   "lat": 41.0603,
-  "lon": -94.3647,
-  "website": "shawlocal.com/creston-news-advertiser"
+  "lon": -94.3647
  },
  {
   "name": "Telegraph Herald",
   "city": "Dubuque",
   "state": "IA",
+  "address": "801 Bluff St, Dubuque, IA 52001",
+  "zip": "52001",
+  "website": "https://www.telegraphherald.com",
   "lat": 42.4989,
-  "lon": -90.7073,
-  "website": "telegraphherald.com"
+  "lon": -90.7073
  },
  {
   "name": "Dyersville Commercial",
   "city": "Dyersville",
   "state": "IA",
+  "address": "223 1st Ave E, Dyersville, IA 52040",
+  "zip": "52040",
+  "website": "https://www.dyersvillecommercial.com",
   "lat": 42.4815,
-  "lon": -91.1166,
-  "website": "dyersvillecommercial.com"
+  "lon": -91.1166
  },
  {
   "name": "Adair County Free Press",
   "city": "Fontanelle",
   "state": "IA",
+  "address": "141 Public Sq, Greenfield, IA 50849",
+  "zip": "50849",
+  "website": "https://www.shawlocal.com/adair-county-free-press/",
   "lat": 41.29,
-  "lon": -94.5602,
-  "website": "shawlocal.com/adair-county-free-press"
+  "lon": -94.5602
  },
  {
   "name": "The Fontanelle Observer",
   "city": "Fontanelle",
   "state": "IA",
+  "address": "503 West Adams Street, Creston, IA 50801",
+  "zip": "50801",
+  "website": "https://www.shawlocal.com/fontanelle-observer/",
   "lat": 41.29,
-  "lon": -94.5602,
-  "website": "shawlocal.com/fontanelle-observer"
+  "lon": -94.5602
  },
  {
   "name": "Times Citizen Communication",
   "city": "Iowa Falls",
   "state": "IA",
+  "address": "406 Stevens St, Iowa Falls, IA 50126",
+  "zip": "50126",
+  "website": "https://www.tccadvertising.com/",
   "lat": 42.5192,
-  "lon": -93.2661,
-  "website": "tccadvertising.com"
+  "lon": -93.2661
  },
  {
   "name": "Manchester Press",
   "city": "Manchester",
   "state": "IA",
+  "address": "109 E Delaware St, Manchester, IA 52057",
+  "zip": "52057",
+  "website": "https://www.manchesterpress.com/",
   "lat": 42.4853,
-  "lon": -91.4561,
-  "website": "manchesterpress.com"
+  "lon": -91.4561
  },
  {
   "name": "Newton Daily News",
   "city": "Newton",
   "state": "IA",
+  "address": "P.O. Box 967, Newton, IA 50208",
+  "zip": "50208",
+  "website": "https://www.newtondailynews.com",
   "lat": 41.6963,
-  "lon": -93.0405,
-  "website": "newtondailynews.com"
+  "lon": -93.0405
  },
  {
   "name": "Osceola Sentinel-Tribune",
   "city": "Osceola",
   "state": "IA",
+  "address": "111 E Washington, Osceola, IA 50213",
+  "zip": "50213",
+  "website": "https://www.shawlocal.com/osceola-sentinel-tribune/",
   "lat": 41.0297,
-  "lon": -93.7853,
-  "website": "shawlocal.com/osceola-sentinel-tribune"
+  "lon": -93.7853
  },
  {
   "name": "The Weekly",
   "city": "Osceola",
   "state": "IA",
+  "address": "111 E Washington St, Osceola, IA 50213",
+  "zip": "50213",
+  "website": "https://www.shawlocal.com/clarke-county-now/",
   "lat": 41.0297,
-  "lon": -93.7853,
-  "website": "shawlocal.com/clarke-county-now"
+  "lon": -93.7853
  },
  {
   "name": "The Oskaloosa Herald",
   "city": "Oskaloosa",
   "state": "IA",
+  "address": "219 High Avenue East, Oskaloosa, IA 52577",
+  "zip": "52577",
+  "website": "https://www.oskaloosa.com",
   "lat": 41.2922,
-  "lon": -92.6409,
-  "website": "oskaloosa.com"
+  "lon": -92.6409
  },
  {
   "name": "Ottumwa Courier",
   "city": "Ottumwa",
   "state": "IA",
+  "address": "213 E 2nd St, Ottumwa, IA 52501",
+  "zip": "52501",
+  "website": "https://www.ottumwacourier.com",
   "lat": 41.0223,
-  "lon": -92.4233,
-  "website": "ottumwacourier.com"
+  "lon": -92.4233
  },
  {
   "name": "Northwest Herald",
   "city": "Crystal Lake",
   "state": "IL",
+  "address": "7717 S IL Route 31, Crystal Lake, IL 60014",
+  "zip": "60014",
+  "website": "https://www.shawlocal.com/northwest-herald/",
   "lat": 42.2332,
-  "lon": -88.3344,
-  "website": "shawlocal.com/northwest-herald"
+  "lon": -88.3344
  },
  {
   "name": "Commercial-News",
   "city": "Danville",
   "state": "IL",
+  "address": "2 East Main St., Unit 144, Danville, IL 61832",
+  "zip": "61832",
+  "website": "https://www.commercial-news.com",
   "lat": 40.1426,
-  "lon": -87.6107,
-  "website": "commercial-news.com"
+  "lon": -87.6107
  },
  {
   "name": "Suburban Life",
   "city": "Darien",
   "state": "IL",
+  "address": "2001 Butterfield Road Suite 105, Downers Grove, IL 60515",
+  "zip": "60515",
+  "website": "https://www.shawlocal.com/suburban-life/",
   "lat": 41.7457,
-  "lon": -87.9815,
-  "website": "shawlocal.com/suburban-life"
+  "lon": -87.9815
  },
  {
   "name": "Daily Chronicle",
   "city": "DeKalb",
   "state": "IL",
+  "address": "1985 DeKalb Ave., Sycamore, IL 60178",
+  "zip": "60178",
+  "website": "https://www.shawlocal.com/dekalb/",
   "lat": 41.9289,
-  "lon": -88.7464,
-  "website": "shawlocal.com/dekalb"
+  "lon": -88.7464
  },
  {
   "name": "Northern Star",
   "city": "DeKalb",
   "state": "IL",
+  "address": "Peters Campus Life Building, Suite 175, 545 Lucinda Ave., DeKalb, IL 60115",
+  "zip": "60115",
+  "website": "https://northernstar.info",
   "lat": 41.9289,
-  "lon": -88.7464,
-  "website": "northernstar.info"
+  "lon": -88.7464
  },
  {
   "name": "Telegraph",
   "city": "Dixon",
   "state": "IL",
+  "address": "113 S Peoria Ave, Dixon, IL 61021",
+  "zip": "61021",
+  "website": "https://www.shawlocal.com/sauk-valley/",
   "lat": 41.8448,
-  "lon": -89.4765,
-  "website": "shawlocal.com/sauk-valley"
+  "lon": -89.4765
  },
  {
   "name": "Elburn Herald",
   "city": "Elburn",
   "state": "IL",
+  "address": "525 North Main Street, Elburn, IL 60119",
+  "zip": "60119",
+  "website": "https://www.shawlocal.com/kane-county-chronicle/",
   "lat": 41.886,
-  "lon": -88.4609,
-  "website": "shawlocal.com/kane-county-chronicle"
+  "lon": -88.4609
  },
  {
   "name": "The Review",
   "city": "Erie",
   "state": "IL",
+  "address": "910 Albany, Erie, IL 61250",
+  "zip": "61250",
+  "website": "https://www.shawlocal.com/whiteside/",
   "lat": 41.6586,
-  "lon": -90.0813,
-  "website": "shawlocal.com/whiteside"
+  "lon": -90.0813
+ },
+ {
+  "name": "Forreston Journal",
+  "city": "Forreston",
+  "state": "IL",
+  "address": "113 S. Peoria Ave, Dixon, IL 61021",
+  "zip": "61021",
+  "website": "https://www.shawlocal.com/ogle-county/",
+  "lat": 42.12725,
+  "lon": -89.57837
  },
  {
   "name": "Fulton Journal",
   "city": "Fulton",
   "state": "IL",
+  "address": "113 S. Peoria Ave, Dixon, IL 61021",
+  "zip": "61021",
+  "website": "https://www.shawlocal.com/whiteside/",
   "lat": 41.8652,
-  "lon": -90.1587,
-  "website": "shawlocal.com/whiteside"
+  "lon": -90.1587
  },
  {
   "name": "Lake County Journal",
   "city": "Grayslake",
   "state": "IL",
+  "address": "34121 N. Highway 45 Suite 224, Grayslake, IL 60030",
+  "zip": "60030",
+  "website": "https://www.shawlocal.com/lake-county-journal/",
   "lat": 42.3408,
-  "lon": -88.0336,
-  "website": "shawlocal.com/lake-county-journal"
+  "lon": -88.0336
  },
  {
   "name": "The Putnam County Record",
   "city": "Hennepin",
   "state": "IL",
+  "address": "526 S S Bureau Valley Parkway, Ste. F, Princeton, IL 61356",
+  "zip": "61356",
+  "website": "https://www.shawlocal.com/illinois-valley/",
   "lat": 41.2505,
-  "lon": -89.3141,
-  "website": "shawlocal.com/illinois-valley"
+  "lon": -89.3141
  },
  {
   "name": "The Herald-News",
   "city": "Joliet",
   "state": "IL",
+  "address": "1100 Essington Rd, Ste. 4, Joliet, IL 60435",
+  "zip": "60435",
+  "website": "https://www.shawlocal.com/herald-news/",
   "lat": 41.5177,
-  "lon": -88.1488,
-  "website": "shawlocal.com/herald-news"
+  "lon": -88.1488
  },
  {
   "name": "Daily Journal (Kankakee)",
   "city": "Kankakee",
   "state": "IL",
+  "address": "1 Dearborn Square, Suite 200, Kankakee, IL 60901",
+  "zip": "60901",
+  "website": "https://www.daily-journal.com",
   "lat": 41.1017,
-  "lon": -87.8637,
-  "website": "daily-journal.com"
+  "lon": -87.8637
  },
  {
   "name": "AgriNews",
   "city": "LaSalle",
   "state": "IL",
+  "address": "426 Second St, La Salle, IL 61301",
+  "zip": "61301",
+  "website": "https://www.agrinews-pubs.com/",
   "lat": 41.3352,
-  "lon": -89.0972,
-  "website": "agrinews-pubs.com"
+  "lon": -89.0972
  },
  {
   "name": "NewsTribune",
   "city": "LaSalle",
   "state": "IL",
+  "address": "426 Second St, La Salle, IL 61301",
+  "zip": "61301",
+  "website": "https://www.shawlocal.com/illinois-valley/",
   "lat": 41.3352,
-  "lon": -89.0972,
-  "website": "shawlocal.com/illinois-valley"
+  "lon": -89.0972
  },
  {
   "name": "The Mendota Reporter",
   "city": "Mendota",
   "state": "IL",
+  "address": "703 Illinois Ave, Mendota, IL 61342",
+  "zip": "61342",
+  "website": "https://www.shawlocal.com/illinois-valley/",
   "lat": 41.5567,
-  "lon": -89.1005,
-  "website": "shawlocal.com/illinois-valley"
+  "lon": -89.1005
  },
  {
   "name": "Morris Herald News",
   "city": "Morris",
   "state": "IL",
+  "address": "909 Liberty St, Morris, IL 60450",
+  "zip": "60450",
+  "website": "https://www.shawlocal.com/grundy-county-now/",
   "lat": 41.3802,
-  "lon": -88.4243,
-  "website": "shawlocal.com/grundy-county-now"
+  "lon": -88.4243
+ },
+ {
+  "name": "Morris Times",
+  "city": "Mount Morris",
+  "state": "IL",
+  "address": "121 S 4th St Ste A, Oregon, IL 61061",
+  "zip": "61061",
+  "website": "https://www.shawlocal.com/ogle-county/",
+  "lat": 42.04834,
+  "lon": -89.42933
  },
  {
   "name": "Ogle County Life",
   "city": "Oregon",
   "state": "IL",
+  "address": "311 W Washington St, Oregon, IL 61061",
+  "zip": "61061",
+  "website": "https://www.shawlocal.com/ogle-county/",
   "lat": 42.0127,
-  "lon": -89.3358,
-  "website": "oglecountylife.com"
+  "lon": -89.3358
+ },
+ {
+  "name": "Oregon Republic Reporter",
+  "city": "Oregon",
+  "state": "IL",
+  "address": "121A South Fourth Street, P.O. Box 8, Oregon, IL 61061",
+  "zip": "61061",
+  "website": "https://www.shawlocal.com/ogle-county/",
+  "lat": 42.0127,
+  "lon": -89.33577
  },
  {
   "name": "Oswego Ledger",
   "city": "Oswego",
   "state": "IL",
+  "address": "64 Main St, Oswego, IL 60543",
+  "zip": "60543",
+  "website": "https://www.shawlocal.com/kendall-county-now/",
   "lat": 41.6832,
-  "lon": -88.3388,
-  "website": "shawlocal.com/kendall-county-now"
+  "lon": -88.3388
  },
  {
   "name": "Ottawa Times",
   "city": "Ottawa",
   "state": "IL",
+  "address": "110 W Jefferson St, Ottawa, IL 61350",
+  "zip": "61350",
+  "website": "https://www.mywebtimes.com",
   "lat": 41.354,
-  "lon": -88.8234,
-  "website": "mywebtimes.com"
+  "lon": -88.8234
  },
  {
   "name": "The Times",
   "city": "Ottawa",
   "state": "IL",
+  "address": "426 2nd St, La Salle, IL 61301",
+  "zip": "61301",
+  "website": "https://www.shawlocal.com/illinois-valley/",
   "lat": 41.354,
-  "lon": -88.8234,
-  "website": "shawlocal.com/illinois-valley"
+  "lon": -88.8234
  },
  {
   "name": "Plano Record",
   "city": "Plano",
   "state": "IL",
+  "address": "109 W Veterans Parkway, Yorkville, IL 60560",
+  "zip": "60560",
+  "website": "https://www.shawlocal.com/kendall-county-now/",
   "lat": 41.6804,
-  "lon": -88.5363,
-  "website": "shawlocal.com/kendall-county-now"
+  "lon": -88.5363
+ },
+ {
+  "name": "Polo Tri-County Press",
+  "city": "Polo",
+  "state": "IL",
+  "address": "113 N Franklin Ave, Polo, IL 61064",
+  "zip": "61064",
+  "website": "https://www.shawlocal.com/ogle-county/",
+  "lat": 41.98485,
+  "lon": -89.58043
  },
  {
   "name": "Bureau County Republican",
   "city": "Princeton",
   "state": "IL",
+  "address": "526 S. Bureau Valley Pkwy, Suite F, Princeton, IL 61356",
+  "zip": "61356",
+  "website": "https://www.shawlocal.com/bureau-county-republican/",
   "lat": 41.3806,
-  "lon": -89.4641,
-  "website": "shawlocal.com/bureau-county-republican"
+  "lon": -89.4641
  },
  {
   "name": "The Prophetstown Echo",
   "city": "Prophetstown",
   "state": "IL",
+  "address": "342 Washington St, Prophetstown, IL 61277",
+  "zip": "61277",
+  "website": "https://www.shawlocal.com/whiteside/",
   "lat": 41.6697,
-  "lon": -89.9347,
-  "website": "shawlocal.com/whiteside"
+  "lon": -89.9347
  },
  {
   "name": "Rochelle News-Leader",
   "city": "Rochelle",
   "state": "IL",
+  "address": "211 E Il Route 38, Rochelle, IL 61068",
+  "zip": "61068",
+  "website": "https://www.shawlocal.com/ogle-county/",
   "lat": 41.9191,
-  "lon": -89.0637,
-  "website": "shawlocal.com/ogle-county"
+  "lon": -89.0637
  },
  {
   "name": "Sandwich Record",
   "city": "Sandwich",
   "state": "IL",
+  "address": "109 W. Veterans Parkway, Yorkville, IL 60560",
+  "zip": "60560",
+  "website": "https://www.shawlocal.com/kendall-county-now/",
   "lat": 41.6501,
-  "lon": -88.619,
-  "website": "shawlocal.com/kendall-county-now"
+  "lon": -88.619
  },
  {
   "name": "Kane County Chronicle",
   "city": "St. Charles",
   "state": "IL",
+  "address": "333 N Randall Road, Ste. 2, St. Charles, IL 60174",
+  "zip": "60174",
+  "website": "https://www.shawlocal.com/kane-county-chronicle/",
   "lat": 41.9194,
-  "lon": -88.3107,
-  "website": "shawlocal.com/kane-county-chronicle"
+  "lon": -88.3107
  },
  {
   "name": "Gazette",
   "city": "Sterling",
   "state": "IL",
+  "address": "3200 E Lincolnway, Sterling, IL 61081",
+  "zip": "61081",
+  "website": "https://www.shawlocal.com/sauk-valley/",
   "lat": 41.7997,
-  "lon": -89.6959,
-  "website": "shawlocal.com/sauk-valley"
+  "lon": -89.6959
  },
  {
   "name": "Sauk Valley Weekend",
   "city": "Sterling",
   "state": "IL",
+  "address": "3200 E Lincolnway, Sterling, IL 61081",
+  "zip": "61081",
+  "website": "https://www.shawlocal.com/sauk-valley/",
   "lat": 41.7997,
-  "lon": -89.6959,
-  "website": "shawlocal.com/sauk-valley"
+  "lon": -89.6959
  },
  {
   "name": "Whiteside News Sentinel",
   "city": "Sterling",
   "state": "IL",
+  "address": "113 S. Peoria Ave, Dixon, IL 61021",
+  "zip": "61021",
+  "website": "https://www.shawlocal.com/whiteside/",
   "lat": 41.7997,
-  "lon": -89.6959,
-  "website": "shawlocal.com/whiteside"
+  "lon": -89.6959
  },
  {
   "name": "The MidWeek",
   "city": "Sycamore",
   "state": "IL",
+  "address": "121 W. Lincoln Highway, DeKalb, IL 60115",
+  "zip": "60115",
+  "website": "https://www.shawlocal.com/dekalb/",
   "lat": 41.9967,
-  "lon": -88.6776,
-  "website": "shawlocal.com/dekalb"
+  "lon": -88.6776
  },
  {
   "name": "Kendall County Record",
   "city": "Yorkville",
   "state": "IL",
+  "address": "109 W. Veterans Parkway, Yorkville, IL 60560",
+  "zip": "60560",
+  "website": "https://www.shawlocal.com/kendall-county-now/",
   "lat": 41.6617,
-  "lon": -88.4286,
-  "website": "shawlocal.com/kendall-county-now"
+  "lon": -88.4286
  },
  {
   "name": "The Herald Bulletin",
   "city": "Anderson",
   "state": "IN",
+  "address": "1133 Jackson St, Anderson, IN 46016",
+  "zip": "46016",
+  "website": "https://www.theheraldbulletin.com",
   "lat": 40.0898,
-  "lon": -85.6894,
-  "website": "theheraldbulletin.com"
+  "lon": -85.6894
  },
  {
   "name": "Culver Citizen",
   "city": "Culver",
   "state": "IN",
+  "address": "214 N. Michigan Street, Plymouth, IN 46563",
+  "zip": "46563",
+  "website": "https://www.thepilotnews.com",
   "lat": 41.2166,
-  "lon": -86.4243,
-  "website": "thepilotnews.com"
+  "lon": -86.4243
  },
  {
   "name": "News and Tribune",
   "city": "Jeffersonville",
   "state": "IN",
+  "address": "221 Spring St., Jeffersonville, IN 47130",
+  "zip": "47130",
+  "website": "https://www.newsandtribune.com",
   "lat": 38.3324,
-  "lon": -85.6961,
-  "website": "newsandtribune.com"
+  "lon": -85.6961
  },
  {
   "name": "The Leader",
   "city": "Knox",
   "state": "IN",
+  "address": "Starke County Leader, Knox, IN 46534",
+  "zip": "46534",
+  "website": "https://www.thepilotnews.com",
   "lat": 41.291,
-  "lon": -86.6212,
-  "website": "thepilotnews.com"
+  "lon": -86.6212
  },
  {
   "name": "The Review",
   "city": "Knox",
   "state": "IN",
+  "address": "153 E Washington St, Knox, IN 46534",
+  "zip": "46534",
+  "website": "https://www.thepilotnews.com",
   "lat": 41.291,
-  "lon": -86.6212,
-  "website": "thepilotnews.com"
+  "lon": -86.6212
  },
  {
   "name": "Kokomo Tribune",
   "city": "Kokomo",
   "state": "IN",
+  "address": "123 N. Buckeye St., Kokomo, IN 46901",
+  "zip": "46901",
+  "website": "https://www.kokomotribune.com",
   "lat": 40.464,
-  "lon": -86.1273,
-  "website": "kokomotribune.com"
+  "lon": -86.1273
  },
  {
   "name": "Heartland News",
   "city": "Nappanee, Wakarusa, Bremen, Bourbon",
   "state": "IN",
+  "address": "214 N Michigan St, Plymouth, IN 46563",
+  "zip": "46563",
+  "website": "https://www.thepilotnews.com",
   "lat": 41.4428,
-  "lon": -86.0011,
-  "website": "thepilotnews.com"
+  "lon": -86.0011
  },
  {
   "name": "The Pilot News",
   "city": "Plymouth",
   "state": "IN",
+  "address": "218 N Michigan St, Plymouth, IN 46563",
+  "zip": "46563",
+  "website": "https://www.thepilotnews.com",
   "lat": 41.3488,
-  "lon": -86.3193,
-  "website": "thepilotnews.com"
+  "lon": -86.3193
  },
  {
   "name": "The Shopper",
   "city": "Plymouth",
   "state": "IN",
+  "address": "218 N Michigan St, Plymouth, IN 46563",
+  "zip": "46563",
+  "website": "https://www.thepilotnews.com",
   "lat": 41.3488,
-  "lon": -86.3193,
-  "website": "thepilotnews.com"
+  "lon": -86.3193
  },
  {
   "name": "The Daily Independent",
   "city": "Ashland",
   "state": "KY",
+  "address": "1544 Winchester Ave., Sixth Floor, Ashland, KY 41101",
+  "zip": "41101",
+  "website": "https://www.dailyindependent.com",
   "lat": 38.4595,
-  "lon": -82.6451,
-  "website": "dailyindependent.com"
+  "lon": -82.6451
  },
  {
   "name": "Georgetown News-Graphic",
   "city": "Georgetown",
   "state": "KY",
+  "address": "1481 Cherry Blossom Way, Georgetown, KY 40324",
+  "zip": "40324",
+  "website": "https://www.news-graphic.com",
   "lat": 38.2602,
-  "lon": -84.5349,
-  "website": "news-graphic.com"
+  "lon": -84.5349
  },
  {
   "name": "Hazard Herald",
   "city": "Hazard",
   "state": "KY",
+  "address": "439 High St, Hazard, KY 41701",
+  "zip": "41701",
+  "website": "https://www.hazard-herald.com",
   "lat": 37.2605,
-  "lon": -83.1982,
-  "website": "hazard-herald.com"
+  "lon": -83.1982
  },
  {
   "name": "The Murray Ledger & Times",
   "city": "Murray",
   "state": "KY",
+  "address": "1001 Whitnell Ave, Murray, KY 42071",
+  "zip": "42071",
+  "website": "https://www.murrayledger.com",
   "lat": 36.6142,
-  "lon": -88.3221,
-  "website": "murrayledger.com"
+  "lon": -88.3221
  },
  {
   "name": "The Paintsville Herald",
   "city": "Paintsville",
   "state": "KY",
+  "address": "978 Broadway St, Paintsville, KY 41240",
+  "zip": "41240",
+  "website": "https://www.paintsvilleherald.com",
   "lat": 37.8203,
-  "lon": -82.806,
-  "website": "paintsvilleherald.com"
+  "lon": -82.806
  },
  {
   "name": "Appalachian News-Express",
   "city": "Pikeville",
   "state": "KY",
+  "address": "129 Caroline Ave, Pikeville, KY 41501",
+  "zip": "41501",
+  "website": "https://www.news-expressky.com",
   "lat": 37.4769,
-  "lon": -82.5288,
-  "website": "news-expressky.com"
+  "lon": -82.5288
  },
  {
   "name": "Floyd County Chronicle & Times",
   "city": "Prestonsburg",
   "state": "KY",
+  "address": "197 South Lake Drive, Prestonsburg, KY 41653",
+  "zip": "41653",
+  "website": "https://www.floydct.com",
   "lat": 37.6816,
-  "lon": -82.7659,
-  "website": "floydct.com"
+  "lon": -82.7659
  },
  {
   "name": "Richmond Register",
   "city": "Richmond",
   "state": "KY",
+  "address": "1212 W. Main Street, Richmond, KY 40475",
+  "zip": "40475",
+  "website": "https://www.richmondregister.com",
   "lat": 37.7291,
-  "lon": -84.2994,
-  "website": "richmondregister.com"
+  "lon": -84.2994
  },
  {
   "name": "Commonwealth Journal",
   "city": "Somerset",
   "state": "KY",
+  "address": "110 East Mt. Vernon Street, Somerset, KY 42501",
+  "zip": "42501",
+  "website": "https://www.somerset-kentucky.com",
   "lat": 37.0865,
-  "lon": -84.6054,
-  "website": "somerset-kentucky.com"
+  "lon": -84.6054
  },
  {
   "name": "The Era-Leader",
   "city": "Franklinton",
   "state": "LA",
+  "address": "1137 Main Street, Franklinton, LA 70438",
+  "zip": "70438",
+  "website": "https://www.era-leader.com/",
   "lat": 30.8482,
-  "lon": -90.1459,
-  "website": "era-leader.com"
+  "lon": -90.1459
  },
  {
   "name": "Daily Iberian",
   "city": "New Iberia",
   "state": "LA",
+  "address": "124 East Main Street, New Iberia, LA 70560",
+  "zip": "70560",
+  "website": "https://www.thedailyiberian.com",
   "lat": 30.0055,
-  "lon": -91.8203,
-  "website": "thedailyiberian.com"
+  "lon": -91.8203
  },
  {
   "name": "The Madison Journal",
   "city": "Tallulah",
   "state": "LA",
+  "address": "300 S. Chestnut St., Tallulah, LA 71282",
+  "zip": "71282",
+  "website": "https://www.madisonjournal.com/",
   "lat": 32.4067,
-  "lon": -91.1917,
-  "website": "madisonjournal.com"
+  "lon": -91.1917
  },
  {
   "name": "Sun Chronicle",
   "city": "Attleboro",
   "state": "MA",
+  "address": "34 South Main St., Attleboro, MA 02703",
+  "zip": "02703",
+  "website": "https://www.thesunchronicle.com",
   "lat": 41.9317,
-  "lon": -71.2945,
-  "website": "thesunchronicle.com"
+  "lon": -71.2945
  },
  {
   "name": "Gloucester Daily Times",
   "city": "Gloucester",
   "state": "MA",
+  "address": "503 Gloucester Crossing Road, Gloucester, MA 01930",
+  "zip": "01930",
+  "website": "https://www.gloucestertimes.com",
   "lat": 42.6288,
-  "lon": -70.6859,
-  "website": "gloucestertimes.com"
+  "lon": -70.6859
  },
  {
   "name": "The Daily News of Newburyport",
   "city": "Newburyport",
   "state": "MA",
+  "address": "23 Liberty St., Newburyport, MA 01950",
+  "zip": "01950",
+  "website": "https://www.newburyportnews.com",
   "lat": 42.8121,
-  "lon": -70.8866,
-  "website": "newburyportnews.com"
+  "lon": -70.8866
  },
  {
   "name": "The Eagle-Tribune",
   "city": "North Andover",
   "state": "MA",
+  "address": "100 Turnpike St., North Andover, MA 01845",
+  "zip": "01845",
+  "website": "https://www.eagletribune.com",
   "lat": 42.6987,
-  "lon": -71.1351,
-  "website": "eagletribune.com"
+  "lon": -71.1351
  },
  {
   "name": "The Salem News",
   "city": "Salem",
   "state": "MA",
+  "address": "300 Rosewood Drive, Suite 107, Danvers, MA 01923",
+  "zip": "01923",
+  "website": "https://www.salemnews.com",
   "lat": 42.4992,
-  "lon": -70.8982,
-  "website": "salemnews.com"
+  "lon": -70.8982
  },
  {
   "name": "Daily Times Chronicle",
   "city": "Woburn",
   "state": "MA",
+  "address": "36 Commerce Way Unit 410, Woburn, MA 01801",
+  "zip": "01801",
+  "website": "https://homenewshere.com/daily_times_chronicle/",
   "lat": 42.4887,
-  "lon": -71.1544,
-  "website": "homenewshere.com/daily_times_chronicle"
+  "lon": -71.1544
  },
  {
   "name": "Cumberland Times-News",
   "city": "Cumberland",
   "state": "MD",
+  "address": "19 Baltimore St, Cumberland, MD 21502",
+  "zip": "21502",
+  "website": "https://www.times-news.com",
   "lat": 39.6519,
-  "lon": -78.7584,
-  "website": "times-news.com"
+  "lon": -78.7584
  },
  {
   "name": "The Globe (formerly Ironwood Daily Globe)",
   "city": "Ironwood",
   "state": "MI",
+  "address": "118 E. McLeod Ave., Ironwood, MI 49938",
+  "zip": "49938",
+  "website": "https://www.yourdailyglobe.com",
   "lat": 46.4522,
-  "lon": -90.1504,
-  "website": "yourdailyglobe.com"
+  "lon": -90.1504
  },
  {
   "name": "Traverse City Record-Eagle",
   "city": "Traverse City",
   "state": "MI",
+  "address": "120 W Front St, Traverse City, MI 49684",
+  "zip": "49684",
+  "website": "https://www.record-eagle.com",
   "lat": 44.7543,
-  "lon": -85.603,
-  "website": "record-eagle.com"
+  "lon": -85.603
  },
  {
   "name": "Mankato Free Press",
   "city": "Mankato",
   "state": "MN",
+  "address": "418 S. 2nd St., Mankato, MN 56002",
+  "zip": "56002",
+  "website": "https://www.mankatofreepress.com",
   "lat": 44.1711,
-  "lon": -93.9764,
-  "website": "mankatofreepress.com"
+  "lon": -93.9764
  },
  {
   "name": "Outdoor News",
   "city": "Plymouth",
   "state": "MN",
+  "address": "9850 51st Avenue North, Suite 130, Plymouth, MN 55442",
+  "zip": "55442",
+  "website": "https://www.outdoornews.com/",
   "lat": 45.0223,
-  "lon": -93.4629,
-  "website": "outdoornews.com"
+  "lon": -93.4629
  },
  {
   "name": "Press Publications",
   "city": "White Bear Lk",
   "state": "MN",
+  "address": "4779 Bloom Ave, White Bear Lake, MN 55110",
+  "zip": "55110",
+  "website": "https://presspubs.com/white_bear",
   "lat": 45.0847,
-  "lon": -92.9966,
-  "website": "presspubs.com/white_bear"
+  "lon": -92.9966
  },
  {
   "name": "The Ozark County Times",
   "city": "Gainesville",
   "state": "MO",
+  "address": "504 Third Street, Gainesville, MO 65655",
+  "zip": "65655",
+  "website": "https://www.ozarkcountytimes.com/",
   "lat": 36.6063,
-  "lon": -92.4246,
-  "website": "ozarkcountytimes.com"
+  "lon": -92.4246
  },
  {
   "name": "Branson Tri Lakes News",
   "city": "Hollister",
   "state": "MO",
+  "address": "200 Industrial Park Drive, Hollister, MO 65672",
+  "zip": "65672",
+  "website": "https://www.bransontrilakesnews.com",
   "lat": 36.6072,
-  "lon": -93.232,
-  "website": "bransontrilakesnews.com"
+  "lon": -93.232
  },
  {
   "name": "The Joplin Globe",
   "city": "Joplin",
   "state": "MO",
+  "address": "117 E 4th St, Joplin, MO 64801",
+  "zip": "64801",
+  "website": "https://www.joplinglobe.com",
   "lat": 37.0752,
-  "lon": -94.5013,
-  "website": "joplinglobe.com"
+  "lon": -94.5013
  },
  {
   "name": "Lebanon Daily Record",
   "city": "Lebanon",
   "state": "MO",
+  "address": "100 E. Commercial St., Lebanon, MO 65536",
+  "zip": "65536",
+  "website": "https://www.laclederecord.com/",
   "lat": 37.6721,
-  "lon": -92.6597,
-  "website": "laclederecord.com"
+  "lon": -92.6597
  },
  {
   "name": "Missourian Media",
   "city": "Washington",
   "state": "MO",
+  "address": "6321 Bluff Road, Washington, MO 63090",
+  "zip": "63090",
+  "website": "https://www.missourian.com",
   "lat": 38.5519,
-  "lon": -91.0155,
-  "website": "missourian.com"
+  "lon": -91.0155
  },
  {
   "name": "Washington Missourian",
   "city": "Washington",
   "state": "MO",
+  "address": "6321 Bluff Road, Washington, MO 63090",
+  "zip": "63090",
+  "website": "https://www.emissourian.com",
   "lat": 38.5519,
-  "lon": -91.0155,
-  "website": "emissourian.com"
+  "lon": -91.0155
  },
  {
   "name": "The Sun-Sentinel",
   "city": "Charleston",
   "state": "MS",
+  "address": "149 Court Square, Charleston, MS 38921",
+  "zip": "38921",
+  "website": "https://www.tallahatchienews.ms/",
   "lat": 34.0077,
-  "lon": -90.0552,
-  "website": "tallahatchienews.ms"
+  "lon": -90.0552
  },
  {
   "name": "Clarksdale Press Register",
   "city": "Clarksdale",
   "state": "MS",
+  "address": "128 E. Second St., Clarksdale, MS 38614",
+  "zip": "38614",
+  "website": "https://www.pressregister.com/",
   "lat": 34.1938,
-  "lon": -90.5686,
-  "website": "pressregister.com"
+  "lon": -90.5686
  },
  {
   "name": "Columbian Progress",
   "city": "Columbia",
   "state": "MS",
+  "address": "318 Second St, Columbia, MS 39429",
+  "zip": "39429",
+  "website": "https://www.columbianprogress.com/",
   "lat": 31.2569,
-  "lon": -89.8254,
-  "website": "columbianprogress.com"
+  "lon": -89.8254
  },
  {
   "name": "Scott County Times",
   "city": "Forest",
   "state": "MS",
+  "address": "311 Smith Ave, Forest, MS 39074",
+  "zip": "39074",
+  "website": "https://www.sctonline.net/",
   "lat": 32.3598,
-  "lon": -89.4759,
-  "website": "sctonline.net"
+  "lon": -89.4759
  },
  {
   "name": "Delta Democrat Times",
   "city": "Greenville",
   "state": "MS",
+  "address": "627 Washington Avenue, Greenville, MS 38701",
+  "zip": "38701",
+  "website": "https://www.ddtonline.com/",
   "lat": 33.3835,
-  "lon": -91.0523,
-  "website": "ddtonline.com"
+  "lon": -91.0523
  },
  {
   "name": "The Greenwood Commonwealth",
   "city": "Greenwood",
   "state": "MS",
+  "address": "329 Hwy. 82 West, Greenwood, MS 38930",
+  "zip": "38930",
+  "website": "https://www.gwcommonwealth.com/",
   "lat": 33.5125,
-  "lon": -90.199,
-  "website": "gwcommonwealth.com"
+  "lon": -90.199
  },
  {
   "name": "Grenada Star",
   "city": "Grenada",
   "state": "MS",
+  "address": "355 W. Monroe St., Grenada, MS 38901",
+  "zip": "38901",
+  "website": "https://www.grenadastar.com/",
   "lat": 33.7814,
-  "lon": -89.8115,
-  "website": "grenadastar.com"
+  "lon": -89.8115
  },
  {
   "name": "Pine Belt News",
   "city": "Hattiesburg",
   "state": "MS",
+  "address": "525 Main Street, Suite C, Hattiesburg, MS 39401",
+  "zip": "39401",
+  "website": "https://www.hubcityspokes.com/",
   "lat": 31.3073,
-  "lon": -89.3174,
-  "website": "hubcityspokes.com"
+  "lon": -89.3174
  },
  {
   "name": "The Enterprise-Tocsin",
   "city": "Indianola",
   "state": "MS",
+  "address": "114 Main St., Indianola, MS 38751",
+  "zip": "38751",
+  "website": "https://www.enterprise-tocsin.com/",
   "lat": 33.4489,
-  "lon": -90.6438,
-  "website": "enterprise-tocsin.com"
+  "lon": -90.6438
  },
  {
   "name": "The Northside Sun",
   "city": "Jackson",
   "state": "MS",
+  "address": "246 Briarwood Dr, Jackson, MS 39206",
+  "zip": "39206",
+  "website": "https://www.northsidesun.com/",
   "lat": 32.3158,
-  "lon": -90.2129,
-  "website": "northsidesun.com"
+  "lon": -90.2129
  },
  {
   "name": "The Star-Herald",
   "city": "Kosciusko",
   "state": "MS",
+  "address": "104 N. Jackson St., Kosciusko, MS 39090",
+  "zip": "39090",
+  "website": "https://www.starherald.net/",
   "lat": 33.0582,
-  "lon": -89.5894,
-  "website": "starherald.net"
+  "lon": -89.5894
  },
  {
   "name": "Red Hills News",
   "city": "Louisville",
   "state": "MS",
+  "address": "233 North Court, Louisville, MS 39339",
+  "zip": "39339",
+  "website": "https://www.redhillsmsnews.com/",
   "lat": 33.1229,
-  "lon": -89.0549,
-  "website": "redhillsmsnews.com"
+  "lon": -89.0549
  },
  {
   "name": "Magee Courier-Simpson County News",
   "city": "Magee",
   "state": "MS",
+  "address": "206 Main Ave. N, Magee, MS 39111",
+  "zip": "39111",
+  "website": "https://www.simpsoncounty.ms/",
   "lat": 31.873,
-  "lon": -89.734,
-  "website": "simpsoncounty.ms"
+  "lon": -89.734
  },
  {
   "name": "Enterprise-Journal",
   "city": "McComb",
   "state": "MS",
+  "address": "112 Oliver Emmerich Dr, McComb, MS 39648",
+  "zip": "39648",
+  "website": "https://www.enterprise-journal.com/",
   "lat": 31.2445,
-  "lon": -90.4716,
-  "website": "enterprise-journal.com"
+  "lon": -90.4716
  },
  {
   "name": "Clarke County Tribune",
   "city": "Quitman",
   "state": "MS",
+  "address": "101 Main Street, Quitman, MS 39355",
+  "zip": "39355",
+  "website": "https://www.clarkecountytrib.com/",
   "lat": 32.0415,
-  "lon": -88.7205,
-  "website": "clarkecountytrib.com"
+  "lon": -88.7205
  },
  {
   "name": "Tate Record",
   "city": "Senatobia",
   "state": "MS",
+  "address": "105 North Center Street B, Senatobia, MS 38668",
+  "zip": "38668",
+  "website": "https://www.taterecord.com/",
   "lat": 34.6086,
-  "lon": -89.981,
-  "website": "taterecord.com"
+  "lon": -89.981
  },
  {
   "name": "The Newton County Appeal",
   "city": "Union",
   "state": "MS",
+  "address": "105 Main Street, Union, MS 39365",
+  "zip": "39365",
+  "website": "https://www.newtoncountyappeal.com/",
   "lat": 32.5711,
-  "lon": -89.1152,
-  "website": "newtoncountyappeal.com"
+  "lon": -89.1152
  },
  {
   "name": "Stone County Enterprise",
   "city": "Wiggins",
   "state": "MS",
+  "address": "143 First St S, Wiggins, MS 39577",
+  "zip": "39577",
+  "website": "https://www.stonecountyenterprise.com",
   "lat": 30.856,
-  "lon": -89.139,
-  "website": "stonecountyenterprise.com"
+  "lon": -89.139
  },
  {
   "name": "Winona Times/Carroll Conservative",
   "city": "Winona",
   "state": "MS",
+  "address": "401 Summit Street, Winona, MS 38967",
+  "zip": "38967",
+  "website": "https://www.winonatimes.com/",
   "lat": 33.4903,
-  "lon": -89.7293,
-  "website": "winonatimes.com"
+  "lon": -89.7293
  },
  {
   "name": "The Yazoo Herald",
   "city": "Yazoo City",
   "state": "MS",
+  "address": "1035 Grand Ave., Yazoo City, MS 39194",
+  "zip": "39194",
+  "website": "https://www.yazooherald.net/",
   "lat": 32.8622,
-  "lon": -90.408,
-  "website": "yazooherald.net"
+  "lon": -90.408
  },
  {
   "name": "Sidney Herald",
   "city": "Sidney",
   "state": "MT",
+  "address": "310 2nd Ave NE, Sidney, MT 59270",
+  "zip": "59270",
+  "website": "https://www.sidneyherald.com",
   "lat": 47.7155,
-  "lon": -104.1672,
-  "website": "sidneyherald.com"
+  "lon": -104.1672
  },
  {
   "name": "Daily Herald",
   "city": "Roanoke Rapids",
   "state": "NC",
+  "address": "1025 Roanoke Ave, Roanoke Rapids, NC 27870",
+  "zip": "27870",
+  "website": "https://www.rrdailyherald.com",
   "lat": 36.446,
-  "lon": -77.6486,
-  "website": "rrdailyherald.com"
+  "lon": -77.6486
  },
  {
   "name": "The Mountaineer",
   "city": "Waynesville",
   "state": "NC",
+  "address": "220 N Main St, Waynesville, NC 28786-3812",
+  "zip": "28786",
+  "website": "https://themountaineer.com",
   "lat": 35.4856,
-  "lon": -82.9993,
-  "website": "themountaineer.com"
+  "lon": -82.9993
  },
  {
   "name": "Daily News",
   "city": "Wahpeton",
   "state": "ND",
+  "address": "601 Dakota Avenue, Wahpeton, ND 58074-0760",
+  "zip": "58074",
+  "website": "https://www.wahpetondailynews.com",
   "lat": 46.2721,
-  "lon": -96.6122,
-  "website": "wahpetondailynews.com"
+  "lon": -96.6122
  },
  {
   "name": "Williston Herald",
   "city": "Williston",
   "state": "ND",
+  "address": "14 4th St W, Williston, ND 58801",
+  "zip": "58801",
+  "website": "https://www.willistonherald.com",
   "lat": 48.1895,
-  "lon": -103.6491,
-  "website": "willistonherald.com"
+  "lon": -103.6491
  },
  {
   "name": "Custer County Chief",
   "city": "Broken Bow",
   "state": "NE",
+  "address": "305 S 10th Ave, Broken Bow, NE 68822",
+  "zip": "68822",
+  "website": "https://www.custercountychief.com/",
   "lat": 41.4052,
-  "lon": -99.6408,
-  "website": "custercountychief.com"
+  "lon": -99.6408
  },
  {
   "name": "Keene Publishing Corporation",
   "city": "Keene",
   "state": "NH",
+  "address": "60 West St, Keene, NH 03431",
+  "zip": "03431",
+  "website": "https://www.sentinelsource.com/",
   "lat": 42.9538,
-  "lon": -72.3069,
-  "website": "sentinelsource.com"
+  "lon": -72.3069
  },
  {
   "name": "Keene Sentinel",
   "city": "Keene",
   "state": "NH",
+  "address": "60 West St, Keene, NH 03431",
+  "zip": "03431",
+  "website": "https://www.keenesentinel.com",
   "lat": 42.9538,
-  "lon": -72.3069,
-  "website": "keenesentinel.com"
+  "lon": -72.3069
  },
  {
   "name": "Laconia Daily Sun",
   "city": "Laconia",
   "state": "NH",
+  "address": "781 Union Ave., Laconia, NH 03246",
+  "zip": "03246",
+  "website": "https://www.laconiadailysun.com",
   "lat": 43.5765,
-  "lon": -71.4823,
-  "website": "laconiadailysun.com"
+  "lon": -71.4823
  },
  {
   "name": "Littleton Record",
   "city": "Littleton",
   "state": "NH",
+  "address": "263 Main St, Littleton, NH 03561",
+  "zip": "03561",
+  "website": "https://www.caledonianrecord.com",
   "lat": 44.3308,
-  "lon": -71.7687,
-  "website": "caledonianrecord.com"
+  "lon": -71.7687
  },
  {
   "name": "The NH Chronicle",
   "city": "Manchester",
   "state": "NH",
+  "address": "100 South Commercial Street, Manchester, NH 03101",
+  "zip": "03101",
+  "website": "https://www.wmur.com/chronicle",
   "lat": 42.9849,
-  "lon": -71.4441,
-  "website": "wmur.com/chronicle"
+  "lon": -71.4441
  },
  {
   "name": "The Conway Daily Sun",
   "city": "North Conway",
   "state": "NH",
+  "address": "64 Seavey Street, North Conway, NH 03860",
+  "zip": "03860",
+  "website": "https://www.conwaydailysun.com",
   "lat": 44.0357,
-  "lon": -71.1172,
-  "website": "conwaydailysun.com"
+  "lon": -71.1172
  },
  {
   "name": "El Especialito",
   "city": "Union City",
   "state": "NJ",
+  "address": "3711 Hudson Ave, Union City, NJ 07087",
+  "zip": "07087",
+  "website": "https://elespecial.com",
   "lat": 40.7674,
-  "lon": -74.0323,
-  "website": "elespecial.com"
+  "lon": -74.0323
  },
  {
   "name": "Clovis News-Journal",
   "city": "Clovis",
   "state": "NM",
+  "address": "521 Pile Street, Clovis, NM 88102",
+  "zip": "88102",
+  "website": "https://www.easternnewmexiconews.com/",
   "lat": 34.4386,
-  "lon": -103.1942,
-  "website": "easternnewmexiconews.com"
+  "lon": -103.1942
  },
  {
   "name": "Eastern New Mexico News",
   "city": "Clovis",
   "state": "NM",
+  "address": "521 Pile Street, Clovis, NM 88101",
+  "zip": "88101",
+  "website": "https://www.easternnewmexiconews.com",
   "lat": 34.4386,
-  "lon": -103.1942,
-  "website": "easternnewmexiconews.com"
+  "lon": -103.1942
  },
  {
   "name": "Capital Region Ind. Media",
   "city": "Clifton Park",
   "state": "NY",
+  "address": "11 Augusta Court, Clifton Park, NY 12065",
+  "zip": "12065",
+  "website": "https://theupstater.com",
   "lat": 42.8623,
-  "lon": -73.7727,
-  "website": "theupstater.com"
+  "lon": -73.7727
  },
  {
   "name": "The Spotlight",
   "city": "Clifton Park",
   "state": "NY",
+  "address": "341 Delaware Ave., Delmar, NY 12054",
+  "zip": "12054",
+  "website": "https://spotlightnews.com",
   "lat": 42.8623,
-  "lon": -73.7727,
-  "website": "spotlightnews.com"
+  "lon": -73.7727
  },
  {
   "name": "Cortland Standard Printing",
   "city": "Cortland",
   "state": "NY",
+  "address": "50 Main Street, Cortland, NY 13045",
+  "zip": "13045",
+  "website": "https://www.samplenewsgroup.com",
   "lat": 42.6009,
-  "lon": -76.1791,
-  "website": "samplenewsgroup.com"
+  "lon": -76.1791
  },
  {
   "name": "Denton Publications",
   "city": "Elizabethtown",
   "state": "NY",
+  "address": "14 Hand Ave., Elizabethtown, NY 12932",
+  "zip": "12932",
+  "website": "https://suncommunitynews.com",
   "lat": 44.2261,
-  "lon": -73.5889,
-  "website": "suncommunitynews.com"
+  "lon": -73.5889
  },
  {
   "name": "Neighbor Newspapers",
   "city": "Farmingdale",
   "state": "NY",
+  "address": "565 Broadhollow Road, Suite 3, Farmingdale, NY 11735",
+  "zip": "11735",
+  "website": "https://longislandmediagroup.com",
   "lat": 40.7328,
-  "lon": -73.4468,
-  "website": "longislandmediagroup.com"
+  "lon": -73.4468
  },
  {
   "name": "The Valley News",
   "city": "Fulton",
   "state": "NY",
+  "address": "67 S 2nd St, Fulton, NY 13069",
+  "zip": "13069",
+  "website": "http://oswegocountynewsnow.com",
   "lat": 43.3192,
-  "lon": -76.4197,
-  "website": "oswegocountynewsnow.com"
+  "lon": -76.4197
  },
  {
   "name": "Our Towne",
   "city": "Hyde Park",
   "state": "NY",
+  "address": "",
+  "zip": "",
+  "website": "https://ourtowne.net",
   "lat": 41.7836,
-  "lon": -73.9347,
-  "website": "ourtowne.net"
+  "lon": -73.9347
  },
  {
   "name": "The National Herald",
   "city": "L.I. City",
   "state": "NY",
+  "address": "37-10 30th Street, Long Island City, NY 11101",
+  "zip": "11101",
+  "website": "https://www.thenationalherald.com/",
   "lat": 40.7447,
-  "lon": -73.9485,
-  "website": "thenationalherald.com"
+  "lon": -73.9485
  },
  {
   "name": "Ethnikos Kirix",
   "city": "Long Island City",
   "state": "NY",
+  "address": "National Herald Way 37-10 30th Street, Long Island City, NY 11101",
+  "zip": "11101",
+  "website": "https://www.ekirikas.com",
   "lat": 40.7447,
-  "lon": -73.9485,
-  "website": "ekirikas.com"
+  "lon": -73.9485
  },
  {
   "name": "Oswego County News",
   "city": "Mexico",
   "state": "NY",
+  "address": "80 N. Jefferson Street, Mexico, NY 13114",
+  "zip": "13114",
+  "website": "http://oswegocountynewsnow.com",
   "lat": 43.4652,
-  "lon": -76.2326,
-  "website": "oswegocountynewsnow.com"
+  "lon": -76.2326
  },
  {
   "name": "The Chief Leader",
   "city": "New York",
   "state": "NY",
+  "address": "200 Vesey St., FL 24, New York, NY 10281",
+  "zip": "10281",
+  "website": "https://thechiefleader.com/",
   "lat": 40.6627,
-  "lon": -73.9387,
-  "website": "thechiefleader.com"
+  "lon": -73.9387
  },
  {
   "name": "The Niagara Gazette",
   "city": "Niagara Falls",
   "state": "NY",
+  "address": "473 Third Street, Niagara Falls, NY 14303",
+  "zip": "14303",
+  "website": "https://www.niagara-gazette.com",
   "lat": 43.0928,
-  "lon": -79.0147,
-  "website": "niagara-gazette.com"
+  "lon": -79.0147
  },
  {
   "name": "The Daily Star (Oneonta)",
   "city": "Oneonta",
   "state": "NY",
+  "address": "102 Chestnut Street, Oneonta, NY 13820",
+  "zip": "13820",
+  "website": "https://www.thedailystar.com",
   "lat": 42.4548,
-  "lon": -75.0669,
-  "website": "thedailystar.com"
+  "lon": -75.0669
  },
  {
   "name": "The Oswego Shopper",
   "city": "Oswego",
   "state": "NY",
+  "address": "115 West 3rd Street, Oswego, NY 13126",
+  "zip": "13126",
+  "website": "http://oswegocountynewsnow.com",
   "lat": 43.4581,
-  "lon": -76.5037,
-  "website": "oswegocountynewsnow.com"
+  "lon": -76.5037
  },
  {
   "name": "The Palladium-Times",
   "city": "Oswego",
   "state": "NY",
+  "address": "140 W 1st St, Oswego, NY 13126",
+  "zip": "13126",
+  "website": "http://oswegocountynewsnow.com",
   "lat": 43.4581,
-  "lon": -76.5037,
-  "website": "oswegocountynewsnow.com"
+  "lon": -76.5037
  },
  {
   "name": "The Press Republican",
   "city": "Plattsburgh",
   "state": "NY",
+  "address": "170 Margaret St, Plattsburgh, NY 12901",
+  "zip": "12901",
+  "website": "https://www.pressrepublican.com",
   "lat": 44.692,
-  "lon": -73.4583,
-  "website": "pressrepublican.com"
+  "lon": -73.4583
  },
  {
   "name": "Capital Region Living",
   "city": "Saratoga Springs",
   "state": "NY",
+  "address": "6 Butler Place #10, Saratoga Springs, NY 12866-2155",
+  "zip": "12866",
+  "website": "https://crlmag.com",
   "lat": 43.0677,
-  "lon": -73.7781,
-  "website": "crlmag.com"
+  "lon": -73.7781
  },
  {
   "name": "Saratoga Living",
   "city": "Saratoga Springs",
   "state": "NY",
+  "address": "8 Butler Place, Saratoga Springs, NY 12866",
+  "zip": "12866",
+  "website": "https://saratogaliving.com",
   "lat": 43.0677,
-  "lon": -73.7781,
-  "website": "saratogaliving.com"
+  "lon": -73.7781
+ },
+ {
+  "name": "Ski Expo",
+  "city": "Saratoga Springs",
+  "state": "NY",
+  "address": "15 Coventry Drive, Clifton Park, NY 12065",
+  "zip": "12065",
+  "website": "https://www.adksports.com/winter-expo",
+  "lat": 43.0677,
+  "lon": -73.77814
  },
  {
   "name": "Chagrin Valley Times",
   "city": "Chagrin Falls",
   "state": "OH",
+  "address": "525 E. Washington St., Chagrin Falls, OH 44022",
+  "zip": "44022",
+  "website": "https://[chagrinvalleytoday.com](https://chagrinvalleytoday.com)",
   "lat": 41.431,
-  "lon": -81.389,
-  "website": "chagrinvalleytoday.com"
+  "lon": -81.389
  },
  {
   "name": "Geauga Times Courier",
   "city": "Chardon",
   "state": "OH",
+  "address": "525 Washington Street, Chagrin Falls, OH 44022",
+  "zip": "44022",
+  "website": "https://[chagrinvalleytoday.com](https://chagrinvalleytoday.com)",
   "lat": 41.5793,
-  "lon": -81.2091,
-  "website": "chagrinvalleytoday.com"
+  "lon": -81.2091
  },
  {
   "name": "Community Post",
   "city": "Minster",
   "state": "OH",
+  "address": "326 N Main St #200, Minster, OH 45865",
+  "zip": "45865",
+  "website": "https://www.minstercommunitypost.com",
   "lat": 40.3948,
-  "lon": -84.3789,
-  "website": "minstercommunitypost.com"
+  "lon": -84.3789
  },
  {
   "name": "Douthit Communications",
   "city": "Sandusky",
   "state": "OH",
+  "address": "520 Warren St, Sandusky, OH 44870",
+  "zip": "44870",
+  "website": "https://westlifenews.com",
   "lat": 41.4559,
-  "lon": -82.7144,
-  "website": "westlifenews.com"
+  "lon": -82.7144
  },
  {
   "name": "Shelby Daily Globe",
   "city": "Shelby",
   "state": "OH",
+  "address": "37 West Main Street, Shelby, OH 44875",
+  "zip": "44875",
+  "website": "https://www.sdgnewsgroup.com",
   "lat": 40.8851,
-  "lon": -82.6583,
-  "website": "sdgnewsgroup.com"
+  "lon": -82.6583
  },
  {
   "name": "Solon Times",
   "city": "Solon",
   "state": "OH",
+  "address": "525 East Washington Street, Chagrin Falls, OH 44022",
+  "zip": "44022",
+  "website": "https://[chagrinvalleytoday.com](https://chagrinvalleytoday.com)",
   "lat": 41.386,
-  "lon": -81.4408,
-  "website": "chagrinvalleytoday.com"
+  "lon": -81.4408
  },
  {
   "name": "The Evening Leader",
   "city": "St. Marys",
   "state": "OH",
+  "address": "102 E Spring St, Saint Marys, OH 45885",
+  "zip": "45885",
+  "website": "https://www.theeveningleader.com",
   "lat": 40.5476,
-  "lon": -84.3923,
-  "website": "theeveningleader.com"
+  "lon": -84.3923
  },
  {
   "name": "Wapakoneta Daily News",
   "city": "Wapakoneta",
   "state": "OH",
+  "address": "520 Industrial Dr, Wapakoneta, OH 45895",
+  "zip": "45895",
+  "website": "https://www.wapakdailynews.com/",
   "lat": 40.5652,
-  "lon": -84.1907,
-  "website": "wapakdailynews.com"
+  "lon": -84.1907
  },
  {
   "name": "Enid News & Eagle",
   "city": "Enid",
   "state": "OK",
+  "address": "227 W Broadway Ave, Enid, OK 73701",
+  "zip": "73701",
+  "website": "https://www.enidnews.com",
   "lat": 36.4067,
-  "lon": -97.8699,
-  "website": "enidnews.com"
+  "lon": -97.8699
  },
  {
   "name": "Guymon Daily Herald",
   "city": "Guymon",
   "state": "OK",
+  "address": "515 N Ellison St, Guymon, OK 73942",
+  "zip": "73942",
+  "website": "http://guymondailyherald.com",
   "lat": 36.6901,
-  "lon": -101.477,
-  "website": "guymondailyherald.com"
+  "lon": -101.477
  },
  {
   "name": "Poteau News & Sun",
   "city": "Poteau",
   "state": "OK",
+  "address": "804 N Broadway St, Poteau, OK 74953",
+  "zip": "74953",
+  "website": "http://www.poteaudailynews.com",
   "lat": 35.0667,
-  "lon": -94.6103,
-  "website": "poteaudailynews.com"
+  "lon": -94.6103
  },
  {
   "name": "Argus Observer",
   "city": "Ontario",
   "state": "OR",
+  "address": "1160 SW Fourth Street, Ontario, OR 97914",
+  "zip": "97914",
+  "website": "https://argusobserver.com",
   "lat": 44.025,
-  "lon": -116.9788,
-  "website": "argusobserver.com"
+  "lon": -116.9788
  },
  {
   "name": "The News-Review",
   "city": "Roseburg",
   "state": "OR",
+  "address": "345 NE Winchester, Roseburg, OR 97470",
+  "zip": "97470",
+  "website": "https://nrtoday.com",
   "lat": 43.2236,
-  "lon": -123.352,
-  "website": "nrtoday.com"
+  "lon": -123.352
  },
  {
   "name": "Butler Eagle",
   "city": "Butler",
   "state": "PA",
+  "address": "514 West Wayne Street, Butler, PA 16001",
+  "zip": "16001",
+  "website": "https://www.butlereagle.com",
   "lat": 40.8616,
-  "lon": -79.8962,
-  "website": "butlereagle.com"
+  "lon": -79.8962
  },
  {
   "name": "The Tribune-Democrat",
   "city": "Johnstown",
   "state": "PA",
+  "address": "425 Locust St., Johnstown, PA 15901",
+  "zip": "15901",
+  "website": "https://www.tribdem.com",
   "lat": 40.3261,
-  "lon": -78.9191,
-  "website": "tribdem.com"
+  "lon": -78.9191
  },
  {
   "name": "Morning Times",
   "city": "Sayre",
   "state": "PA",
+  "address": "201 N Lehigh Ave, Sayre, PA 18840",
+  "zip": "18840",
+  "website": "https://www.morning-times.com",
   "lat": 41.9857,
-  "lon": -76.5208,
-  "website": "morning-times.com"
+  "lon": -76.5208
  },
  {
   "name": "Towanda Printing Company",
   "city": "Sayre",
   "state": "PA",
+  "address": "116 Main Street, Towanda, PA 18848",
+  "zip": "18848",
+  "website": "https://www.morning-times.com",
   "lat": 41.9857,
-  "lon": -76.5208,
-  "website": "morning-times.com"
+  "lon": -76.5208
  },
  {
   "name": "Scranton Times-Tribune",
   "city": "Scranton",
   "state": "PA",
+  "address": "149 Penn Ave, Scranton, PA 18503",
+  "zip": "18503",
+  "website": "https://www.thetimes-tribune.com",
   "lat": 41.4042,
-  "lon": -75.6659,
-  "website": "thetimes-tribune.com"
+  "lon": -75.6659
  },
  {
   "name": "News-Item",
   "city": "Shamokin",
   "state": "PA",
+  "address": "707 N Rock St, Shamokin, PA 17872",
+  "zip": "17872",
+  "website": "https://www.newsitem.com",
   "lat": 40.7881,
-  "lon": -76.555,
-  "website": "newsitem.com"
+  "lon": -76.555
  },
  {
   "name": "The Herald",
   "city": "Sharon",
   "state": "PA",
+  "address": "The Herald, 52 S Dock St, PO Box 51, Sharon, PA 16146",
+  "zip": "16146",
+  "website": "https://www.sharonherald.com",
   "lat": 41.234,
-  "lon": -80.4998,
-  "website": "sharonherald.com"
+  "lon": -80.4998
  },
  {
   "name": "The Daily Review",
   "city": "Towanda",
   "state": "PA",
+  "address": "116 Main Street, Towanda, PA 18848",
+  "zip": "18848",
+  "website": "https://www.thedailyreview.com",
   "lat": 41.7709,
-  "lon": -76.4465,
-  "website": "thedailyreview.com"
+  "lon": -76.4465
  },
  {
   "name": "Coventry Courier",
   "city": "Coventry",
   "state": "RI",
+  "address": "1353 Main St, West Warwick, RI 02893",
+  "zip": "02893",
+  "website": "https://www.mediapost.com/publications/article/388524/two-rhode-island-weeklies-set-to-close.html?edition=",
   "lat": 41.7001,
-  "lon": -71.6617,
-  "website": "mediapost.com/publications/article/388524/two-rhode-island-weeklies-set-to-close.html?edition="
+  "lon": -71.6617
  },
  {
   "name": "Block Island Times",
   "city": "New Shoreham",
   "state": "RI",
+  "address": "123 Ocean Avenue, Box 278, Block Island (New Shoreham), RI 02807",
+  "zip": "02807",
+  "website": "https://www.blockislandtimes.com",
   "lat": 41.1721,
-  "lon": -71.5583,
-  "website": "blockislandtimes.com"
+  "lon": -71.5583
  },
  {
   "name": "Standard Times",
   "city": "North Kingstown",
   "state": "RI",
+  "address": "13 W Main St, North Kingstown, RI 02852",
+  "zip": "02852",
+  "website": "https://www.southkingstownri.gov/1385/Americas-Newspapers---Online-Newspapers",
   "lat": 41.5501,
-  "lon": -71.4662,
-  "website": "southkingstownri.gov/1385/americas-newspapers---online-newspapers"
+  "lon": -71.4662
  },
  {
   "name": "The Times",
   "city": "Pawtucket",
   "state": "RI",
+  "address": "23 Exchange Street, Pawtucket, RI 02860",
+  "zip": "02860",
+  "website": "https://www.pawtuckettimes.com/",
   "lat": 41.8748,
-  "lon": -71.3733,
-  "website": "pawtuckettimes.com"
+  "lon": -71.3733
  },
  {
   "name": "Narragansett Times",
   "city": "Wakefield",
   "state": "RI",
+  "address": "187 Main Street, Wakefield, RI 02879",
+  "zip": "02879",
+  "website": "https://www.facebook.com/srinewspapers/",
   "lat": 41.431,
-  "lon": -71.5009,
-  "website": "facebook.com/srinewspapers"
+  "lon": -71.5009
  },
  {
   "name": "Southern RI Newspapers",
   "city": "Wakefield",
   "state": "RI",
+  "address": "187 Main Street, Wakefield, RI 02879",
+  "zip": "02879",
+  "website": "https://www.ricentral.com",
   "lat": 41.431,
-  "lon": -71.5009,
-  "website": "ricentral.com"
+  "lon": -71.5009
  },
  {
   "name": "The Independent",
   "city": "Wakefield",
   "state": "RI",
+  "address": "187 Main Street, Wakefield, RI 02879",
+  "zip": "02879",
+  "website": "http://www.independentri.com",
   "lat": 41.431,
-  "lon": -71.5009,
-  "website": "independentri.com"
+  "lon": -71.5009
  },
  {
   "name": "The Westerly Sun",
   "city": "Westerly",
   "state": "RI",
+  "address": "100 Main Street, Westerly, Rhode Island 02891",
+  "zip": "02891",
+  "website": "https://www.thewesterlysun.com",
   "lat": 41.3733,
-  "lon": -71.8068,
-  "website": "thewesterlysun.com"
+  "lon": -71.8068
  },
  {
   "name": "Call & Times",
   "city": "Woonsocket",
   "state": "RI",
+  "address": "154 Main St, Woonsocket, RI 02895",
+  "zip": "02895",
+  "website": "https://www.woonsocketcall.com",
   "lat": 42.0017,
-  "lon": -71.4999,
-  "website": "woonsocketcall.com"
+  "lon": -71.4999
  },
  {
   "name": "Madison Daily Leader",
   "city": "Madison",
   "state": "SD",
+  "address": "214 S Egan Ave, Madison, SD 57042",
+  "zip": "57042",
+  "website": "https://www.madisondailyleader.com/",
   "lat": 44.0062,
-  "lon": -97.1085,
-  "website": "madisondailyleader.com"
+  "lon": -97.1085
  },
  {
   "name": "Capital Journal",
   "city": "Pierre",
   "state": "SD",
+  "address": "333 West Dakota Avenue, Pierre, SD 57501",
+  "zip": "57501",
+  "website": "https://www.capjournal.com",
   "lat": 44.3752,
-  "lon": -100.32,
-  "website": "capjournal.com"
+  "lon": -100.32
  },
  {
   "name": "Press & Dakotan",
   "city": "Yankton",
   "state": "SD",
+  "address": "319 Walnut St, Yankton, SD 57078",
+  "zip": "57078",
+  "website": "https://yankton.net",
   "lat": 42.8898,
-  "lon": -97.3927,
-  "website": "yankton.net"
+  "lon": -97.3927
  },
  {
   "name": "Yankton Daily Press",
   "city": "Yankton",
   "state": "SD",
+  "address": "319 Walnut St, Yankton, SD 57078",
+  "zip": "57078",
+  "website": "https://yankton.net/",
   "lat": 42.8898,
-  "lon": -97.3927,
-  "website": "yankton.net"
+  "lon": -97.3927
  },
  {
   "name": "Editor & Publisher",
   "city": "Hendersonville",
   "state": "TN",
+  "address": "1028 Crutcher Station Drive, Hendersonville, TN 37075",
+  "zip": "37075",
+  "website": "https://www.editorandpublisher.com",
   "lat": 36.3073,
-  "lon": -86.5989,
-  "website": "editorandpublisher.com"
+  "lon": -86.5989
  },
  {
   "name": "Big Spring Herald",
   "city": "Big Spring",
   "state": "TX",
+  "address": "710 Scurry St, Big Spring, TX 79720",
+  "zip": "79720",
+  "website": "https://www.bigspringherald.com/",
   "lat": 32.2383,
-  "lon": -101.4857,
-  "website": "bigspringherald.com"
+  "lon": -101.4857
  },
  {
   "name": "Borger News-Herald",
   "city": "Borger",
   "state": "TX",
+  "address": "207 N. Main, Borger, TX 79008",
+  "zip": "79008",
+  "website": "https://www.borgernewsherald.com/",
   "lat": 35.6594,
-  "lon": -101.4024,
-  "website": "borgernewsherald.com"
+  "lon": -101.4024
  },
  {
   "name": "Denton Media Company",
   "city": "Denton",
   "state": "TX",
+  "address": "2413 Fort Worth Dr, Denton, TX 76205",
+  "zip": "76205",
+  "website": "https://dentonrc.com",
   "lat": 33.2174,
-  "lon": -97.1413,
-  "website": "dentonrc.com"
+  "lon": -97.1413
  },
  {
   "name": "Moore County News Press",
   "city": "Dumas",
   "state": "TX",
+  "address": "702 S Meredith Ave, Dumas, TX 79029",
+  "zip": "79029",
+  "website": "https://www.moorenews.com",
   "lat": 35.862,
-  "lon": -101.965,
-  "website": "moorenews.com"
+  "lon": -101.965
  },
  {
   "name": "The Huntsville Item",
   "city": "Huntsville",
   "state": "TX",
+  "address": "1409 10th St, Huntsville, TX 77320",
+  "zip": "77320",
+  "website": "https://www.itemonline.com",
   "lat": 30.7005,
-  "lon": -95.5549,
-  "website": "itemonline.com"
+  "lon": -95.5549
  },
  {
   "name": "Sweetwater Reporter",
   "city": "Sweetwater",
   "state": "TX",
+  "address": "112 W 3rd St, Sweetwater, TX 79556",
+  "zip": "79556",
+  "website": "https://www.sweetwaterreporter.com",
   "lat": 32.4694,
-  "lon": -100.4087,
-  "website": "sweetwaterreporter.com"
+  "lon": -100.4087
  },
  {
   "name": "Weatherford Democrat",
   "city": "Weatherford",
   "state": "TX",
+  "address": "512 Palo Pinto St, Weatherford, TX 76086",
+  "zip": "76086",
+  "website": "https://www.weatherforddemocrat.com",
   "lat": 32.7532,
-  "lon": -97.7719,
-  "website": "weatherforddemocrat.com"
+  "lon": -97.7719
  },
  {
   "name": "Womack Publishing",
   "city": "Chatham",
   "state": "VA",
+  "address": "28 N. Main Street, Chatham, VA 24531",
+  "zip": "24531",
+  "website": "http://www.womackpublishing.com/",
   "lat": 36.8119,
-  "lon": -79.4001,
-  "website": "womackpublishing.com"
+  "lon": -79.4001
  },
  {
   "name": "The Caledonian-Record",
   "city": "St Johnsbury",
   "state": "VT",
+  "address": "190 Federal Street, St. Johnsbury, VT 05819",
+  "zip": "05819",
+  "website": "https://www.caledonianrecord.com",
   "lat": 44.4304,
-  "lon": -72.0086,
-  "website": "caledonianrecord.com"
+  "lon": -72.0086
  },
  {
   "name": "The Wenatchee World",
   "city": "Wenatchee",
   "state": "WA",
+  "address": "14 N Mission St, Wenatchee, WA 98801",
+  "zip": "98801",
+  "website": "https://wenatcheeworld.com",
   "lat": 47.436,
-  "lon": -120.3293,
-  "website": "wenatcheeworld.com"
+  "lon": -120.3293
  },
  {
   "name": "Lakeland Times",
   "city": "Minocqua",
   "state": "WI",
+  "address": "510 Chippewa Street, Minocqua, WI 54548",
+  "zip": "54548",
+  "website": "https://lakelandtimes.com",
   "lat": 45.8792,
-  "lon": -89.7036,
-  "website": "lakelandtimes.com"
+  "lon": -89.7036
  },
  {
   "name": "Unified Newspapers",
   "city": "Oregon",
   "state": "WI",
+  "address": "156 N. Main St., Oregon, WI 53575",
+  "zip": "53575",
+  "website": "https://oregonobserver.com",
   "lat": 42.9252,
-  "lon": -89.3891,
-  "website": "oregonobserver.com"
+  "lon": -89.3891
  },
  {
   "name": "The Journal",
   "city": "Platteville",
   "state": "WI",
+  "address": "250 E Main Street, PO Box 266, Platteville, WI 53818",
+  "zip": "53818",
+  "website": "https://www.swnews4u.com/",
   "lat": 42.7279,
-  "lon": -90.4681,
-  "website": "swnews4u.com"
+  "lon": -90.4681
  },
  {
   "name": "Wisconsin Shopper",
   "city": "Prairie du Chien",
   "state": "WI",
+  "address": "405 N Marquette Rd, Prairie du Chien, WI 53821",
+  "zip": "53821",
+  "website": "https://www.facebook.com/p/Shopping-News-Wisconsin-Iowa-100063480433476/",
   "lat": 43.0433,
-  "lon": -91.1373,
-  "website": "facebook.com/p/shopping-news-wisconsin-iowa-100063480433476"
+  "lon": -91.1373
  },
  {
   "name": "Richland Center Shopper",
   "city": "Richland Center",
   "state": "WI",
+  "address": "272 N Main St, Richland Center, WI 53581",
+  "zip": "53581",
+  "website": "https://richlandcentershoppingnews.com/",
   "lat": 43.3405,
-  "lon": -90.3834,
-  "website": "richlandcentershoppingnews.com"
+  "lon": -90.3834
+ },
+ {
+  "name": "Unified Newspapers",
+  "city": "Stoughton",
+  "state": "WI",
+  "address": "301 W Main St, Stoughton, WI 53589",
+  "zip": "53589",
+  "website": "https://www.stoughtonnews.com/",
+  "lat": 42.92377,
+  "lon": -89.22252
+ },
+ {
+  "name": "Unified Newspapers",
+  "city": "Verona",
+  "state": "WI",
+  "address": "133 Enterprise Dr, Verona, WI 53593",
+  "zip": "53593",
+  "website": "https://www.veronapress.com/",
+  "lat": 42.99006,
+  "lon": -89.53887
  },
  {
   "name": "The Register-Herald",
   "city": "Beckley",
   "state": "WV",
+  "address": "801 N. Kanawha St., Beckley, WV 25801",
+  "zip": "25801",
+  "website": "https://www.register-herald.com",
   "lat": 37.7731,
-  "lon": -81.1616,
-  "website": "register-herald.com"
+  "lon": -81.1616
  },
  {
   "name": "Bluefield Daily Telegraph",
   "city": "Bluefield",
   "state": "WV",
+  "address": "928 Bluefield Avenue, Bluefield, WV 24701",
+  "zip": "24701",
+  "website": "https://www.bdtonline.com",
   "lat": 37.2628,
-  "lon": -81.2113,
-  "website": "bdtonline.com"
+  "lon": -81.2113
  },
  {
   "name": "The Mingo Messenger",
   "city": "Delbarton",
   "state": "WV",
+  "address": "73 East Third Ave, Williamson, WV 25561",
+  "zip": "25561",
+  "website": "https://www.mingomessenger.com",
   "lat": 37.7052,
-  "lon": -82.1861,
-  "website": "mingomessenger.com"
+  "lon": -82.1861
  },
  {
   "name": "Times West Virginian",
   "city": "Fairmont",
   "state": "WV",
+  "address": "300 Quincy St, Fairmont, WV 26554",
+  "zip": "26554",
+  "website": "https://www.timeswv.com",
   "lat": 39.4769,
-  "lon": -80.1491,
-  "website": "timeswv.com"
+  "lon": -80.1491
  },
  {
   "name": "The Dominion Post",
   "city": "Morgantown",
   "state": "WV",
+  "address": "1251 Earl L. Core Road, Morgantown, WV 26505",
+  "zip": "26505",
+  "website": "https://dominionpostlive.com",
   "lat": 39.6375,
-  "lon": -79.9469,
-  "website": "dominionpostlive.com"
+  "lon": -79.9469
  }
 ]

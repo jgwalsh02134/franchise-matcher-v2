@@ -49,6 +49,15 @@ function esc(s) {
     .replace(/"/g, '&quot;');
 }
 
+// website values may be bare domains or full URLs with a scheme
+function webHref(w) {
+  w = String(w || '');
+  return /^https?:\/\//.test(w) ? w : 'https://' + w;
+}
+function webDisplay(w) {
+  return String(w || '').replace(/^https?:\/\//, '').replace(/\/+$/, '');
+}
+
 /* ---------- Overpass query ---------- */
 const US_BBOX = '(24.5,-125.0,49.5,-66.9)';
 
@@ -552,7 +561,7 @@ function renderMarketTable(r) {
       ? m.pubs.map((x) => `<div class="pub">
           <span><span class="pname">${esc(x.pub.name)}</span> <span class="pbase">${esc(x.pub.city)}, ${esc(x.pub.state)}</span></span>
           <span class="pdist">${x.dist.toFixed(1)} mi</span>
-          <span class="pweb"><a href="https://${esc(x.pub.website)}" target="_blank" rel="noopener">${esc(x.pub.website)}</a></span>
+          <span class="pweb"><a href="${esc(webHref(x.pub.website))}" target="_blank" rel="noopener">${esc(webDisplay(x.pub.website))}</a></span>
         </div>`).join('')
       : `<div class="no-pubs">No publications within ${radiusMiles} miles.</div>`;
     return `<tr class="market-row" data-idx="${idx}">
@@ -649,7 +658,7 @@ function openBrief() {
         name: esc(v.pub.name),
         city: esc(v.pub.city),
         state: esc(v.pub.state),
-        website: esc(v.pub.website || ''),
+        website: esc(webDisplay(v.pub.website)),
         lat: v.pub.lat,
         lon: v.pub.lon,
         near: esc(x.market.label + ', ' + x.market.state),

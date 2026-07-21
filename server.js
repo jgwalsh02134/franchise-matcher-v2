@@ -741,7 +741,15 @@ function apolloFetch(url, body, apiKey) {
       res = await apolloHttp(url, body, apiKey);
       if (res.status === 429) throw new ApolloRateLimitError();
     }
-    if (!res.ok) throw new Error(`Apollo HTTP ${res.status}`);
+    if (!res.ok) {
+      const detail = await res.text().catch(() => "");
+      console.error(
+        `[apollo] HTTP ${res.status} from ${url}: ${detail.slice(0, 300)}`
+      );
+      const err = new Error(`Apollo HTTP ${res.status}`);
+      err.status = res.status;
+      throw err;
+    }
     return res.json();
   });
 }
@@ -810,8 +818,8 @@ app.post("/api/apollo/people-search", async (req, res) => {
       logApollo("people-search", target, false, "rate_limited");
       return res.json({ available: false, error: "rate_limited" });
     }
-    logApollo("people-search", target, false, "error");
-    res.json({ available: false, error: "apollo_failed" });
+    logApollo("people-search", target, false, "error " + (err.status || ""));
+    res.json({ available: false, error: "apollo_failed", status: err.status });
   }
 });
 

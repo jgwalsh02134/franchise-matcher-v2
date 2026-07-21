@@ -689,6 +689,8 @@ async function dmSearch() {
   if (!data || data.available === false) {
     if (data && data.error === 'rate_limited') {
       dmStatus('Apollo rate limit hit \u2014 wait a minute and retry.');
+    } else if (data && (data.status === 401 || data.status === 403)) {
+      dmStatus('Apollo rejected the API key \u2014 check APOLLO_API_KEY and that the plan allows People Search.');
     } else if (data && data.error) {
       dmStatus('Contact search failed \u2014 try again in a moment.');
     } else {

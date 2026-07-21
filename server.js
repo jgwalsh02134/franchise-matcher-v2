@@ -682,7 +682,8 @@ app.post("/api/publications/import", requireAuth, (req, res) => {
 // Apollo.io proxy
 // ---------------------------------------------------------------------------
 
-const APOLLO_SEARCH_URL = "https://api.apollo.io/api/v1/mixed_people/search";
+// note: /mixed_people/search is restricted; api_search is the public API path
+const APOLLO_SEARCH_URL = "https://api.apollo.io/api/v1/mixed_people/api_search";
 const APOLLO_MATCH_URL = "https://api.apollo.io/api/v1/people/match";
 const APOLLO_DEFAULT_TITLES = [
   "chief marketing officer",
@@ -789,8 +790,15 @@ app.post("/api/apollo/people-search", async (req, res) => {
   }
 
   const apolloBody = { person_titles: titles, page: 1, per_page: 10 };
-  if (domain) apolloBody.q_organization_domains_list = [domain];
-  else apolloBody.q_organization_name = company;
+  if (domain) {
+    apolloBody.q_organization_domains_list = [
+      domain.replace(/^https?:\/\//, "").replace(/^www\./, "").replace(/\/.*$/, ""),
+    ];
+  } else {
+    // api_search has no organization-name filter; keyword search is the
+    // closest match and the name filter is applied client-side below
+    apolloBody.q_keywords = company;
+  }
 
   try {
     const data = await apolloFetch(
@@ -799,7 +807,17 @@ app.post("/api/apollo/people-search", async (req, res) => {
       process.env.APOLLO_API_KEY
     );
     // never pass through raw emails or phone numbers from search results
-    const people = (Array.isArray(data.people) ? data.people : []).map((p) => ({
+    let rawPeople = Array.isArray(data.people) ? data.people : [];
+    if (!domain && company) {
+      // keyword search is fuzzy — keep only people at the searched company
+      const needle = company.toLowerCase();
+      const filtered = rawPeople.filter((p) => {
+        const org = (p.organization && p.organization.name) || "";
+        return org.toLowerCase().includes(needle);
+      });
+      if (filtered.length) rawPeople = filtered;
+    }
+    const people = rawPeople.map((p) => ({
       id: p.id,
       name: p.name,
       title: p.title,
